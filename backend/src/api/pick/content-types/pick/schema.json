@@ -1,0 +1,70 @@
+{
+  "kind": "collectionType",
+  "collectionName": "picks",
+  "info": {
+    "singularName": "pick",
+    "pluralName": "picks",
+    "displayName": "Pick",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "League": {
+      "type": "enumeration",
+      "enum": [
+        "NBA",
+        "NHL",
+        "NFL",
+        "MLB",
+        "NCAAB",
+        "NCAAF",
+        "WNBA"
+      ],
+      "default": "MLB"
+    },
+    "Date": {
+      "type": "date"
+    },
+    "Away": {
+      "type": "string"
+    },
+    "Home": {
+      "type": "string"
+    },
+    "Pick": {
+      "type": "string"
+    },
+    "Odds": {
+      "type": "decimal"
+    },
+    "Result": {
+      "type": "enumeration",
+      "enum": [
+        "Win",
+        "Loss",
+        "Push",
+        "Pending"
+      ]
+    },
+    "Stake": {
+      "type": "integer",
+      "default": 1
+    },
+    "Writeup": {
+      "type": "blocks"
+    },
+    "Author": {
+      "type": "string",
+      "default": "Picks Office"
+    },
+    "Slug": {
+      "type": "string",
+      "unique": false
+    },
+    "Summary": {
+      "type": "text"
+    }
+  }
+}

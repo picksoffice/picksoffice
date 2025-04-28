@@ -1,0 +1,6482 @@
+[
+  {
+    "row": {
+      "League": "NHL",
+      "Date": "2025-04-09",
+      "Away": "Flames",
+      "Home": "Ducks",
+      "Pick": "Flames ML",
+      "Odds": "1.72",
+      "Result": "Loss",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NBA",
+      "Date": "2025-04-09",
+      "Away": "Nuggets",
+      "Home": "Kings",
+      "Pick": "Nuggets -3.5",
+      "Odds": "1.95",
+      "Result": "Win",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "MLB",
+      "Date": "2025-04-09",
+      "Away": "Phillies ",
+      "Home": "Braves",
+      "Pick": "Braves ML",
+      "Odds": "1.80",
+      "Result": "Loss",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "MLB",
+      "Date": "2025-04-09",
+      "Away": "Phillies ",
+      "Home": "Braves",
+      "Pick": "Under 8.5",
+      "Odds": "2.05",
+      "Result": "Win",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "MLB",
+      "Date": "2025-04-09",
+      "Away": "Astros ",
+      "Home": "Mariners",
+      "Pick": "Astros ML",
+      "Odds": "1.83",
+      "Result": "Loss",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "MLB",
+      "Date": "2025-04-09",
+      "Away": "Reds",
+      "Home": "Giants",
+      "Pick": "Under 7.5",
+      "Odds": "1.95",
+      "Result": "Loss",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "MLB",
+      "Date": "2025-04-09",
+      "Away": "Padres",
+      "Home": "Athletics",
+      "Pick": "Athletics ML",
+      "Odds": "2.00",
+      "Result": "Loss",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NBA",
+      "Date": "2025-04-08",
+      "Away": "Warriors",
+      "Home": "Suns",
+      "Pick": "Warriors -8",
+      "Odds": "1.91",
+      "Result": "Win",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NBA",
+      "Date": "2025-04-08",
+      "Away": "Spurs",
+      "Home": "Clippers",
+      "Pick": "Spurs +12.5",
+      "Odds": "2.00",
+      "Result": "Win",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NBA",
+      "Date": "2025-04-08",
+      "Away": "Timberwolves",
+      "Home": "Bucks",
+      "Pick": "Timberwolves -4",
+      "Odds": "1.91",
+      "Result": "Loss",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NBA",
+      "Date": "2025-04-08",
+      "Away": "Lakers",
+      "Home": "Thunder",
+      "Pick": "Thunder -13.5",
+      "Odds": "1.91",
+      "Result": "Win",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NBA",
+      "Date": "2025-04-08",
+      "Away": "Celtics",
+      "Home": "Knicks",
+      "Pick": "Knicks ML",
+      "Odds": "2.00",
+      "Result": "Loss",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "MLB",
+      "Date": "2025-04-08",
+      "Away": "Reds",
+      "Home": "Giants",
+      "Pick": "Giants ML",
+      "Odds": "1.83",
+      "Result": "Loss",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "MLB",
+      "Date": "2025-04-08",
+      "Away": "Angels",
+      "Home": "Rays",
+      "Pick": "Under 8.5",
+      "Odds": "1.83",
+      "Result": "Win",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "MLB",
+      "Date": "2025-04-08",
+      "Away": "Rangers",
+      "Home": "Cubs",
+      "Pick": "Cubs F5 -0.5",
+      "Odds": "1.91",
+      "Result": "Win",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "MLB",
+      "Date": "2025-04-08",
+      "Away": "Twins",
+      "Home": "Royals",
+      "Pick": "Over 7.5",
+      "Odds": "2.00",
+      "Result": "Loss",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "MLB",
+      "Date": "2025-04-07",
+      "Away": "Padres",
+      "Home": "Athletics",
+      "Pick": "Over 8",
+      "Odds": "1.80",
+      "Result": "Win",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NCAAB",
+      "Date": "2025-04-07",
+      "Away": "Florida",
+      "Home": "Houston",
+      "Pick": "Under 141.5",
+      "Odds": "1.91",
+      "Result": "WIn",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "MLB",
+      "Date": "2025-04-07",
+      "Away": "Rangers",
+      "Home": "Cubs",
+      "Pick": "Cubs ML",
+      "Odds": "1.80",
+      "Result": "WIn",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NHL",
+      "Date": "2025-04-07",
+      "Away": "Lightning",
+      "Home": "Rangers",
+      "Pick": "Lightning ML",
+      "Odds": "1.74",
+      "Result": "WIn",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "MLB",
+      "Date": "2025-04-07",
+      "Away": "Blue Jays",
+      "Home": "Red Sox",
+      "Pick": "Under 9",
+      "Odds": "1.95",
+      "Result": "Win",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "MLB",
+      "Date": "2025-04-07",
+      "Away": "Dodgers",
+      "Home": "Nationals",
+      "Pick": "Dodgers -1.5",
+      "Odds": "1.95",
+      "Result": "Loss",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "MLB",
+      "Date": "2025-04-07",
+      "Away": "Yankees",
+      "Home": "Tigers",
+      "Pick": "Yankees -1.5",
+      "Odds": "2.05",
+      "Result": "Loss",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NBA",
+      "Date": "2025-04-06",
+      "Away": "Spurs",
+      "Home": "Trail Blazers",
+      "Pick": "Trail Blazers -3",
+      "Odds": "1.95",
+      "Result": "Win",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "MLB",
+      "Date": "2025-04-06",
+      "Away": "Reds",
+      "Home": "Brewers",
+      "Pick": "Brewers ML",
+      "Odds": "1.72",
+      "Result": "Win",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "MLB",
+      "Date": "2025-04-06",
+      "Away": "Blue Jays",
+      "Home": "Mets",
+      "Pick": "Under 7.5",
+      "Odds": "1.83",
+      "Result": "Win",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "MLB",
+      "Date": "2025-04-06",
+      "Away": "Dodgers",
+      "Home": "Phillies",
+      "Pick": "Under 7.5",
+      "Odds": "1.83",
+      "Result": "Loss",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "MLB",
+      "Date": "2025-04-05",
+      "Away": "Mariners",
+      "Home": "Giants",
+      "Pick": "Over 7.5",
+      "Odds": "2.00",
+      "Result": "Loss",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "MLB",
+      "Date": "2025-04-05",
+      "Away": "Reds",
+      "Home": "Brewers",
+      "Pick": "Brewers ML",
+      "Odds": "1.91",
+      "Result": "Loss",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NBA",
+      "Date": "2025-04-05",
+      "Away": "Grizzlies",
+      "Home": "Pistons",
+      "Pick": "Grizzlies ML",
+      "Odds": "1.83",
+      "Result": "WIn",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "MLB",
+      "Date": "2025-04-05",
+      "Away": "White Sox",
+      "Home": "Tigers",
+      "Pick": "Tigers -1.5",
+      "Odds": "2.00",
+      "Result": "WIn",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NBA",
+      "Date": "2025-04-04",
+      "Away": "Mavericks",
+      "Home": "Clippers",
+      "Pick": "Clippers -9",
+      "Odds": "1.87",
+      "Result": "WIn",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NBA",
+      "Date": "2025-04-04",
+      "Away": "Trail Blazers",
+      "Home": "Bulls",
+      "Pick": "Bulls -6",
+      "Odds": "1.91",
+      "Result": "Loss",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NBA",
+      "Date": "2025-04-04",
+      "Away": "Thunder",
+      "Home": "Rockets",
+      "Pick": "Thunder -6.5",
+      "Odds": "1.91",
+      "Result": "Loss",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "MLB",
+      "Date": "2025-04-04",
+      "Away": "Orioles",
+      "Home": "Royals",
+      "Pick": "Under 8",
+      "Odds": "1.91",
+      "Result": "Loss",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NBA",
+      "Date": "2025-04-04",
+      "Away": "Pistons",
+      "Home": "Raptors",
+      "Pick": "Pistons -11.5",
+      "Odds": "1.87",
+      "Result": "Win",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "MLB",
+      "Date": "2025-04-04",
+      "Away": "Marlins",
+      "Home": "Braves",
+      "Pick": "Under 7.5",
+      "Odds": "1.95",
+      "Result": "Loss",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "MLB",
+      "Date": "2025-04-04",
+      "Away": "Cardinals",
+      "Home": "Red Sox",
+      "Pick": "Cardinals ML",
+      "Odds": "2.15",
+      "Result": "Loss",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NHL",
+      "Date": "2025-04-03",
+      "Away": "Avalanche",
+      "Home": "Blue Jackets",
+      "Pick": "Blue Jackets ML",
+      "Odds": "2.25",
+      "Result": "Loss",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NBA",
+      "Date": "2025-04-03",
+      "Away": "Trail Blazers",
+      "Home": "Raptors",
+      "Pick": "Trail Blazers -3",
+      "Odds": "1.95",
+      "Result": "Win",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "MLB",
+      "Date": "2025-04-03",
+      "Away": "Red Sox",
+      "Home": "Orioles",
+      "Pick": "Orioles ML",
+      "Odds": "1.87",
+      "Result": "Loss",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "MLB",
+      "Date": "2025-04-03",
+      "Away": "Rockies ",
+      "Home": "Phillies",
+      "Pick": "Rockies +1.5",
+      "Odds": "2.00",
+      "Result": "Loss",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "MLB",
+      "Date": "2025-04-03",
+      "Away": "Rockies ",
+      "Home": "Phillies",
+      "Pick": "Over 9.5",
+      "Odds": "1.87",
+      "Result": "Loss",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "MLB",
+      "Date": "2025-04-02",
+      "Away": "Braves",
+      "Home": "Dodgers",
+      "Pick": "Dodgers -1.5",
+      "Odds": "1.83",
+      "Result": "Loss",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NHL",
+      "Date": "2025-04-02",
+      "Away": "Capitals",
+      "Home": "Hurricanes",
+      "Pick": "Hurricanes -1.5",
+      "Odds": "2.25",
+      "Result": "Win",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "MLB",
+      "Date": "2025-04-02",
+      "Away": "Royals",
+      "Home": "Brewers",
+      "Pick": "Brewers ML",
+      "Odds": "1.87",
+      "Result": "Win",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "MLB",
+      "Date": "2025-04-02",
+      "Away": "Nationals",
+      "Home": "Blue Jays",
+      "Pick": "Blue Jays ML",
+      "Odds": "2.00",
+      "Result": "WIn",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "MLB",
+      "Date": "2025-04-01",
+      "Away": "Braves",
+      "Home": "Dodgers",
+      "Pick": "Dodgers -1.5",
+      "Odds": "2.25",
+      "Result": "Win",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "MLB",
+      "Date": "2025-04-01",
+      "Away": "Cubs",
+      "Home": "Athletics",
+      "Pick": "Under 8.5",
+      "Odds": "1.87",
+      "Result": "Loss",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NBA",
+      "Date": "2025-04-01",
+      "Away": "Timberwolves",
+      "Home": "Nuggets",
+      "Pick": "Nuggets -3",
+      "Odds": "1.95",
+      "Result": "Loss",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "MLB",
+      "Date": "2025-04-01",
+      "Away": "Royals",
+      "Home": "Brewers",
+      "Pick": "Brewers ML",
+      "Odds": "1.87",
+      "Result": "WIn",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NHL",
+      "Date": "2025-04-01",
+      "Away": "Predators",
+      "Home": "Blue Jackets",
+      "Pick": "Blue Jackets in Regulation",
+      "Odds": "1.91",
+      "Result": "Win",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NCAAB",
+      "Date": "2025-04-01",
+      "Away": "Oregon State",
+      "Home": "UCF",
+      "Pick": "UCF -4.5",
+      "Odds": "1.95",
+      "Result": "Loss",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "MLB",
+      "Date": "2025-03-31",
+      "Away": "Braves",
+      "Home": "Dodgers",
+      "Pick": "Dodgers -1.5",
+      "Odds": "2.05",
+      "Result": "Win",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NBA",
+      "Date": "2025-03-31",
+      "Away": "Nets",
+      "Home": "Mavericks",
+      "Pick": "Nets +10",
+      "Odds": "1.95",
+      "Result": "WIn",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "MLB",
+      "Date": "2025-03-31",
+      "Away": "Nationals",
+      "Home": "Blue Jays",
+      "Pick": "Under 8.5",
+      "Odds": "1.91",
+      "Result": "Win",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NBA",
+      "Date": "2025-03-31",
+      "Away": "Heat",
+      "Home": "Wizards",
+      "Pick": "Heat -8",
+      "Odds": "1.87",
+      "Result": "Win",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "MLB",
+      "Date": "2025-03-31",
+      "Away": "Rangers",
+      "Home": "Reds",
+      "Pick": "Rangers ML",
+      "Odds": "1.91",
+      "Result": "Loss",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "MLB",
+      "Date": "2025-03-31",
+      "Away": "Twins",
+      "Home": "White Sox",
+      "Pick": "Under 8.5",
+      "Odds": "1.91",
+      "Result": "Loss",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NBA",
+      "Date": "2025-03-30",
+      "Away": "Trail Blazers",
+      "Home": "Knicks",
+      "Pick": "Trail Blazers +8.5",
+      "Odds": "1.91",
+      "Result": "Loss",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "MLB",
+      "Date": "2025-03-30",
+      "Away": "Guardians",
+      "Home": "Royals",
+      "Pick": "Under 7.5",
+      "Odds": "2.00",
+      "Result": "Loss",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "MLB",
+      "Date": "2025-03-30",
+      "Away": "Angels",
+      "Home": "White Sox",
+      "Pick": "White Sox ML",
+      "Odds": "2.15",
+      "Result": "Loss",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "MLB",
+      "Date": "2025-03-30",
+      "Away": "Rockies ",
+      "Home": "Rays",
+      "Pick": "Under 8.5",
+      "Odds": "1.87",
+      "Result": "Loss",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "MLB",
+      "Date": "2025-03-30",
+      "Away": "Phillies ",
+      "Home": "Nationals",
+      "Pick": "Nationals ML",
+      "Odds": "2.35",
+      "Result": "Win",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "MLB",
+      "Date": "2025-03-29",
+      "Away": "Guardians",
+      "Home": "Royals",
+      "Pick": "Over 8.5",
+      "Odds": "1.83",
+      "Result": "Loss",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "MLB",
+      "Date": "2025-03-29",
+      "Away": "Twins",
+      "Home": "Cardinals",
+      "Pick": "Cardinals ML",
+      "Odds": "2.05",
+      "Result": "Win",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NHL",
+      "Date": "2025-03-29",
+      "Away": "Bruins",
+      "Home": "Red Wings",
+      "Pick": "Red Wings in Regulation",
+      "Odds": "1.95",
+      "Result": "Win",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NHL",
+      "Date": "2025-03-29",
+      "Away": "Stars ",
+      "Home": "Kraken ",
+      "Pick": "Kraken ML",
+      "Odds": "2.50",
+      "Result": "Loss",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NBA",
+      "Date": "2025-03-29",
+      "Away": "Lakers",
+      "Home": "Grizzlies",
+      "Pick": "Grizzlies -2",
+      "Odds": "1.91",
+      "Result": "Loss",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NBA",
+      "Date": "2025-03-29",
+      "Away": "Pacers",
+      "Home": "Thunder",
+      "Pick": "Thunder -10",
+      "Odds": "1.95",
+      "Result": "Win",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "MLB",
+      "Date": "2025-03-28",
+      "Away": "Cubs ",
+      "Home": "Diamondbacks",
+      "Pick": "Diamondbacks ML",
+      "Odds": "1.74",
+      "Result": "Win",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "MLB",
+      "Date": "2025-03-28",
+      "Away": "Athletics",
+      "Home": "Mariners",
+      "Pick": "Athletics ML",
+      "Odds": "2.25",
+      "Result": "Win",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NHL",
+      "Date": "2025-03-28",
+      "Away": "Golden Knights",
+      "Home": "Blackhawks",
+      "Pick": "Golden Knights -1.5",
+      "Odds": "1.87",
+      "Result": "Win",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "MLB",
+      "Date": "2025-03-28",
+      "Away": "Mets",
+      "Home": "Astros",
+      "Pick": "Mets ML",
+      "Odds": "1.91",
+      "Result": "WIn",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NBA",
+      "Date": "2025-03-28",
+      "Away": "Warriors",
+      "Home": "Pelicans",
+      "Pick": "Warriors -14.5",
+      "Odds": "1.95",
+      "Result": "Win",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "MLB",
+      "Date": "2025-03-28",
+      "Away": "Orioles",
+      "Home": "Blue Jays",
+      "Pick": "Over 8.5",
+      "Odds": "1.95",
+      "Result": "Win",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NHL",
+      "Date": "2025-03-28",
+      "Away": "Canucks ",
+      "Home": "Blue Jackets",
+      "Pick": "Blue Jackets ML",
+      "Odds": "1.91",
+      "Result": "Win",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NBA",
+      "Date": "2025-03-28",
+      "Away": "Cavaliers",
+      "Home": "Pistons",
+      "Pick": "Pistons +6.5",
+      "Odds": "1.95",
+      "Result": "WIn",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "MLB",
+      "Date": "2025-03-27",
+      "Away": "Cubs",
+      "Home": "Diamondbacks",
+      "Pick": "Cubs ML",
+      "Odds": "2.20",
+      "Result": "Win",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "MLB",
+      "Date": "2025-03-27",
+      "Away": "Tigers",
+      "Home": "Dodgers",
+      "Pick": "Tigers ML",
+      "Odds": "2.45",
+      "Result": "Loss",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NHL",
+      "Date": "2025-03-27",
+      "Away": "Canadiens",
+      "Home": "Flyers",
+      "Pick": "Canadiens ML",
+      "Odds": "1.83",
+      "Result": "Loss",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "MLB",
+      "Date": "2025-03-27",
+      "Away": "Red Sox",
+      "Home": "Rangers",
+      "Pick": "Over 7.5",
+      "Odds": "1.91",
+      "Result": "Loss",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "MLB",
+      "Date": "2025-03-27",
+      "Away": "Phillies ",
+      "Home": "Nationals",
+      "Pick": "Nationals +1.5",
+      "Odds": "1.80",
+      "Result": "Loss",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "MLB",
+      "Date": "2025-03-27",
+      "Away": "Orioles",
+      "Home": "Blue Jays",
+      "Pick": "Blue Jays ML",
+      "Odds": "1.91",
+      "Result": "Loss",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "MLB",
+      "Date": "2025-03-27",
+      "Away": "Brewers",
+      "Home": "Yankees",
+      "Pick": "Brewers ML",
+      "Odds": "2.30",
+      "Result": "Loss",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NBA",
+      "Date": "2025-03-26",
+      "Away": "Bucks",
+      "Home": "Nuggets",
+      "Pick": "Nuggets -4.5",
+      "Odds": "1.91",
+      "Result": "Win",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NBA",
+      "Date": "2025-03-26",
+      "Away": "Lakers",
+      "Home": "Pacers",
+      "Pick": "Lakers ML",
+      "Odds": "1.83",
+      "Result": "Win",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NHL",
+      "Date": "2025-03-26",
+      "Away": "Bruins",
+      "Home": "Ducks",
+      "Pick": "Ducks ML",
+      "Odds": "1.87",
+      "Result": "Win",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NHL",
+      "Date": "2025-03-25",
+      "Away": "Kraken",
+      "Home": "Flames",
+      "Pick": "Kraken ML",
+      "Odds": "2.20",
+      "Result": "Loss",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NBA",
+      "Date": "2025-03-25",
+      "Away": "Thunder",
+      "Home": "Kings",
+      "Pick": "Thunder -10",
+      "Odds": "2.00",
+      "Result": "Win",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NBA",
+      "Date": "2025-03-25",
+      "Away": "Cavaliers",
+      "Home": "Trail Blazers",
+      "Pick": "Trail Blazers +6.5",
+      "Odds": "1.95",
+      "Result": "Loss",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NHL",
+      "Date": "2025-03-24",
+      "Away": "WIld",
+      "Home": "Stars",
+      "Pick": "Wild +1.5",
+      "Odds": "1.74",
+      "Result": "Loss",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NBA",
+      "Date": "2025-03-24",
+      "Away": "76ers",
+      "Home": "Pelicans",
+      "Pick": "Pelicans -6.5",
+      "Odds": "1.91",
+      "Result": "Win",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NHL",
+      "Date": "2025-03-24",
+      "Away": "Canucks",
+      "Home": "Devils",
+      "Pick": "Canucks ML",
+      "Odds": "2.35",
+      "Result": "Win",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NCAAB",
+      "Date": "2025-03-23",
+      "Away": "Oregon",
+      "Home": "Arizona",
+      "Pick": "Oregon +4",
+      "Odds": "1.91",
+      "Result": "Push",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NHL",
+      "Date": "2025-03-23",
+      "Away": "Bruins",
+      "Home": "Kings",
+      "Pick": "Kings -1.5",
+      "Odds": "2.15",
+      "Result": "Win",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NBA",
+      "Date": "2025-03-23",
+      "Away": "Thunder",
+      "Home": "Clippers",
+      "Pick": "Clippers +3.5",
+      "Odds": "2.00",
+      "Result": "Win",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NHL",
+      "Date": "2025-03-23",
+      "Away": "Hurricanes",
+      "Home": "Ducks",
+      "Pick": "Ducks ML",
+      "Odds": "2.85",
+      "Result": "Loss",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NHL",
+      "Date": "2025-03-22",
+      "Away": "Senators",
+      "Home": "Devils",
+      "Pick": "Senators ML",
+      "Odds": "2.00",
+      "Result": "Win",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NHL",
+      "Date": "2025-03-22",
+      "Away": "Hurricanes",
+      "Home": "Kings",
+      "Pick": "Under 5.5",
+      "Odds": "1.77",
+      "Result": "Loss",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NHL",
+      "Date": "2025-03-22",
+      "Away": "Flames",
+      "Home": "Islanders",
+      "Pick": "Under 5.5",
+      "Odds": "1.91",
+      "Result": "Loss",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NHL",
+      "Date": "2025-03-22",
+      "Away": "Sabres",
+      "Home": "WIld",
+      "Pick": "Under 5.5",
+      "Odds": "2.05",
+      "Result": "Win",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NBA",
+      "Date": "2025-03-21",
+      "Away": "Grizzlies",
+      "Home": "Clippers",
+      "Pick": "Clippers -6.5",
+      "Odds": "1.91",
+      "Result": "Win",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NCAAB",
+      "Date": "2025-03-21",
+      "Away": "Liberty",
+      "Home": "Oregon",
+      "Pick": "Oregon -6.5",
+      "Odds": "1.95",
+      "Result": "Win",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NCAAB",
+      "Date": "2025-03-21",
+      "Away": "Akron",
+      "Home": "Arizona",
+      "Pick": "Arizona -14.5",
+      "Odds": "1.95",
+      "Result": "Win",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NCAAB",
+      "Date": "2025-03-21",
+      "Away": "Lipscomb",
+      "Home": "Iowa State",
+      "Pick": "Iowa State -14",
+      "Odds": "1.95",
+      "Result": "Win",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NBA",
+      "Date": "2025-03-20",
+      "Away": "Bucks",
+      "Home": "Lakers",
+      "Pick": "Bucks -3.5",
+      "Odds": "1.95",
+      "Result": "Win",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NCAAB",
+      "Date": "2025-03-20",
+      "Away": "Omaha",
+      "Home": "St Johns",
+      "Pick": "St Johns -18.5",
+      "Odds": "1.95",
+      "Result": "Win",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NHL",
+      "Date": "2025-03-20",
+      "Away": "Jets",
+      "Home": "Oilers",
+      "Pick": "Jets ML",
+      "Odds": "2.10",
+      "Result": "Win",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NHL",
+      "Date": "2025-03-20",
+      "Away": "Flames",
+      "Home": "Devils",
+      "Pick": "Under 5.5",
+      "Odds": "1.83",
+      "Result": "Loss",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NHL",
+      "Date": "2025-03-20",
+      "Away": "Flames",
+      "Home": "Devils",
+      "Pick": "Flames ML",
+      "Odds": "2.55",
+      "Result": "Win",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NBA",
+      "Date": "2025-03-19",
+      "Away": "Wizards",
+      "Home": "Jazz",
+      "Pick": "Jazz -4.5",
+      "Odds": "1.91",
+      "Result": "Win",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NBA",
+      "Date": "2025-03-19",
+      "Away": "Mavericks",
+      "Home": "Pacers",
+      "Pick": "Pacers -9",
+      "Odds": "1.91",
+      "Result": "Loss",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "MLB",
+      "Date": "2025-03-19",
+      "Away": "Dodgers",
+      "Home": "Cubs",
+      "Pick": "Under 8.5",
+      "Odds": "1.87",
+      "Result": "Loss",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NBA",
+      "Date": "2025-03-18",
+      "Away": "Bucks",
+      "Home": "Warriors",
+      "Pick": "Bucks -2.5",
+      "Odds": "1.91",
+      "Result": "Loss",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NHL",
+      "Date": "2025-03-18",
+      "Away": "Utah HC",
+      "Home": "Oilers",
+      "Pick": "Utah HC ML",
+      "Odds": "2.50",
+      "Result": "Loss",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NHL",
+      "Date": "2025-03-18",
+      "Away": "Red Wings",
+      "Home": "Capitals",
+      "Pick": "Red Wings ML",
+      "Odds": "2.65",
+      "Result": "Loss",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "MLB",
+      "Date": "2025-03-18",
+      "Away": "Dodgers",
+      "Home": "Cubs",
+      "Pick": "Cubs +1.5",
+      "Odds": "1.77",
+      "Result": "Loss",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NBA",
+      "Date": "2025-03-17",
+      "Away": "Grizzlies",
+      "Home": "Kings",
+      "Pick": "Kings -2.5",
+      "Odds": "1.95",
+      "Result": "Win",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NBA",
+      "Date": "2025-03-17",
+      "Away": "76ers",
+      "Home": "Rockets",
+      "Pick": "Rockets -15",
+      "Odds": "1.91",
+      "Result": "Loss",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NBA",
+      "Date": "2025-03-17",
+      "Away": "Pistons",
+      "Home": "Pelicans",
+      "Pick": "Pistons -6.5",
+      "Odds": "1.91",
+      "Result": "Win",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NHL",
+      "Date": "2025-03-17",
+      "Away": "Flyers",
+      "Home": "Lightning",
+      "Pick": "Under 6",
+      "Odds": "1.83",
+      "Result": "Win",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NBA",
+      "Date": "2025-03-16",
+      "Away": "Hawks",
+      "Home": "Nets",
+      "Pick": "Nets +5.5",
+      "Odds": "1.95",
+      "Result": "Win",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NBA",
+      "Date": "2025-03-16",
+      "Away": "76ers",
+      "Home": "Mavericks",
+      "Pick": "Mavericks -6.5",
+      "Odds": "1.95",
+      "Result": "Loss",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NBA",
+      "Date": "2025-03-16",
+      "Away": "Magic",
+      "Home": "Cavaliers",
+      "Pick": "Magic +10.5",
+      "Odds": "1.91",
+      "Result": "Win",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NBA",
+      "Date": "2025-03-15",
+      "Away": "Wizards",
+      "Home": "Nuggets",
+      "Pick": "Wizards +13",
+      "Odds": "1.91",
+      "Result": "Win",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NBA",
+      "Date": "2025-03-15",
+      "Away": "Pelicans",
+      "Home": "Spurs",
+      "Pick": "Pelicans -4",
+      "Odds": "1.95",
+      "Result": "Loss",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NHL",
+      "Date": "2025-03-15",
+      "Away": "Blues",
+      "Home": "Wild",
+      "Pick": "Under 5.5",
+      "Odds": "1.83",
+      "Result": "Loss",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NHL",
+      "Date": "2025-03-15",
+      "Away": "Blues",
+      "Home": "Wild",
+      "Pick": "Blues ML",
+      "Odds": "2.00",
+      "Result": "Win",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NBA",
+      "Date": "2025-03-15",
+      "Away": "Bulls",
+      "Home": "Rockets",
+      "Pick": "Bulls +9",
+      "Odds": "1.91",
+      "Result": "Win",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NCAAB",
+      "Date": "2025-03-15",
+      "Away": "Creighton",
+      "Home": "San Jose State",
+      "Pick": "San Jose State -6.5",
+      "Odds": "1.95",
+      "Result": "Win",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NHL",
+      "Date": "2025-03-15",
+      "Away": "Golden Knights",
+      "Home": "Sabres",
+      "Pick": "Golden Knights in Reg",
+      "Odds": "1.91",
+      "Result": "Loss",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NHL",
+      "Date": "2025-03-14",
+      "Away": "Avalanche",
+      "Home": "Flames",
+      "Pick": "Avalanche ML",
+      "Odds": "1.91",
+      "Result": "Win",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NBA",
+      "Date": "2025-03-14",
+      "Away": "Hornets",
+      "Home": "Spurs",
+      "Pick": "Hornets +3.5",
+      "Odds": "1.91",
+      "Result": "Win",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NBA",
+      "Date": "2025-03-14",
+      "Away": "Cavaliers",
+      "Home": "Grizzlies",
+      "Pick": "Grizzlies +1.5",
+      "Odds": "2.00",
+      "Result": "Loss",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NBA",
+      "Date": "2025-03-14",
+      "Away": "Magic",
+      "Home": "Timberwolves",
+      "Pick": "Timberwolves -10.5",
+      "Odds": "2.00",
+      "Result": "Loss",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NBA",
+      "Date": "2025-03-14",
+      "Away": "Pacers",
+      "Home": "76ers",
+      "Pick": "Pacers -11.5",
+      "Odds": "1.95",
+      "Result": "Win",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NHL",
+      "Date": "2025-03-13",
+      "Away": "FLA",
+      "Home": "TOR",
+      "Pick": "FLA -110",
+      "Odds": "1.91",
+      "Result": "Win",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NHL",
+      "Date": "2025-03-13",
+      "Away": "EDM",
+      "Home": "NJ",
+      "Pick": "EDM -135",
+      "Odds": "1.74",
+      "Result": "Loss",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NCAAB",
+      "Date": "2025-03-13",
+      "Away": "DAV",
+      "Home": "SLU",
+      "Pick": "SLU -3.5 -110",
+      "Odds": "1.91",
+      "Result": "Win",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NCAAB",
+      "Date": "2025-03-13",
+      "Away": "IOWA",
+      "Home": "ILL",
+      "Pick": "ILL -10.5 -105",
+      "Odds": "1.95",
+      "Result": "Win",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NCAAB",
+      "Date": "2025-03-13",
+      "Away": "LAS",
+      "Home": "JOES",
+      "Pick": "JOES -12 -110",
+      "Odds": "1.91",
+      "Result": "Loss",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NBA",
+      "Date": "2025-03-13",
+      "Away": "LAC",
+      "Home": "MIA",
+      "Pick": "MIA -3 -110",
+      "Odds": "1.91",
+      "Result": "Loss",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NBA",
+      "Date": "2025-03-13",
+      "Away": "UTA",
+      "Home": "MEM",
+      "Pick": "UTA +12.5 -105",
+      "Odds": "1.95",
+      "Result": "Win",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NBA",
+      "Date": "2025-03-13",
+      "Away": "WAS",
+      "Home": "DET",
+      "Pick": "WAS +15 -110",
+      "Odds": "1.91",
+      "Result": "Win",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NHL",
+      "Date": "2025-03-11",
+      "Away": "TB",
+      "Home": "CAR",
+      "Pick": "TB +115",
+      "Odds": "2.15",
+      "Result": "Loss",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NBA",
+      "Date": "2025-03-11",
+      "Away": "NYK",
+      "Home": "SAC",
+      "Pick": "NYK -125",
+      "Odds": "1.80",
+      "Result": "Win",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NBA",
+      "Date": "2025-03-11",
+      "Away": "WAS",
+      "Home": "DET",
+      "Pick": "DET -15 -110",
+      "Odds": "1.91",
+      "Result": "Win",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NCAAB",
+      "Date": "2025-03-10",
+      "Away": "PEPP",
+      "Home": "SCU",
+      "Pick": "SCU -15.5 -110",
+      "Odds": "1.91",
+      "Result": "Loss",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NCAAB",
+      "Date": "2025-03-10",
+      "Away": "UST",
+      "Home": "NEOM",
+      "Pick": "UST -3.5 -110",
+      "Odds": "1.91",
+      "Result": "Loss",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NBA",
+      "Date": "2025-03-10",
+      "Away": "SAS",
+      "Home": "MIN",
+      "Pick": "MIN -10 -110",
+      "Odds": "1.91",
+      "Result": "Win",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NBA",
+      "Date": "2025-03-10",
+      "Away": "SAC",
+      "Home": "LAC",
+      "Pick": "LAC -6 -110",
+      "Odds": "1.91",
+      "Result": "Loss",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NHL",
+      "Date": "2025-03-09",
+      "Away": "DAL",
+      "Home": "EDM",
+      "Pick": "DAL +105",
+      "Odds": "2.05",
+      "Result": "Loss",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NCAAB",
+      "Date": "2025-03-09",
+      "Away": "SEA",
+      "Home": "UTU",
+      "Pick": "SEA -8 -110",
+      "Odds": "1.91",
+      "Result": "Loss",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NCAAB",
+      "Date": "2025-03-09",
+      "Away": "IOWA",
+      "Home": "NEB",
+      "Pick": "NEB -7.5 -110",
+      "Odds": "1.91",
+      "Result": "Loss",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NCAAB",
+      "Date": "2025-03-09",
+      "Away": "ORE",
+      "Home": "WASH",
+      "Pick": "ORE -7.5 +100",
+      "Odds": "2.00",
+      "Result": "Loss",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NCAAB",
+      "Date": "2025-03-09",
+      "Away": "WEB",
+      "Home": "UNCO",
+      "Pick": "UNCO -8.5 -110",
+      "Odds": "1.91",
+      "Result": "Win",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NBA",
+      "Date": "2025-03-09",
+      "Away": "NOP",
+      "Home": "HOU",
+      "Pick": "HOU -8 -105",
+      "Odds": "1.95",
+      "Result": "Win",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NBA",
+      "Date": "2025-03-09",
+      "Away": "LAL",
+      "Home": "BOS",
+      "Pick": "BOS -6.5 -110",
+      "Odds": "1.91",
+      "Result": "Win",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NBA",
+      "Date": "2025-03-09",
+      "Away": "DEN",
+      "Home": "OKC",
+      "Pick": "OKC -7.5 -105",
+      "Odds": "1.95",
+      "Result": "Win",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NBA",
+      "Date": "2025-03-09",
+      "Away": "MEM",
+      "Home": "NOP",
+      "Pick": "MEM @ NOP: o238.5 -110",
+      "Odds": "1.91",
+      "Result": "Loss",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NBA",
+      "Date": "2025-03-09",
+      "Away": "UTA",
+      "Home": "PHI",
+      "Pick": "UTA +6.5 -105",
+      "Odds": "1.95",
+      "Result": "Win",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NHL",
+      "Date": "2025-03-08",
+      "Away": "STL",
+      "Home": "ANA",
+      "Pick": "STL -140",
+      "Odds": "1.71",
+      "Result": "Win",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NHL",
+      "Date": "2025-03-08",
+      "Away": "BOS",
+      "Home": "TB",
+      "Pick": "TB -1.5 +100",
+      "Odds": "2.00",
+      "Result": "Loss",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NCAAB",
+      "Date": "2025-03-08",
+      "Away": "MER",
+      "Home": "CHAT",
+      "Pick": "CHAT -8.5 -120",
+      "Odds": "1.83",
+      "Result": "Win",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NCAAB",
+      "Date": "2025-03-08",
+      "Away": "JOES",
+      "Home": "LAS",
+      "Pick": "JOES -10 -110",
+      "Odds": "1.91",
+      "Result": "Loss",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NCAAB",
+      "Date": "2025-03-08",
+      "Away": "ARIZ",
+      "Home": "KU",
+      "Pick": "KU -3 -110",
+      "Odds": "1.91",
+      "Result": "Win",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NBA",
+      "Date": "2025-03-08",
+      "Away": "CLE",
+      "Home": "CHA",
+      "Pick": "CLE -17 +100",
+      "Odds": "2.00",
+      "Result": "Loss",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NBA",
+      "Date": "2025-03-08",
+      "Away": "UTA",
+      "Home": "TOR",
+      "Pick": "TOR -5.5 -110",
+      "Odds": "1.91",
+      "Result": "Win",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NBA",
+      "Date": "2025-03-08",
+      "Away": "MEM",
+      "Home": "DAL",
+      "Pick": "MEM -10 -115",
+      "Odds": "1.87",
+      "Result": "Win",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NBA",
+      "Date": "2025-03-08",
+      "Away": "SAS",
+      "Home": "SAC",
+      "Pick": "SAC -5.5 -110",
+      "Odds": "1.91",
+      "Result": "Win",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NBA",
+      "Date": "2025-03-08",
+      "Away": "PHX",
+      "Home": "DEN",
+      "Pick": "DEN -7.5 -110",
+      "Odds": "1.91",
+      "Result": "Win",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NHL",
+      "Date": "2025-03-07",
+      "Away": "MTL",
+      "Home": "EDM",
+      "Pick": "MTL +1.5 -115",
+      "Odds": "1.87",
+      "Result": "Win",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NCAAB",
+      "Date": "2025-03-07",
+      "Away": "UVU",
+      "Home": "AC",
+      "Pick": "UVU -3 -110",
+      "Odds": "1.91",
+      "Result": "Win",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NBA",
+      "Date": "2025-03-07",
+      "Away": "PHI",
+      "Home": "BOS",
+      "Pick": "PHI @ BOS: u222.5 -110",
+      "Odds": "1.91",
+      "Result": "Loss",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NBA",
+      "Date": "2025-03-07",
+      "Away": "PHI",
+      "Home": "BOS",
+      "Pick": "BOS -14.5 +100",
+      "Odds": "2.00",
+      "Result": "Win",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NBA",
+      "Date": "2025-03-07",
+      "Away": "IND",
+      "Home": "ATL",
+      "Pick": "IND @ ATL: o246.5 -105",
+      "Odds": "1.95",
+      "Result": "Loss",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NCAAB",
+      "Date": "2025-03-06",
+      "Away": "DAV",
+      "Home": "L-IL",
+      "Pick": "L-IL -5 -115",
+      "Odds": "1.87",
+      "Result": "Win",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NBA",
+      "Date": "2025-03-06",
+      "Away": "UTA",
+      "Home": "WAS",
+      "Pick": "UTA @ WAS: u231 -110",
+      "Odds": "1.91",
+      "Result": "Loss",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NBA",
+      "Date": "2025-03-06",
+      "Away": "DAL",
+      "Home": "MIL",
+      "Pick": "MIL -10 -110",
+      "Odds": "1.91",
+      "Result": "Win",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NBA",
+      "Date": "2025-03-06",
+      "Away": "DET",
+      "Home": "LAC",
+      "Pick": "DET -4.5 -110",
+      "Odds": "1.91",
+      "Result": "Loss",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NHL",
+      "Date": "2025-03-05",
+      "Away": "SJ",
+      "Home": "BUF",
+      "Pick": "SJ +1.5 -115",
+      "Odds": "1.87",
+      "Result": "Win",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NHL",
+      "Date": "2025-03-05",
+      "Away": "ANA",
+      "Home": "EDM",
+      "Pick": "ANA @ EDM: o6.5 +100",
+      "Odds": "2.00",
+      "Result": "Win",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NCAAB",
+      "Date": "2025-03-05",
+      "Away": "EMU",
+      "Home": "OHIO",
+      "Pick": "EMU +10.5 -105",
+      "Odds": "1.95",
+      "Result": "Win",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NBA",
+      "Date": "2025-03-05",
+      "Away": "HOU",
+      "Home": "IND",
+      "Pick": "HOU @ IND: o229.5 -110",
+      "Odds": "1.91",
+      "Result": "Loss",
+      "Stake": "2",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NBA",
+      "Date": "2025-03-05",
+      "Away": "MIL",
+      "Home": "ATL",
+      "Pick": "MIL @ ATL: u241.5 -110",
+      "Odds": "1.91",
+      "Result": "Loss",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NBA",
+      "Date": "2025-03-05",
+      "Away": "PHI",
+      "Home": "MIN",
+      "Pick": "MIN -13 -110",
+      "Odds": "1.91",
+      "Result": "Win",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NBA",
+      "Date": "2025-03-05",
+      "Away": "BKN",
+      "Home": "SAS",
+      "Pick": "BKN +4.5 -115",
+      "Odds": "1.87",
+      "Result": "Loss",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NBA",
+      "Date": "2025-03-05",
+      "Away": "NOP",
+      "Home": "LAL",
+      "Pick": "NOP @ LAL: u230.5 -110",
+      "Odds": "1.91",
+      "Result": "Loss",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NHL",
+      "Date": "2025-03-04",
+      "Away": "TB",
+      "Home": "FLA",
+      "Pick": "TB +105",
+      "Odds": "2.05",
+      "Result": "Loss",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NBA",
+      "Date": "2025-03-04",
+      "Away": "POR",
+      "Home": "PHI",
+      "Pick": "POR @ PHI: o228 -110",
+      "Odds": "1.91",
+      "Result": "Loss",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NBA",
+      "Date": "2025-03-04",
+      "Away": "WAS",
+      "Home": "MIA",
+      "Pick": "WAS +9 -110",
+      "Odds": "1.91",
+      "Result": "Loss",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NBA",
+      "Date": "2025-03-04",
+      "Away": "WAS",
+      "Home": "MIA",
+      "Pick": "WAS @ MIA: u219.5 -105",
+      "Odds": "1.95",
+      "Result": "Win",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "MLB",
+      "Date": "2022-05-03",
+      "Away": "ATL",
+      "Home": "NYM",
+      "Pick": "(Live) ATL +650",
+      "Odds": "7.50",
+      "Result": "Loss",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NBA",
+      "Date": "2025-03-04",
+      "Away": "HOU",
+      "Home": "OKC",
+      "Pick": "HOU @ OKC: o226 -110",
+      "Odds": "1.91",
+      "Result": "Win",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NBA",
+      "Date": "2025-03-04",
+      "Away": "HOU",
+      "Home": "OKC",
+      "Pick": "HOU +10.5 -110",
+      "Odds": "1.91",
+      "Result": "Win",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NBA",
+      "Date": "2025-03-04",
+      "Away": "SAC",
+      "Home": "DAL",
+      "Pick": "SAC @ DAL: u231.5 +100",
+      "Odds": "2.00",
+      "Result": "Win",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NBA",
+      "Date": "2025-03-04",
+      "Away": "DET",
+      "Home": "UTA",
+      "Pick": "DET @ UTA: o232 -105",
+      "Odds": "1.95",
+      "Result": "Win",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NBA",
+      "Date": "2025-03-03",
+      "Away": "OKC",
+      "Home": "SAS",
+      "Pick": "OKC @ SAS: u237 -110",
+      "Odds": "1.91",
+      "Result": "Loss",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NBA",
+      "Date": "2025-03-03",
+      "Away": "NOP",
+      "Home": "UTA",
+      "Pick": "NOP @ UTA: u232.5 -110",
+      "Odds": "1.91",
+      "Result": "Loss",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NBA",
+      "Date": "2025-03-03",
+      "Away": "MIN",
+      "Home": "PHX",
+      "Pick": "MIN @ PHX: o228.5 -110",
+      "Odds": "1.91",
+      "Result": "Loss",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NHL",
+      "Date": "2025-03-02",
+      "Away": "MTL",
+      "Home": "BUF",
+      "Pick": "MTL @ BUF: o6.5 +100",
+      "Odds": "2.00",
+      "Result": "Loss",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NHL",
+      "Date": "2025-03-02",
+      "Away": "NJ",
+      "Home": "UTA",
+      "Pick": "UTA +100",
+      "Odds": "2.00",
+      "Result": "Loss",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NHL",
+      "Date": "2025-03-02",
+      "Away": "VAN",
+      "Home": "SEA",
+      "Pick": "SEA -110",
+      "Odds": "1.91",
+      "Result": "Win",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NCAAB",
+      "Date": "2025-03-02",
+      "Away": "BSU",
+      "Home": "FRES",
+      "Pick": "BSU -16.5 -115",
+      "Odds": "1.87",
+      "Result": "Loss",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NCAAB",
+      "Date": "2025-03-02",
+      "Away": "PRIN",
+      "Home": "COR",
+      "Pick": "COR -4 -110",
+      "Odds": "1.91",
+      "Result": "Win",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NBA",
+      "Date": "2025-03-02",
+      "Away": "SAS",
+      "Home": "MEM",
+      "Pick": "SAS +9.5 +100",
+      "Odds": "2.00",
+      "Result": "Win",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NBA",
+      "Date": "2025-03-02",
+      "Away": "SAS",
+      "Home": "MEM",
+      "Pick": "SAS @ MEM: o241.5 -110",
+      "Odds": "1.91",
+      "Result": "Win",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NBA",
+      "Date": "2025-03-02",
+      "Away": "SAC",
+      "Home": "HOU",
+      "Pick": "SAC @ HOU: u228.5 -110",
+      "Odds": "1.91",
+      "Result": "Win",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NBA",
+      "Date": "2025-03-02",
+      "Away": "DEN",
+      "Home": "BOS",
+      "Pick": "DEN @ BOS: u236 -110",
+      "Odds": "1.91",
+      "Result": "Win",
+      "Stake": "2",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NBA",
+      "Date": "2025-03-02",
+      "Away": "POR",
+      "Home": "CLE",
+      "Pick": "POR @ CLE: o233 -110",
+      "Odds": "1.91",
+      "Result": "Win",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NBA",
+      "Date": "2025-03-02",
+      "Away": "NYK",
+      "Home": "MIA",
+      "Pick": "NYK @ MIA: u224 -110",
+      "Odds": "1.91",
+      "Result": "Loss",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NHL",
+      "Date": "2025-03-01",
+      "Away": "LA",
+      "Home": "DAL",
+      "Pick": "LA +125",
+      "Odds": "2.25",
+      "Result": "Loss",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NHL",
+      "Date": "2025-03-01",
+      "Away": "DET",
+      "Home": "CBJ",
+      "Pick": "CBJ +120",
+      "Odds": "2.20",
+      "Result": "Win",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NCAAB",
+      "Date": "2025-03-01",
+      "Away": "PENN",
+      "Home": "COR",
+      "Pick": "COR -9 -110",
+      "Odds": "1.91",
+      "Result": "Win",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NCAAB",
+      "Date": "2025-03-01",
+      "Away": "DAV",
+      "Home": "VCU",
+      "Pick": "VCU -15.5 -105",
+      "Odds": "1.95",
+      "Result": "Win",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NCAAB",
+      "Date": "2025-03-01",
+      "Away": "FUR",
+      "Home": "WOF",
+      "Pick": "FUR +3.5 -105",
+      "Odds": "1.95",
+      "Result": "Win",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NCAAB",
+      "Date": "2025-03-01",
+      "Away": "AC",
+      "Home": "UTA",
+      "Pick": "UTA -5.5 +100",
+      "Odds": "2.00",
+      "Result": "Loss",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NCAAB",
+      "Date": "2025-03-01",
+      "Away": "USC",
+      "Home": "ORE",
+      "Pick": "USC +8 -110",
+      "Odds": "1.91",
+      "Result": "Loss",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NCAAB",
+      "Date": "2025-03-01",
+      "Away": "TOL",
+      "Home": "BUFF",
+      "Pick": "TOL -6.5 -105",
+      "Odds": "1.95",
+      "Result": "Loss",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NBA",
+      "Date": "2025-03-01",
+      "Away": "CLE",
+      "Home": "BOS",
+      "Pick": "CLE +2.5 -110",
+      "Odds": "1.91",
+      "Result": "Win",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NBA",
+      "Date": "2025-03-01",
+      "Away": "NYK",
+      "Home": "MEM",
+      "Pick": "MEM -3 -115",
+      "Odds": "1.87",
+      "Result": "Loss",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NBA",
+      "Date": "2025-03-01",
+      "Away": "NOP",
+      "Home": "PHX",
+      "Pick": "NOP @ PHX: u237 -110",
+      "Odds": "1.91",
+      "Result": "Win",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NBA",
+      "Date": "2025-03-01",
+      "Away": "NOP",
+      "Home": "PHX",
+      "Pick": "PHX -5.5 -115",
+      "Odds": "1.87",
+      "Result": "Win",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NBA",
+      "Date": "2025-03-01",
+      "Away": "LAC",
+      "Home": "LAL",
+      "Pick": "LAC -3.5 -110",
+      "Odds": "1.91",
+      "Result": "Loss",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NHL",
+      "Date": "2025-02-28",
+      "Away": "NYI",
+      "Home": "BOS",
+      "Pick": "NYI -110",
+      "Odds": "1.91",
+      "Result": "Win",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NHL",
+      "Date": "2025-02-28",
+      "Away": "MIN",
+      "Home": "UTA",
+      "Pick": "UTA -140",
+      "Odds": "1.71",
+      "Result": "Win",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NCAAB",
+      "Date": "2025-02-28",
+      "Away": "RUTG",
+      "Home": "MICH",
+      "Pick": "RUTG +10.5 -110",
+      "Odds": "1.91",
+      "Result": "Win",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NCAAB",
+      "Date": "2025-02-28",
+      "Away": "USD",
+      "Home": "WSU",
+      "Pick": "USD +13.5 -110",
+      "Odds": "1.91",
+      "Result": "Win",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NCAAB",
+      "Date": "2025-02-27",
+      "Away": "PSU",
+      "Home": "IND",
+      "Pick": "IND -6 -110",
+      "Odds": "1.91",
+      "Result": "Loss",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NCAAB",
+      "Date": "2025-02-27",
+      "Away": "UTAH",
+      "Home": "ARIZ",
+      "Pick": "ARIZ -14.5 -110",
+      "Odds": "1.91",
+      "Result": "Win",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NBA",
+      "Date": "2025-02-27",
+      "Away": "POR",
+      "Home": "WAS",
+      "Pick": "POR @ WAS: o229.5 -110",
+      "Odds": "1.91",
+      "Result": "Win",
+      "Stake": "2",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NBA",
+      "Date": "2025-02-27",
+      "Away": "BOS",
+      "Home": "DET",
+      "Pick": "BOS @ DET: o225.5 -110",
+      "Odds": "1.91",
+      "Result": "Loss",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NBA",
+      "Date": "2025-02-27",
+      "Away": "TOR",
+      "Home": "IND",
+      "Pick": "TOR @ IND: u236 -110",
+      "Odds": "1.91",
+      "Result": "Win",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "MLB",
+      "Date": "2022-05-02",
+      "Away": "ATL",
+      "Home": "NYM",
+      "Pick": "ATL -109",
+      "Odds": "1.92",
+      "Result": "Win",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NBA",
+      "Date": "2025-02-27",
+      "Away": "SAC",
+      "Home": "UTA",
+      "Pick": "SAC -8.5 -110",
+      "Odds": "1.91",
+      "Result": "Win",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NHL",
+      "Date": "2025-02-26",
+      "Away": "EDM",
+      "Home": "TB",
+      "Pick": "EDM @ TB: o6 -120",
+      "Odds": "1.83",
+      "Result": "Loss",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NCAAB",
+      "Date": "2025-02-26",
+      "Away": "DUKE",
+      "Home": "MIA",
+      "Pick": "DUKE -22 -110",
+      "Odds": "1.91",
+      "Result": "Win",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NCAAB",
+      "Date": "2025-02-26",
+      "Away": "GTWN",
+      "Home": "CONN",
+      "Pick": "CONN -12 -115",
+      "Odds": "1.87",
+      "Result": "Win",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NBA",
+      "Date": "2025-02-26",
+      "Away": "CLE",
+      "Home": "ORL",
+      "Pick": "CLE @ ORL: u224.5 -110",
+      "Odds": "1.91",
+      "Result": "Win",
+      "Stake": "2",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NBA",
+      "Date": "2025-02-26",
+      "Away": "CHA",
+      "Home": "GSW",
+      "Pick": "CHA @ GSW: u223.5 -110",
+      "Odds": "1.91",
+      "Result": "Win",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NBA",
+      "Date": "2025-02-25",
+      "Away": "CHI",
+      "Home": "PHI",
+      "Pick": "CHI @ PHI: o227 -110",
+      "Odds": "1.91",
+      "Result": "Win",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NBA",
+      "Date": "2025-02-25",
+      "Away": "CHI",
+      "Home": "PHI",
+      "Pick": "PHI -4 -110",
+      "Odds": "1.91",
+      "Result": "Loss",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NBA",
+      "Date": "2025-02-25",
+      "Away": "CHA",
+      "Home": "SAC",
+      "Pick": "CHA @ SAC: u231.5 -110",
+      "Odds": "1.91",
+      "Result": "Win",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NBA",
+      "Date": "2025-02-24",
+      "Away": "SAS",
+      "Home": "NOP",
+      "Pick": "SAS @ NOP: u240 -110",
+      "Odds": "1.91",
+      "Result": "Win",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NHL",
+      "Date": "2025-02-23",
+      "Away": "ANA",
+      "Home": "BOS",
+      "Pick": "ANA +1.5 -145",
+      "Odds": "1.69",
+      "Result": "Win",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NHL",
+      "Date": "2025-02-23",
+      "Away": "VAN",
+      "Home": "VGK",
+      "Pick": "VAN @ VGK: u5.5 -105",
+      "Odds": "1.95",
+      "Result": "Win",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NHL",
+      "Date": "2025-02-23",
+      "Away": "NYR",
+      "Home": "PIT",
+      "Pick": "NYR @ PIT: o6 +100",
+      "Odds": "2.00",
+      "Result": "Win",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NCAAB",
+      "Date": "2025-02-23",
+      "Away": "UNT",
+      "Home": "USF",
+      "Pick": "USF +6 -110",
+      "Odds": "1.91",
+      "Result": "Loss",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NCAAB",
+      "Date": "2025-02-23",
+      "Away": "QUIN",
+      "Home": "MAN",
+      "Pick": "QUIN -4 -110",
+      "Odds": "1.91",
+      "Result": "Loss",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NCAAB",
+      "Date": "2025-02-23",
+      "Away": "USC",
+      "Home": "RUTG",
+      "Pick": "RUTG -3 -110",
+      "Odds": "1.91",
+      "Result": "Win",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NBA",
+      "Date": "2025-02-23",
+      "Away": "CHA",
+      "Home": "POR",
+      "Pick": "CHA +4.5 -105",
+      "Odds": "1.95",
+      "Result": "Loss",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NBA",
+      "Date": "2025-02-23",
+      "Away": "PHX",
+      "Home": "TOR",
+      "Pick": "PHX @ TOR: u228 -110",
+      "Odds": "1.91",
+      "Result": "Loss",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NHL",
+      "Date": "2025-02-22",
+      "Away": "SEA",
+      "Home": "FLA",
+      "Pick": "SEA +1.5 -120",
+      "Odds": "1.83",
+      "Result": "Win",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NCAAB",
+      "Date": "2025-02-22",
+      "Away": "CAN",
+      "Home": "MRST",
+      "Pick": "CAN +13.5 -110",
+      "Odds": "1.91",
+      "Result": "Win",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NCAAB",
+      "Date": "2025-02-22",
+      "Away": "OAK",
+      "Home": "PFW",
+      "Pick": "OAK @ PFW: o151.5 -110",
+      "Odds": "1.91",
+      "Result": "Loss",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NCAAB",
+      "Date": "2025-02-22",
+      "Away": "MSST",
+      "Home": "OKLA",
+      "Pick": "MSST -3.5 -105",
+      "Odds": "1.95",
+      "Result": "Loss",
+      "Stake": "2",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NCAAB",
+      "Date": "2025-02-22",
+      "Away": "FIU",
+      "Home": "LIB",
+      "Pick": "FIU +14.5 -110",
+      "Odds": "1.91",
+      "Result": "Win",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NCAAB",
+      "Date": "2025-02-22",
+      "Away": "WAKE",
+      "Home": "NCST",
+      "Pick": "WAKE -4 +100",
+      "Odds": "2.00",
+      "Result": "Loss",
+      "Stake": "2",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NCAAB",
+      "Date": "2025-02-22",
+      "Away": "ISU",
+      "Home": "HOU",
+      "Pick": "HOU -11.5 -110",
+      "Odds": "1.91",
+      "Result": "Loss",
+      "Stake": "2",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NCAAB",
+      "Date": "2025-02-22",
+      "Away": "CLEM",
+      "Home": "SMU",
+      "Pick": "CLEM -1.5 -105",
+      "Odds": "1.95",
+      "Result": "Win",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NCAAB",
+      "Date": "2025-02-22",
+      "Away": "UVA",
+      "Home": "UNC",
+      "Pick": "UVA +9.5 -110",
+      "Odds": "1.91",
+      "Result": "Loss",
+      "Stake": "2",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NCAAB",
+      "Date": "2025-02-22",
+      "Away": "WASH",
+      "Home": "IOWA",
+      "Pick": "IOWA -6.5 -110",
+      "Odds": "1.91",
+      "Result": "Loss",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NCAAB",
+      "Date": "2025-02-21",
+      "Away": "NMSU",
+      "Home": "JVST",
+      "Pick": "JVST -5.5 -110",
+      "Odds": "1.91",
+      "Result": "Loss",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NCAAB",
+      "Date": "2025-02-21",
+      "Away": "SUU",
+      "Home": "AC",
+      "Pick": "SUU +7.5 -105",
+      "Odds": "1.95",
+      "Result": "Loss",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NCAAB",
+      "Date": "2025-02-21",
+      "Away": "CSB",
+      "Home": "UCD",
+      "Pick": "CSB +4.5 -110",
+      "Odds": "1.91",
+      "Result": "Win",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NCAAB",
+      "Date": "2025-02-21",
+      "Away": "ORST",
+      "Home": "PEPP",
+      "Pick": "PEPP +7.5 -110",
+      "Odds": "1.91",
+      "Result": "Win",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NCAAB",
+      "Date": "2025-02-21",
+      "Away": "LMU",
+      "Home": "SCU",
+      "Pick": "SCU -12 -110",
+      "Odds": "1.91",
+      "Result": "Win",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NBA",
+      "Date": "2025-02-21",
+      "Away": "CHA",
+      "Home": "DEN",
+      "Pick": "DEN -16 -105",
+      "Odds": "1.95",
+      "Result": "Loss",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NCAAB",
+      "Date": "2025-02-20",
+      "Away": "NCST",
+      "Home": "UNC",
+      "Pick": "NCST +10 -115",
+      "Odds": "1.87",
+      "Result": "Loss",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NCAAB",
+      "Date": "2025-02-20",
+      "Away": "JOES",
+      "Home": "GW",
+      "Pick": "JOES -1.5 -110",
+      "Odds": "1.91",
+      "Result": "Win",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NCAAB",
+      "Date": "2025-02-20",
+      "Away": "GONZ",
+      "Home": "WSU",
+      "Pick": "GONZ @ WSU: u164 -110",
+      "Odds": "1.91",
+      "Result": "Win",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NCAAB",
+      "Date": "2025-02-20",
+      "Away": "MIA",
+      "Home": "FSU",
+      "Pick": "MIA +8.5 -110",
+      "Odds": "1.91",
+      "Result": "Win",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NCAAB",
+      "Date": "2025-02-20",
+      "Away": "ALA",
+      "Home": "MIZZ",
+      "Pick": "ALA @ MIZZ: u170.5 -110",
+      "Odds": "1.91",
+      "Result": "Loss",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NCAAB",
+      "Date": "2025-02-20",
+      "Away": "UNM",
+      "Home": "BSU",
+      "Pick": "BSU -2.5 -115",
+      "Odds": "1.87",
+      "Result": "Win",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NCAAB",
+      "Date": "2025-02-20",
+      "Away": "MRSH",
+      "Home": "ODU",
+      "Pick": "ODU +3 -110",
+      "Odds": "1.91",
+      "Result": "Loss",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NCAAB",
+      "Date": "2025-02-20",
+      "Away": "GASO",
+      "Home": "APP",
+      "Pick": "GASO +9 -115",
+      "Odds": "1.87",
+      "Result": "Win",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NCAAB",
+      "Date": "2025-02-19",
+      "Away": "BALL",
+      "Home": "TOL",
+      "Pick": "TOL -8 -110",
+      "Odds": "1.91",
+      "Result": "Loss",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NCAAB",
+      "Date": "2025-02-19",
+      "Away": "TNST",
+      "Home": "UTM",
+      "Pick": "UTM -3 -105",
+      "Odds": "1.95",
+      "Result": "Loss",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NCAAB",
+      "Date": "2025-02-19",
+      "Away": "HALL",
+      "Home": "MARQ",
+      "Pick": "HALL @ MARQ: o135 -110",
+      "Odds": "1.91",
+      "Result": "Win",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NCAAB",
+      "Date": "2025-02-19",
+      "Away": "MINN",
+      "Home": "UCLA",
+      "Pick": "MINN @ UCLA: u130 -110",
+      "Odds": "1.91",
+      "Result": "Win",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NCAAB",
+      "Date": "2025-02-19",
+      "Away": "RICH",
+      "Home": "LAS",
+      "Pick": "RICH @ LAS: o140 -110",
+      "Odds": "1.91",
+      "Result": "Loss",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NCAAB",
+      "Date": "2025-02-16",
+      "Away": "MSU",
+      "Home": "ILL",
+      "Pick": "ILL -5.5 -110",
+      "Odds": "1.91",
+      "Result": "Loss",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NCAAB",
+      "Date": "2025-02-16",
+      "Away": "KU",
+      "Home": "UTAH",
+      "Pick": "UTAH +6.5 -110",
+      "Odds": "1.91",
+      "Result": "Win",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NCAAB",
+      "Date": "2025-02-15",
+      "Away": "PRIN",
+      "Home": "BRWN",
+      "Pick": "PRIN -4 -115",
+      "Odds": "1.87",
+      "Result": "Loss",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NCAAB",
+      "Date": "2025-02-15",
+      "Away": "CONN",
+      "Home": "HALL",
+      "Pick": "CONN -14 -110",
+      "Odds": "1.91",
+      "Result": "Loss",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NCAAB",
+      "Date": "2025-02-15",
+      "Away": "WAKE",
+      "Home": "SMU",
+      "Pick": "SMU -7 +100",
+      "Odds": "2.00",
+      "Result": "Loss",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NCAAB",
+      "Date": "2025-02-14",
+      "Away": "APP",
+      "Home": "CCAR",
+      "Pick": "APP @ CCAR: o127.5 -110",
+      "Odds": "1.91",
+      "Result": "Loss",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NCAAB",
+      "Date": "2025-02-14",
+      "Away": "ORST",
+      "Home": "PORT",
+      "Pick": "ORST @ PORT: u146 -110",
+      "Odds": "1.91",
+      "Result": "Loss",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NCAAB",
+      "Date": "2025-02-14",
+      "Away": "UCSB",
+      "Home": "UCI",
+      "Pick": "UCSB @ UCI: o139.5 -105",
+      "Odds": "1.95",
+      "Result": "Loss",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NBA",
+      "Date": "2025-02-14",
+      "Away": "SAC",
+      "Home": "NOP",
+      "Pick": "SAC @ NOP: u236.5 -110",
+      "Odds": "1.91",
+      "Result": "Loss",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NBA",
+      "Date": "2025-02-13",
+      "Away": "CHA",
+      "Home": "ORL",
+      "Pick": "CHA @ ORL: u205 -110",
+      "Odds": "1.91",
+      "Result": "Win",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NBA",
+      "Date": "2025-02-13",
+      "Away": "IND",
+      "Home": "WAS",
+      "Pick": "WAS +9.5 -105",
+      "Odds": "1.95",
+      "Result": "Win",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NBA",
+      "Date": "2025-02-13",
+      "Away": "MIL",
+      "Home": "MIN",
+      "Pick": "MIL +6.5 -110",
+      "Odds": "1.91",
+      "Result": "Win",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NBA",
+      "Date": "2025-02-13",
+      "Away": "MIA",
+      "Home": "OKC",
+      "Pick": "OKC -13.5 -110",
+      "Odds": "1.91",
+      "Result": "Win",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NBA",
+      "Date": "2025-02-13",
+      "Away": "SAC",
+      "Home": "NOP",
+      "Pick": "SAC -4.5 -115",
+      "Odds": "1.87",
+      "Result": "Win",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NBA",
+      "Date": "2025-02-13",
+      "Away": "MIL",
+      "Home": "MIN",
+      "Pick": "MIL @ MIN: u225 -105",
+      "Odds": "1.95",
+      "Result": "Win",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NBA",
+      "Date": "2025-02-13",
+      "Away": "GSW",
+      "Home": "DAL",
+      "Pick": "GSW -5 -110",
+      "Odds": "1.91",
+      "Result": "Loss",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NCAAB",
+      "Date": "2025-02-12",
+      "Away": "FLA",
+      "Home": "MSST",
+      "Pick": "MSST +1.5 -105",
+      "Odds": "1.95",
+      "Result": "Loss",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NCAAB",
+      "Date": "2025-02-12",
+      "Away": "OHIO",
+      "Home": "BGSU",
+      "Pick": "OHIO -4.5 -110",
+      "Odds": "1.91",
+      "Result": "Win",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NCAAB",
+      "Date": "2025-02-12",
+      "Away": "EMU",
+      "Home": "BALL",
+      "Pick": "EMU +4.5 +100",
+      "Odds": "2.00",
+      "Result": "Win",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NCAAB",
+      "Date": "2025-02-12",
+      "Away": "ARIZ",
+      "Home": "KSU",
+      "Pick": "KSU +3 -110",
+      "Odds": "1.91",
+      "Result": "Win",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NCAAB",
+      "Date": "2025-02-12",
+      "Away": "DEP",
+      "Home": "MARQ",
+      "Pick": "MARQ -18.5 -110",
+      "Odds": "1.91",
+      "Result": "Loss",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NCAAB",
+      "Date": "2025-02-12",
+      "Away": "PSU",
+      "Home": "USC",
+      "Pick": "USC -4.5 -110",
+      "Odds": "1.91",
+      "Result": "Win",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NBA",
+      "Date": "2025-02-12",
+      "Away": "TOR",
+      "Home": "PHI",
+      "Pick": "PHI -8.5 -105",
+      "Odds": "1.95",
+      "Result": "Loss",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NBA",
+      "Date": "2025-02-12",
+      "Away": "MEM",
+      "Home": "PHX",
+      "Pick": "MEM -4 -110",
+      "Odds": "1.91",
+      "Result": "Win",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NBA",
+      "Date": "2025-02-12",
+      "Away": "MEM",
+      "Home": "PHX",
+      "Pick": "MEM @ PHX: o244 +100",
+      "Odds": "2.00",
+      "Result": "Loss",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NCAAB",
+      "Date": "2025-02-11",
+      "Away": "CHAR",
+      "Home": "FAU",
+      "Pick": "CHAR +12.5 -105",
+      "Odds": "1.95",
+      "Result": "Win",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NHL",
+      "Date": "2025-02-09",
+      "Away": "ANA",
+      "Home": "LA",
+      "Pick": "ANA +1.5 -110",
+      "Odds": "1.91",
+      "Result": "Win",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NFL",
+      "Date": "2025-02-09",
+      "Away": "KC",
+      "Home": "PHI",
+      "Pick": "KC -110",
+      "Odds": "1.91",
+      "Result": "Loss",
+      "Stake": "2",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NBA",
+      "Date": "2025-02-09",
+      "Away": "OKC",
+      "Home": "MEM",
+      "Pick": "OKC @ MEM: o241 -110",
+      "Odds": "1.91",
+      "Result": "Loss",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NBA",
+      "Date": "2025-02-09",
+      "Away": "NOP",
+      "Home": "SAC",
+      "Pick": "NOP +7 -105",
+      "Odds": "1.95",
+      "Result": "Win",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NBA",
+      "Date": "2025-02-09",
+      "Away": "UTA",
+      "Home": "LAC",
+      "Pick": "UTA @ LAC: u225 -110",
+      "Odds": "1.91",
+      "Result": "Loss",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NHL",
+      "Date": "2025-02-08",
+      "Away": "DAL",
+      "Home": "LA",
+      "Pick": "DAL @ LA: u5.5 -110",
+      "Odds": "1.91",
+      "Result": "Loss",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NHL",
+      "Date": "2025-02-08",
+      "Away": "VGK",
+      "Home": "BOS",
+      "Pick": "VGK -145",
+      "Odds": "1.69",
+      "Result": "Win",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NCAAB",
+      "Date": "2025-02-08",
+      "Away": "APP",
+      "Home": "OHIO",
+      "Pick": "OHIO -4.5 -110",
+      "Odds": "1.91",
+      "Result": "Loss",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NCAAB",
+      "Date": "2025-02-08",
+      "Away": "USA",
+      "Home": "AKR",
+      "Pick": "AKR -7 -105",
+      "Odds": "1.95",
+      "Result": "Win",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NCAAB",
+      "Date": "2025-02-08",
+      "Away": "MIA",
+      "Home": "LOU",
+      "Pick": "MIA +18.5 -105",
+      "Odds": "1.95",
+      "Result": "Win",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NCAAB",
+      "Date": "2025-02-08",
+      "Away": "WCU",
+      "Home": "UNCG",
+      "Pick": "WCU +14.5 -110",
+      "Odds": "1.91",
+      "Result": "Win",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NCAAB",
+      "Date": "2025-02-08",
+      "Away": "FUR",
+      "Home": "CHAT",
+      "Pick": "CHAT -4.5 -110",
+      "Odds": "1.91",
+      "Result": "Win",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NBA",
+      "Date": "2025-02-08",
+      "Away": "SAS",
+      "Home": "CHA",
+      "Pick": "SAS @ CHA: o226.5 -110",
+      "Odds": "1.91",
+      "Result": "Win",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NBA",
+      "Date": "2025-02-08",
+      "Away": "CLE",
+      "Home": "WAS",
+      "Pick": "WAS +17.5 -110",
+      "Odds": "1.91",
+      "Result": "Win",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NBA",
+      "Date": "2025-02-08",
+      "Away": "MIL",
+      "Home": "ATL",
+      "Pick": "MIL @ ATL: o240 -110",
+      "Odds": "1.91",
+      "Result": "Loss",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NBA",
+      "Date": "2025-02-08",
+      "Away": "MIA",
+      "Home": "BKN",
+      "Pick": "MIA @ BKN: u212 -110",
+      "Odds": "1.91",
+      "Result": "Win",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NBA",
+      "Date": "2025-02-08",
+      "Away": "TOR",
+      "Home": "OKC",
+      "Pick": "TOR @ OKC: o230.5 -105",
+      "Odds": "1.95",
+      "Result": "Loss",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NBA",
+      "Date": "2025-02-08",
+      "Away": "IND",
+      "Home": "LAL",
+      "Pick": "IND -3.5 -110",
+      "Odds": "1.91",
+      "Result": "Loss",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NHL",
+      "Date": "2025-02-07",
+      "Away": "WSH",
+      "Home": "PHI",
+      "Pick": "WSH @ PHI: u5.5 +100",
+      "Odds": "2.00",
+      "Result": "Loss",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NHL",
+      "Date": "2025-02-07",
+      "Away": "VGK",
+      "Home": "NJ",
+      "Pick": "VGK +100",
+      "Odds": "2.00",
+      "Result": "Win",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NHL",
+      "Date": "2025-02-07",
+      "Away": "UTA",
+      "Home": "CBJ",
+      "Pick": "UTA -135",
+      "Odds": "1.74",
+      "Result": "Win",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NHL",
+      "Date": "2025-02-07",
+      "Away": "UTA",
+      "Home": "CBJ",
+      "Pick": "UTA @ CBJ: u6 -110",
+      "Odds": "1.91",
+      "Result": "Win",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NCAAB",
+      "Date": "2025-02-07",
+      "Away": "LMU",
+      "Home": "GONZ",
+      "Pick": "GONZ -21 -110",
+      "Odds": "1.91",
+      "Result": "Loss",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NCAAB",
+      "Date": "2025-02-07",
+      "Away": "SMC",
+      "Home": "SF",
+      "Pick": "SMC -6 -105",
+      "Odds": "1.95",
+      "Result": "Loss",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NCAAB",
+      "Date": "2025-02-07",
+      "Away": "SUU",
+      "Home": "CBU",
+      "Pick": "CBU -12 -110",
+      "Odds": "1.91",
+      "Result": "Loss",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NCAAB",
+      "Date": "2025-02-06",
+      "Away": "DET",
+      "Home": "RMU",
+      "Pick": "RMU -13 -110",
+      "Odds": "1.91",
+      "Result": "Win",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NCAAB",
+      "Date": "2025-02-06",
+      "Away": "RICE",
+      "Home": "ECU",
+      "Pick": "ECU -7.5 -105",
+      "Odds": "1.95",
+      "Result": "Loss",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NCAAB",
+      "Date": "2025-02-06",
+      "Away": "NCST",
+      "Home": "CAL",
+      "Pick": "CAL -2.5 -115",
+      "Odds": "1.87",
+      "Result": "Win",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NBA",
+      "Date": "2025-02-06",
+      "Away": "MEM",
+      "Home": "TOR",
+      "Pick": "MEM -8.5 -110",
+      "Odds": "1.91",
+      "Result": "Win",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NBA",
+      "Date": "2025-02-06",
+      "Away": "NOP",
+      "Home": "DEN",
+      "Pick": "NOP @ DEN: u239.5 -110",
+      "Odds": "1.91",
+      "Result": "Loss",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NHL",
+      "Date": "2025-02-05",
+      "Away": "CAR",
+      "Home": "WPG",
+      "Pick": "CAR @ WPG: u6 -130",
+      "Odds": "1.77",
+      "Result": "Win",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NCAAB",
+      "Date": "2025-02-05",
+      "Away": "VAN",
+      "Home": "FLA",
+      "Pick": "VAN +12.5 -110",
+      "Odds": "1.91",
+      "Result": "Win",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NCAAB",
+      "Date": "2025-02-05",
+      "Away": "UK",
+      "Home": "MISS",
+      "Pick": "MISS -4 -115",
+      "Odds": "1.87",
+      "Result": "Win",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NCAAB",
+      "Date": "2025-02-05",
+      "Away": "KSU",
+      "Home": "ASU",
+      "Pick": "KSU +1.5 -110",
+      "Odds": "1.91",
+      "Result": "Win",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NBA",
+      "Date": "2025-02-05",
+      "Away": "NYK",
+      "Home": "TOR",
+      "Pick": "TOR +5.5 -105",
+      "Odds": "1.95",
+      "Result": "Loss",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NBA",
+      "Date": "2025-02-05",
+      "Away": "BOS",
+      "Home": "CLE",
+      "Pick": "BOS @ CLE: o236.5 -110",
+      "Odds": "1.91",
+      "Result": "Loss",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NBA",
+      "Date": "2025-02-05",
+      "Away": "LAL",
+      "Home": "LAC",
+      "Pick": "LAL @ LAC: o219.5 -110",
+      "Odds": "1.91",
+      "Result": "Loss",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NBA",
+      "Date": "2025-02-05",
+      "Away": "IND",
+      "Home": "POR",
+      "Pick": "IND @ POR: o232 -110",
+      "Odds": "1.91",
+      "Result": "Loss",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NCAAB",
+      "Date": "2025-02-04",
+      "Away": "UVA",
+      "Home": "PITT",
+      "Pick": "UVA @ PITT: u133.5 -110",
+      "Odds": "1.91",
+      "Result": "Win",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NCAAB",
+      "Date": "2025-02-04",
+      "Away": "NAU",
+      "Home": "WEB",
+      "Pick": "NAU @ WEB: u143.5 -110",
+      "Odds": "1.91",
+      "Result": "Loss",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NBA",
+      "Date": "2025-02-04",
+      "Away": "NOP",
+      "Home": "DEN",
+      "Pick": "NOP +12 -110",
+      "Odds": "1.91",
+      "Result": "Push",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NBA",
+      "Date": "2025-02-03",
+      "Away": "MEM",
+      "Home": "MIL",
+      "Pick": "MEM @ MIL: o244 -105",
+      "Odds": "1.95",
+      "Result": "Win",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NHL",
+      "Date": "2025-02-02",
+      "Away": "MIN",
+      "Home": "OTT",
+      "Pick": "OTT -140",
+      "Odds": "1.71",
+      "Result": "Win",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NHL",
+      "Date": "2025-02-02",
+      "Away": "PHI",
+      "Home": "COL",
+      "Pick": "PHI +1.5 -135",
+      "Odds": "1.74",
+      "Result": "Loss",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NHL",
+      "Date": "2025-02-02",
+      "Away": "MTL",
+      "Home": "ANA",
+      "Pick": "MTL @ ANA: o6 -115",
+      "Odds": "1.87",
+      "Result": "Loss",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NCAAB",
+      "Date": "2025-02-02",
+      "Away": "UVU",
+      "Home": "GC",
+      "Pick": "GC -10.5 -110",
+      "Odds": "1.91",
+      "Result": "Win",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NCAAB",
+      "Date": "2025-02-02",
+      "Away": "CONN",
+      "Home": "MARQ",
+      "Pick": "CONN +6.5 +100",
+      "Odds": "2.00",
+      "Result": "Win",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NCAAB",
+      "Date": "2025-02-02",
+      "Away": "SYR",
+      "Home": "CAL",
+      "Pick": "CAL -4.5 -110",
+      "Odds": "1.91",
+      "Result": "Loss",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NBA",
+      "Date": "2025-02-02",
+      "Away": "CHI",
+      "Home": "DET",
+      "Pick": "CHI @ DET: o233 -110",
+      "Odds": "1.91",
+      "Result": "Win",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NBA",
+      "Date": "2025-02-02",
+      "Away": "LAC",
+      "Home": "TOR",
+      "Pick": "TOR +5 -110",
+      "Odds": "1.91",
+      "Result": "Win",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NBA",
+      "Date": "2025-02-02",
+      "Away": "LAC",
+      "Home": "TOR",
+      "Pick": "LAC @ TOR: u220.5 -110",
+      "Odds": "1.91",
+      "Result": "Loss",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  },
+  {
+    "row": {
+      "League": "NBA",
+      "Date": "2025-02-02",
+      "Away": "DAL",
+      "Home": "CLE",
+      "Pick": "CLE -12.5 -110",
+      "Odds": "1.91",
+      "Result": "Win",
+      "Stake": "1",
+      "Writeup": "",
+      "Author": "",
+      "Slug": "",
+      "Summary": ""
+    },
+    "error": "",
+    "responseData": null
+  }
+]

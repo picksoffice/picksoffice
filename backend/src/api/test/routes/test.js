@@ -1,0 +1,10 @@
+module.exports = {
+    routes: [
+      {
+        method: 'GET',
+        path: '/test/email',
+        handler: 'test.sendTestEmail',
+        config: { policies: [] },
+      },
+    ],
+  };

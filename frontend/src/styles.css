@@ -1,0 +1,14 @@
+/* Utility classes for mobile-friendly buttons */
+.tap-highlight-transparent {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Additional mobile optimizations */
+@media (max-width: 640px) {
+  button, 
+  [role="button"],
+  a[href] {
+    cursor: pointer;
+    touch-action: manipulation;
+  }
+}

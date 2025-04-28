@@ -1,0 +1,14 @@
+# robots.txt file for PicksOffice
+# https://picksoffice.com/
+
+User-agent: *
+Allow: /
+
+# Disallow admin-related pages
+Disallow: /login
+Disallow: /register
+Disallow: /forgot-password
+Disallow: /reset-password
+
+# Sitemaps
+Sitemap: https://picksoffice.com/sitemap.xml
