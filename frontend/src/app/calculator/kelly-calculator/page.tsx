@@ -1,4 +1,4 @@
-import PageLayout from '../../../components/layout/PageLayoutClient'; // Ändere den Import
+import PageLayout from '@/components/layout/PageLayout';
 import KellyCalculatorClientWrapper from './page.client';
 
 export default function KellyCalculatorPage() {
