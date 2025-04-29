@@ -35,7 +35,8 @@ const calculatorTools = [
       </svg>
     )
   },
-  {
+  // Kelly Calculator temporarily removed due to build issues
+  /* {
     id: 'kelly-calculator',
     title: 'Kelly Criterion Calculator',
     description: 'Optimize your bet sizing with the Kelly Criterion formula to maximize long-term growth rate of your bankroll.',
@@ -45,7 +46,7 @@ const calculatorTools = [
         <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 18.75a60.07 60.07 0 0 1 15.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 0 1 3 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m1.5-1.5H21a.75.75 0 0 0-.75.75v.75m0 0H3.75m0 0h-.375a1.125 1.125 0 0 1-1.125-1.125V15m1.5 1.5v-.75A.75.75 0 0 0 3 15h-.75M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm3 0h.008v.008H18V10.5Zm-12 0h.008v.008H6V10.5Z" />
       </svg>
     )
-  },
+  }, */
   {
     id: 'hedging-calculator',
     title: 'Hedging Calculator',
@@ -134,7 +135,7 @@ export default function CalculatorPage() {
               <div className="rounded-xl bg-slate-800/30 backdrop-blur-sm p-6 shadow-lg border border-white/10">
                 <h3 className="text-xl font-medium mb-2 text-white">Optimize Your Strategy</h3>
                 <p className="text-gray-400">
-                  Use tools like the Kelly Calculator to determine optimal bet sizes based on your edge and bankroll.
+                  Use our advanced calculators to determine optimal bet sizes and make smarter betting decisions.
                 </p>
               </div>
               <div className="rounded-xl bg-slate-800/30 backdrop-blur-sm p-6 shadow-lg border border-white/10">
