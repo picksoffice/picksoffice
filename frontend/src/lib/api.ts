@@ -40,6 +40,7 @@ export interface StrapiError {
   };
 }
 
+// API URLs and tokens for production environment
 const STRAPI_API_URL = process.env.NEXT_PUBLIC_STRAPI_API_URL || 'http://localhost:1337';
 const STRAPI_API_TOKEN = process.env.STRAPI_API_TOKEN || '';
 
