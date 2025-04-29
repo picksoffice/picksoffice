@@ -1,0 +1,13 @@
+{
+  "name": "picksoffice-root",
+  "version": "1.0.0",
+  "description": "Root package for PicksOffice project",
+  "scripts": {
+    "install": "cd backend && npm install",
+    "build": "cd backend && npm run build",
+    "start": "cd backend && npm run start"
+  },
+  "engines": {
+    "node": ">=18.0.0 <=22.x.x"
+  }
+}
