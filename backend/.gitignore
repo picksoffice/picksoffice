@@ -129,3 +129,10 @@ dist
 build
 .strapi-updater.json
 .strapi-cloud.json
+
+data/assets/
+data/configuration/
+data/entities/
+data/links/
+data/metadata.json
+data/schemas/
