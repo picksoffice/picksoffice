@@ -9,11 +9,11 @@
   "deploy": "strapi deploy",
   "dev": "strapi develop",
   "develop": "strapi develop",
-  "start": "strapi start",
+  "start": "npm run postdeploy && strapi start",
   "strapi": "strapi",
   "upgrade": "npx @strapi/upgrade latest",
   "upgrade:dry": "npx @strapi/upgrade latest --dry",
-"postdeploy": "mkdir -p ./data && tar -xvzf ./data/export_20250429234947.tar.gz -C ./data && npm run strapi import -- --file ./data/entities/entities.jsonl"
+  "postdeploy": "mkdir -p ./data && tar -xvzf ./data/export_20250429234947.tar.gz -C ./data && npm run strapi import -- --file ./data/entities/entities.jsonl"
 },
   "dependencies": {
     "@strapi/plugin-cloud": "5.12.4",
