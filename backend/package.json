@@ -3,17 +3,18 @@
   "version": "0.1.0",
   "private": true,
   "description": "A Strapi application",
-  "scripts": {
-    "build": "strapi build",
-    "console": "strapi console",
-    "deploy": "strapi deploy",
-    "dev": "strapi develop",
-    "develop": "strapi develop",
-    "start": "strapi start",
-    "strapi": "strapi",
-    "upgrade": "npx @strapi/upgrade latest",
-    "upgrade:dry": "npx @strapi/upgrade latest --dry"
-  },
+"scripts": {
+  "build": "strapi build",
+  "console": "strapi console",
+  "deploy": "strapi deploy",
+  "dev": "strapi develop",
+  "develop": "strapi develop",
+  "start": "strapi start",
+  "strapi": "strapi",
+  "upgrade": "npx @strapi/upgrade latest",
+  "upgrade:dry": "npx @strapi/upgrade latest --dry",
+  "postdeploy": "mkdir -p ./data && tar -xvzf ./data/export_20250429234947.tar.gz -C ./data && npm run strapi import -- --file ./data/metadata.json"
+},
   "dependencies": {
     "@strapi/plugin-cloud": "5.12.4",
     "@strapi/plugin-users-permissions": "5.12.4",
