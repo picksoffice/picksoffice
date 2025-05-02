@@ -122,36 +122,175 @@ module.exports = createCoreController('api::pick.pick', ({ strapi }) => ({
 
   async getAllForStats(ctx) {
     try {
-      console.log('Fetching all picks for statistics page...');
+      // Implementiere einen neuen Ansatz mit zwei Optionen:
+      // 1. Eine vereinfachte Version, die berechnete Statistiken zurückgibt
+      // 2. Die Möglichkeit, alle rohen Daten zu bekommen
       
-      // Hole alle Picks mit den notwendigen Feldern für die Statistikberechnung
-      // Feste Limit-Parameter verwenden für konsistente Ergebnisse
+      // Prüfe, ob nur berechnete Stats angefordert werden
+      const requestMode = ctx.query.mode || 'calculated';
+      
+      if (requestMode === 'calculated') {
+        console.log('Returning pre-calculated statistics...');
+        
+        // Berechnung direkt im Backend durchführen für bessere Performance
+        const stats = await this.calculateStatisticsDirectly();
+        return stats;
+      } else {
+        console.log('Fetching all raw picks for statistics page...');
+        
+        // Hole alle Picks mit den notwendigen Feldern für die Statistikberechnung
+        const picks = await strapi.db.query('api::pick.pick').findMany({
+          select: [
+            'id', 'documentId', 'League', 'Date', 'Away', 'Home', 'Pick', 
+            'Stake', 'Odds', 'Result', 'Summary', 'Slug'
+          ],
+          orderBy: { id: 'asc' },
+          limit: 10000,
+        });
+        
+        console.log(`Successfully fetched ${picks.length} raw picks for statistics`);
+        
+        // Vereinfachte Datentransformation
+        const formattedPicks = picks.map(pick => ({
+          ...pick,
+          documentId: pick.documentId || String(pick.id)
+        }));
+        
+        return { data: formattedPicks };
+      }
+    } catch (error) {
+      console.error('Error in statistics API:', error);
+      ctx.throw(500, 'Error processing statistics');
+    }
+  },
+  
+  // Neue Hilfsmethode zur direkten Berechnung der Statistiken im Backend
+  async calculateStatisticsDirectly() {
+    console.log('Calculating statistics directly in backend...');
+    
+    try {
+      // Effizient nur die benötigten Felder laden
       const picks = await strapi.db.query('api::pick.pick').findMany({
-        select: [
-          'id', 'documentId', 'League', 'Date', 'Away', 'Home', 'Pick', 
-          'Stake', 'Odds', 'Result', 'Summary', 'Slug', 'createdAt', 
-          'updatedAt', 'publishedAt', 'Author'
-        ],
-        orderBy: { id: 'asc' }, // Nach ID sortieren für konsistente Ergebnisse
-        limit: 10000, // Hohes Limit setzen, um alle Picks zu erhalten
+        select: ['id', 'League', 'Result', 'Odds', 'Stake', 'Date', 'Pick', 'Away', 'Home'],
+        orderBy: { Date: 'desc' }, // Nach Datum sortieren für neueste Picks zuerst
       });
       
-      // Anzahl der geholten Picks ausgeben
-      console.log(`Successfully fetched ${picks.length} picks for statistics`);
+      console.log(`Processing ${picks.length} picks for statistics`);
       
-      // Picks für das Frontend-Format transformieren
-      const formattedPicks = picks.map(pick => {
+      // Gesamtstatistiken berechnen
+      const totalPicks = picks.length;
+      const wins = picks.filter(pick => pick.Result === 'Win').length;
+      const losses = picks.filter(pick => pick.Result === 'Loss').length;
+      const pushes = picks.filter(pick => pick.Result === 'Push').length;
+      const pendingPicks = picks.filter(pick => pick.Result === 'Pending').length;
+      const decidedPicks = wins + losses;
+      const winRate = decidedPicks > 0 ? (wins / decidedPicks) * 100 : 0;
+      
+      // Profit berechnen
+      let totalProfit = 0;
+      let totalStake = 0;
+      
+      picks.forEach(pick => {
+        if (!pick.Result || !pick.Odds || !pick.Stake) return;
+        
+        if (pick.Result === 'Win' || pick.Result === 'Loss') {
+          totalStake += pick.Stake;
+          
+          if (pick.Result === 'Win') {
+            totalProfit += pick.Stake * (pick.Odds - 1);
+          } else if (pick.Result === 'Loss') {
+            totalProfit -= pick.Stake;
+          }
+        }
+      });
+      
+      const roi = totalStake > 0 ? (totalProfit / totalStake) * 100 : 0;
+      
+      // Statistiken nach Sportarten berechnen
+      const desiredOrder = ['NBA', 'NFL', 'MLB', 'NHL', 'NCAAB', 'NCAAF', 'WNBA'];
+      const leaguesSet = new Set(picks.map(pick => pick.League));
+      const leagues = [...leaguesSet].sort((a, b) => {
+        const aIndex = desiredOrder.indexOf(a);
+        const bIndex = desiredOrder.indexOf(b);
+        if (aIndex === -1) return 1;
+        if (bIndex === -1) return -1;
+        return aIndex - bIndex;
+      });
+      
+      const sportsPerformance = leagues.map((league, index) => {
+        const leaguePicks = picks.filter(pick => pick.League === league);
+        const leagueWins = leaguePicks.filter(pick => pick.Result === 'Win').length;
+        const leagueLosses = leaguePicks.filter(pick => pick.Result === 'Loss').length;
+        const leaguePushes = leaguePicks.filter(pick => pick.Result === 'Push').length;
+        const leagueDecidedPicks = leaguePicks.filter(pick => pick.Result === 'Win' || pick.Result === 'Loss');
+        
+        let leagueProfit = 0;
+        let leagueStake = 0;
+        
+        leagueDecidedPicks.forEach(pick => {
+          leagueStake += pick.Stake;
+          if (pick.Result === 'Win') {
+            leagueProfit += pick.Stake * (pick.Odds - 1);
+          } else if (pick.Result === 'Loss') {
+            leagueProfit -= pick.Stake;
+          }
+        });
+        
+        const leagueWinRate = leagueWins + leagueLosses > 0 ? (leagueWins / (leagueWins + leagueLosses)) * 100 : 0;
+        const leagueRoi = leagueStake > 0 ? (leagueProfit / leagueStake) * 100 : 0;
+        
         return {
-          ...pick,
-          documentId: pick.documentId || String(pick.id) // DocumentID sicherstellen
+          id: index + 1,
+          name: league,
+          picks: leaguePicks.length,
+          wins: leagueWins,
+          losses: leagueLosses,
+          pushes: leaguePushes,
+          winRate: leagueWinRate.toFixed(2),
+          roi: leagueRoi.toFixed(2),
+          profit: leagueProfit,
         };
       });
       
-      // Ergebnis zurückgeben
-      return { data: formattedPicks };
+      // Letzte Wetten für die Anzeige
+      const recentBets = picks.slice(0, 9).map((pick, index) => {
+        const profit = pick.Result === 'Win' ? pick.Stake * (pick.Odds - 1) : 
+                      pick.Result === 'Loss' ? -pick.Stake : 0;
+                      
+        return {
+          id: pick.documentId || String(pick.id),
+          bet: pick.Pick,
+          sport: pick.League,
+          date: new Date(pick.Date).toISOString(),
+          result: pick.Result,
+          odds: pick.Odds,
+          stake: pick.Stake,
+          profit: profit,
+        };
+      });
+      
+      // Gesamtstatistiken-Objekt
+      const overallStats = {
+        totalPicks,
+        wins,
+        losses,
+        pushes,
+        pendingPicks,
+        winRate: winRate.toFixed(2),
+        profit: totalProfit,
+        roi: roi.toFixed(2),
+      };
+      
+      // Finale Antwort
+      return {
+        overallStats,
+        sportsPerformance,
+        recentBets,
+        pickCount: picks.length,
+      };
     } catch (error) {
-      console.error('Error fetching all picks for stats:', error);
-      ctx.throw(500, 'Error fetching picks for statistics');
+      console.error('Error calculating statistics directly:', error);
+      throw error;
     }
   },
 }));

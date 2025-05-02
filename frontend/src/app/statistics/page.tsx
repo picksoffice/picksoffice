@@ -101,37 +101,98 @@ const calculateSportsPerformance = (picks: Pick[]) => {
 };
 
 export default async function StatisticsPage() {
-  let picks: Pick[] = [];
+  // Standardwerte für Statistiken
   let recentStats = { totalPicks: 0, wins: 0, losses: 0, pushes: 0, winRate: '0.00', profit: 0, roi: '0.00' };
   let sportsPerformance: { id: number; name: string; picks: number; wins: number; losses: number; pushes: number; winRate: string; roi: string; profit: number }[] = [];
   let recentBets: { id: string; bet: string; sport: string; date: string; result: string; odds: number; stake: number; profit: number }[] = [];
 
   try {
-    const response = await getAllPicks();
-    picks = response.data || [];
-    
-    console.log(`Statistics: Processing ${picks.length} total picks`);
-    
-    recentStats = calculateOverallStats(picks);
-    console.log('Overall stats calculated:', recentStats);
-    
-    sportsPerformance = calculateSportsPerformance(picks);
-    console.log(`Sports performance for ${sportsPerformance.length} leagues:`, 
-      sportsPerformance.map(s => `${s.name}: ${s.wins}-${s.losses}-${s.pushes} (${s.winRate}%)`));
-    
-    // Only use the most recent 9 picks for the "Last Bets" display
-    recentBets = picks.slice(0, 9).map((pick) => ({
-      id: pick.documentId || String(pick.id),
-      bet: pick.Pick,
-      sport: pick.League,
-      date: new Date(pick.Date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }),
-      result: pick.Result,
-      odds: pick.Odds,
-      stake: pick.Stake,
-      profit: calculateProfit(pick),
-    }));
+    // Verwende den neuen Endpunkt mit vorberechneten Statistiken
+    console.log("Fetching pre-calculated statistics...");
+    const controller = new AbortController();
+    const timeoutId = setTimeout(() => controller.abort(), 30000); // 30 Sekunden Timeout
+
+    try {
+      // Verwende den mode=calculated Parameter, um vorberechnete Statistiken zu erhalten
+      const response = await fetch(
+        `${process.env.NEXT_PUBLIC_STRAPI_API_URL || 'http://localhost:1337'}/api/picks/all-for-stats?mode=calculated`, 
+        {
+          method: 'GET',
+          headers: { 'Content-Type': 'application/json' },
+          signal: controller.signal,
+          cache: 'no-store',
+          next: { revalidate: 0 }
+        }
+      );
+      
+      clearTimeout(timeoutId);
+      
+      if (response.ok) {
+        const data = await response.json();
+        console.log("Received pre-calculated statistics:", data);
+        
+        if (data.overallStats && data.sportsPerformance && data.recentBets) {
+          // Direkt die vorberechneten Statistiken verwenden
+          recentStats = {
+            totalPicks: data.overallStats.totalPicks || 0,
+            wins: data.overallStats.wins || 0,
+            losses: data.overallStats.losses || 0,
+            pushes: data.overallStats.pushes || 0,
+            winRate: data.overallStats.winRate || '0.00',
+            profit: data.overallStats.profit || 0,
+            roi: data.overallStats.roi || '0.00'
+          };
+          
+          sportsPerformance = data.sportsPerformance || [];
+          
+          // Daten für die letzten Wetten formatieren
+          recentBets = (data.recentBets || []).map((bet: any) => ({
+            id: bet.id,
+            bet: bet.bet,
+            sport: bet.sport,
+            date: new Date(bet.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }),
+            result: bet.result,
+            odds: bet.odds,
+            stake: bet.stake,
+            profit: bet.profit
+          }));
+          
+          console.log(`Successfully loaded statistics with ${recentStats.totalPicks} total picks`);
+        } else {
+          throw new Error("Invalid data structure from statistics endpoint");
+        }
+      } else {
+        throw new Error(`API error: ${response.status} ${response.statusText}`);
+      }
+    } catch (error) {
+      console.error("Error with pre-calculated statistics:", error);
+      console.log("Falling back to regular getAllPicks method");
+      
+      // Fallback: Wir holen die Daten und berechnen sie selbst
+      const rawData = await getAllPicks();
+      const picks = rawData.data || [];
+      
+      console.log(`Fallback: Processing ${picks.length} total picks`);
+      
+      recentStats = calculateOverallStats(picks);
+      console.log('Overall stats calculated:', recentStats);
+      
+      sportsPerformance = calculateSportsPerformance(picks);
+      
+      // Nur die 9 neuesten Picks für die "Last Bets" Anzeige verwenden
+      recentBets = picks.slice(0, 9).map((pick) => ({
+        id: pick.documentId || String(pick.id),
+        bet: pick.Pick,
+        sport: pick.League,
+        date: new Date(pick.Date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }),
+        result: pick.Result,
+        odds: pick.Odds,
+        stake: pick.Stake,
+        profit: calculateProfit(pick),
+      }));
+    }
   } catch (error) {
-    console.error('Error fetching picks:', error);
+    console.error('Error fetching statistics:', error);
   }
 
   return (
