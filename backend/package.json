@@ -12,8 +12,8 @@
   "start": "npm run postdeploy && NODE_OPTIONS=\"--max-old-space-size=4096\" strapi start",
   "strapi": "strapi",
   "upgrade": "npx @strapi/upgrade latest",
-  "upgrade:dry": "npx @strapi/upgrade latest --dry",
-  "postdeploy": "npm run strapi import -- --file ./data/export_20250429234947.tar.gz --force"
+  "upgrade:dry": "npx @strapi/upgrade latest --dry"
+
 },
   "dependencies": {
     "@strapi/plugin-cloud": "5.12.4",
