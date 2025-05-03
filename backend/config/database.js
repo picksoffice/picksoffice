@@ -1,4 +1,4 @@
-console.log('Using simplified database.js version 5.0');
+console.log('Using simplified database.js version 5.1');
 module.exports = ({ env }) => {
   console.log('Loading database configuration...');
   
@@ -12,7 +12,7 @@ module.exports = ({ env }) => {
       connection: env('DATABASE_URL')
         ? {
             connectionString: env('DATABASE_URL'),
-            ssl: { rejectUnauthorized: true },
+            ssl: { rejectUnauthorized: false }, // SSL-Zertifikatprüfung deaktiviert
           }
         : {
             host: env('DATABASE_HOST', 'localhost'),
@@ -21,7 +21,7 @@ module.exports = ({ env }) => {
             user: env('DATABASE_USERNAME', 'strapi'),
             password: env('DATABASE_PASSWORD', 'strapi'),
             ssl: env.bool('DATABASE_SSL', false) && {
-              rejectUnauthorized: env.bool('DATABASE_SSL_REJECT_UNAUTHORIZED', true),
+              rejectUnauthorized: false, // SSL-Zertifikatprüfung deaktiviert
             },
           },
       pool: { min: 2, max: 10 },
