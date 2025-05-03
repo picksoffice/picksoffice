@@ -8,7 +8,8 @@ module.exports = {
       path: '/picks/stats', 
       handler: 'api::pick.pick.stats',
       config: {
-        policies: [], // Öffentlicher Zugriff
+        auth: false,
+        policies: [], 
         middlewares: [],
       },
     },
@@ -17,6 +18,7 @@ module.exports = {
       path: '/picks/all-for-stats',
       handler: 'api::pick.pick.getAllForStats',
       config: {
+        auth: false,
         policies: [],
         middlewares: [],
       },

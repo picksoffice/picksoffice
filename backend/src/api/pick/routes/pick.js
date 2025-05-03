@@ -6,4 +6,22 @@
 
 const { createCoreRouter } = require('@strapi/strapi').factories;
 
-module.exports = createCoreRouter('api::pick.pick');
+// Route mit öffentlichen Berechtigungen
+const defaultRouter = createCoreRouter('api::pick.pick', {
+  config: {
+    find: {
+      policies: [],
+      middlewares: [],
+    },
+    findOne: {
+      policies: [],
+      middlewares: [],
+    },
+    count: {
+      policies: [],
+      middlewares: [],
+    },
+  }
+});
+
+module.exports = defaultRouter;
