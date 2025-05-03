@@ -14,4 +14,13 @@ module.exports = ({ env }) => ({
     nps: env.bool('FLAG_NPS', true),
     promoteEE: env.bool('FLAG_PROMOTE_EE', true),
   },
+  url: '/admin',
+  autoOpen: false,
+  auth: {
+    secret: env('ADMIN_JWT_SECRET'),
+  },
+  watchIgnoreFiles: [
+    '**/node_modules/**',
+    '**/dist/**',
+  ],
 });
