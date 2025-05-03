@@ -1,22 +1,30 @@
-console.log('Using simplified database.js version 4.0');
+console.log('Using simplified database.js version 5.0');
 module.exports = ({ env }) => {
   console.log('Loading database configuration...');
-  console.log('Environment variables:', Object.keys(env()));
-  console.log('DATABASE_URL:', env('DATABASE_URL'));
-  console.log('DATABASE_CLIENT:', env('DATABASE_CLIENT'));
+  
   if (!env('DATABASE_URL')) {
     console.error('ERROR: DATABASE_URL is not defined');
   }
-  const config = {
+  
+  return {
     connection: {
-      client: 'postgres',
-      connection: {
-        connectionString: env('DATABASE_URL'),
-        ssl: { rejectUnauthorized: true },
-      },
+      client: env('DATABASE_CLIENT', 'postgres'),
+      connection: env('DATABASE_URL')
+        ? {
+            connectionString: env('DATABASE_URL'),
+            ssl: { rejectUnauthorized: true },
+          }
+        : {
+            host: env('DATABASE_HOST', 'localhost'),
+            port: env.int('DATABASE_PORT', 5432),
+            database: env('DATABASE_NAME', 'strapi'),
+            user: env('DATABASE_USERNAME', 'strapi'),
+            password: env('DATABASE_PASSWORD', 'strapi'),
+            ssl: env.bool('DATABASE_SSL', false) && {
+              rejectUnauthorized: env.bool('DATABASE_SSL_REJECT_UNAUTHORIZED', true),
+            },
+          },
       pool: { min: 2, max: 10 },
     },
   };
-  console.log('Database config:', JSON.stringify(config, null, 2));
-  return config;
 };

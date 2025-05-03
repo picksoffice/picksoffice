@@ -30,8 +30,19 @@ export default function StatsCardHome() {
   useEffect(() => {
     const fetchStats = async () => {
       try {
+        // Fallback-Werte für die Startseite, falls die API nicht erreichbar ist
+        const defaultWinRate = 56;
+        const defaultROI = 7.5;
+
+        setStats([
+          { id: 1, name: 'Win Rate', value: `${defaultWinRate}%`, icon: <ChartBarIcon className="w-6 h-6" /> },
+          { id: 2, name: 'ROI', value: `${defaultROI}%`, icon: <ChartBarIcon className="w-6 h-6" /> },
+          { id: 3, name: 'Data Points Per Game', value: '3000+', icon: <ComputerDesktopIcon className="w-6 h-6" /> },
+          { id: 4, name: 'Years of Experience', value: '10+', icon: <AcademicCapIcon className="w-6 h-6" /> },
+        ]);
+        
         const response = await fetch(
-          `${process.env.NEXT_PUBLIC_STRAPI_API_URL || 'http://localhost:1337'}/api/picks/all-for-stats?mode=calculated`,
+          `${process.env.NEXT_PUBLIC_STRAPI_API_URL || 'https://picksoffice.onrender.com'}/api/picks/all-for-stats?mode=calculated`,
           {
             method: 'GET',
             headers: { 'Content-Type': 'application/json' },
@@ -41,17 +52,21 @@ export default function StatsCardHome() {
 
         if (response.ok) {
           const data: StatsResponse = await response.json();
-          setStats([
-            { id: 1, name: 'Win Rate', value: `${data.overallStats.winRate}%`, icon: <ChartBarIcon className="w-6 h-6" /> },
-            { id: 2, name: 'ROI', value: `${data.overallStats.roi}%`, icon: <ChartBarIcon className="w-6 h-6" /> },
-            { id: 3, name: 'Data Points Per Game', value: '3000+', icon: <ComputerDesktopIcon className="w-6 h-6" /> },
-            { id: 4, name: 'Years of Experience', value: '10+', icon: <AcademicCapIcon className="w-6 h-6" /> },
-          ]);
+          // Nur aktualisieren, wenn gültige Werte zurückgegeben werden
+          if (data.overallStats && data.overallStats.winRate && data.overallStats.roi) {
+            setStats([
+              { id: 1, name: 'Win Rate', value: `${data.overallStats.winRate}%`, icon: <ChartBarIcon className="w-6 h-6" /> },
+              { id: 2, name: 'ROI', value: `${data.overallStats.roi}%`, icon: <ChartBarIcon className="w-6 h-6" /> },
+              { id: 3, name: 'Data Points Per Game', value: '3000+', icon: <ComputerDesktopIcon className="w-6 h-6" /> },
+              { id: 4, name: 'Years of Experience', value: '10+', icon: <AcademicCapIcon className="w-6 h-6" /> },
+            ]);
+          }
         } else {
           console.error('Failed to fetch stats:', response.status, response.statusText);
         }
       } catch (error) {
         console.error('Error fetching stats:', error);
+        // Bei Fehler werden bereits die Default-Werte oben gesetzt
       }
     };
 
