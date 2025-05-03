@@ -1,10 +1,12 @@
+'use strict';
+
 // src/api/pick/routes/custom-pick.js
 module.exports = {
   routes: [
     {
       method: 'GET',
-      path: '/picks/stats',
-      handler: 'pick.calculateStats',
+      path: '/picks/stats', 
+      handler: 'api::pick.pick.stats',
       config: {
         policies: [], // Öffentlicher Zugriff
         middlewares: [],
@@ -13,7 +15,7 @@ module.exports = {
     {
       method: 'GET',
       path: '/picks/all-for-stats',
-      handler: 'pick.getAllForStats',
+      handler: 'api::pick.pick.getAllForStats',
       config: {
         policies: [],
         middlewares: [],
