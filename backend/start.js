@@ -1,4 +1,4 @@
-const strapi = require('@strapi/strapi');
+const { createStrapi } = require('@strapi/strapi');
 console.log('Custom Strapi start...');
 console.log('Node.js version:', process.version);
 console.log('Strapi version:', require('@strapi/strapi/package.json').version);
@@ -9,4 +9,11 @@ try {
 } catch (error) {
   console.error('Error loading database config:', error);
 }
-strapi({ dir: '.' }).start();
+async function start() {
+  const strapi = await createStrapi({ dir: '.' });
+  await strapi.start();
+}
+start().catch(error => {
+  console.error('Failed to start Strapi:', error);
+  process.exit(1);
+});
