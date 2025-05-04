@@ -6,19 +6,17 @@ module.exports = {
     {
       method: 'GET',
       path: '/picks/stats', 
-      handler: 'api::pick.pick.stats',
+      handler: 'pick.calculateStats',
       config: {
-        auth: false,
-        policies: [], 
+        policies: [], // Öffentlicher Zugriff
         middlewares: [],
       },
     },
     {
       method: 'GET',
       path: '/picks/all-for-stats',
-      handler: 'api::pick.pick.getAllForStats',
+      handler: 'pick.getAllForStats',
       config: {
-        auth: false,
         policies: [],
         middlewares: [],
       },
