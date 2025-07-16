@@ -36,7 +36,7 @@ export interface User {
 }
 
 export interface AuthResponse {
-  jwt: string;
+  jwt?: string; // JWT is now optional since it's in httpOnly cookie
   user: User;
 }
 
@@ -66,11 +66,11 @@ export async function login(credentials: LoginCredentials): Promise<AuthResponse
     const data = await fetchAPI<AuthResponse>('/auth/local', {
       method: 'POST',
       body: JSON.stringify(credentials),
+      credentials: 'include', // Include cookies in request
     });
 
-    // Store the JWT in localStorage
-    if (data && data.jwt) {
-      localStorage.setItem('jwt', data.jwt);
+    // Only store user data in localStorage (JWT is now in httpOnly cookie)
+    if (data && data.user) {
       localStorage.setItem('user', JSON.stringify(data.user));
     }
 
@@ -91,11 +91,11 @@ export async function register(credentials: RegisterCredentials): Promise<AuthRe
     const data = await fetchAPI<AuthResponse>('/auth/local/register', {
       method: 'POST',
       body: JSON.stringify(credentials),
+      credentials: 'include', // Include cookies in request
     });
 
-    // Store the JWT in localStorage
-    if (data && data.jwt) {
-      localStorage.setItem('jwt', data.jwt);
+    // Only store user data in localStorage (JWT is now in httpOnly cookie)
+    if (data && data.user) {
       localStorage.setItem('user', JSON.stringify(data.user));
     }
 
@@ -165,9 +165,19 @@ export async function resetPassword(credentials: ResetPasswordCredentials): Prom
 /**
  * Logs out the current user
  */
-export function logout(): void {
-  localStorage.removeItem('jwt');
-  localStorage.removeItem('user');
+export async function logout(): Promise<void> {
+  try {
+    // Call logout endpoint to clear httpOnly cookie
+    await fetchAPI('/auth/logout', {
+      method: 'POST',
+      credentials: 'include',
+    });
+  } catch (error) {
+    console.error('Logout error:', error);
+  } finally {
+    // Always clear local storage
+    localStorage.removeItem('user');
+  }
 }
 
 /**
@@ -188,11 +198,9 @@ export function getCurrentUser(): User | null {
  * @returns The JWT token or null if not available
  */
 export function getToken(): string | null {
-  if (typeof window === 'undefined') {
-    return null;
-  }
-  
-  return localStorage.getItem('jwt');
+  // JWT is now in httpOnly cookie, not accessible from JavaScript
+  // This function is deprecated but kept for compatibility
+  return null;
 }
 
 /**
@@ -200,7 +208,8 @@ export function getToken(): string | null {
  * @returns Boolean indicating if the user is authenticated
  */
 export function isAuthenticated(): boolean {
-  return !!getToken();
+  // Check if user exists in localStorage as a proxy for authentication
+  return !!getCurrentUser();
 }
 
 /**
@@ -209,13 +218,12 @@ export function isAuthenticated(): boolean {
  * @returns Fetch configuration with authorization header
  */
 export function getAuthFetchConfig(config: RequestInit = {}): RequestInit {
-  const token = getToken();
-  
+  // JWT is now sent automatically via httpOnly cookie
   return {
     ...config,
+    credentials: 'include', // Include cookies in all authenticated requests
     headers: {
       ...(config.headers || {}),
-      Authorization: `Bearer ${token}`,
     },
   };
 }

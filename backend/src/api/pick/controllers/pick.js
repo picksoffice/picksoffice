@@ -1,10 +1,79 @@
 'use strict';
 
 const { createCoreController } = require('@strapi/strapi').factories;
+const cache = require('../../../config/cache');
 
 module.exports = createCoreController('api::pick.pick', ({ strapi }) => ({
+  // Override the default find method to add pagination and filtering
+  async find(ctx) {
+    // Extract query parameters
+    const { page = 1, pageSize = 10, league, search, sort = 'Date:desc' } = ctx.query;
+    
+    // Build filters
+    const filters = {};
+    if (league && league !== 'all') {
+      filters.League = league;
+    }
+    if (search) {
+      filters.$or = [
+        { Pick: { $containsi: search } },
+        { Away: { $containsi: search } },
+        { Home: { $containsi: search } },
+      ];
+    }
+    
+    // Parse sort parameter
+    const [sortField, sortOrder] = sort.split(':');
+    const orderBy = { [sortField]: sortOrder || 'desc' };
+    
+    try {
+      // Calculate offset
+      const offset = (parseInt(page) - 1) * parseInt(pageSize);
+      
+      // Get total count for pagination
+      const total = await strapi.db.query('api::pick.pick').count({
+        where: filters,
+      });
+      
+      // Get paginated results
+      const picks = await strapi.db.query('api::pick.pick').findMany({
+        where: filters,
+        orderBy,
+        limit: parseInt(pageSize),
+        offset,
+      });
+      
+      // Calculate pagination metadata
+      const pageCount = Math.ceil(total / parseInt(pageSize));
+      
+      return {
+        data: picks,
+        meta: {
+          pagination: {
+            page: parseInt(page),
+            pageSize: parseInt(pageSize),
+            pageCount,
+            total,
+          },
+        },
+      };
+    } catch (error) {
+      console.error('Error in paginated find:', error);
+      ctx.throw(500, 'Error fetching picks');
+    }
+  },
+  
   async stats(ctx) {
     try {
+      // Check cache first
+      const cacheKey = 'stats:overall';
+      const cachedStats = cache.get(cacheKey);
+      
+      if (cachedStats) {
+        console.log('Returning cached statistics');
+        return cachedStats;
+      }
+      
       console.log('Fetching picks for statistics...');
 
       // Nur benötigte Felder laden
@@ -96,7 +165,7 @@ module.exports = createCoreController('api::pick.pick', ({ strapi }) => ({
       });
 
       // Antwort
-      return {
+      const response = {
         totalPicks: totalPicks.toString(),
         winRate: winRate.toFixed(1),
         profit: totalProfit.toFixed(2),
@@ -104,6 +173,11 @@ module.exports = createCoreController('api::pick.pick', ({ strapi }) => ({
         sportsPerformance,
         lastBets,
       };
+      
+      // Cache the response
+      cache.set(cacheKey, response);
+      
+      return response;
     } catch (error) {
       console.error('Error calculating stats:', error);
       ctx.throw(500, 'Error calculating stats');
@@ -166,6 +240,15 @@ module.exports = createCoreController('api::pick.pick', ({ strapi }) => ({
   
   // Neue Hilfsmethode zur direkten Berechnung der Statistiken im Backend
   async calculateStatisticsDirectly() {
+    // Check cache first
+    const cacheKey = 'stats:calculated';
+    const cachedStats = cache.get(cacheKey);
+    
+    if (cachedStats) {
+      console.log('Returning cached calculated statistics');
+      return cachedStats;
+    }
+    
     console.log('Calculating statistics directly in backend...');
     
     try {
@@ -282,12 +365,17 @@ module.exports = createCoreController('api::pick.pick', ({ strapi }) => ({
       };
       
       // Finale Antwort
-      return {
+      const response = {
         overallStats,
         sportsPerformance,
         recentBets,
         pickCount: picks.length,
       };
+      
+      // Cache the response
+      cache.set(cacheKey, response);
+      
+      return response;
     } catch (error) {
       console.error('Error calculating statistics directly:', error);
       throw error;

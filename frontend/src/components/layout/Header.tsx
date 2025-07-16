@@ -148,6 +148,18 @@ export default function Header() {
               <Headless.MenuItems className="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-lg bg-slate-900 py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
                 <Headless.MenuItem>
                   {({ active }) => (
+                    <Link
+                      href="/dashboard"
+                      className={`${
+                        active ? 'bg-slate-800 text-sky-300' : 'text-gray-200'
+                      } group flex w-full items-center rounded-md px-4 py-2 text-sm`}
+                    >
+                      Dashboard
+                    </Link>
+                  )}
+                </Headless.MenuItem>
+                <Headless.MenuItem>
+                  {({ active }) => (
                     <button
                       onClick={() => logout()}
                       className={`${
@@ -219,15 +231,24 @@ export default function Header() {
               </div>
               <div className="py-6">
                 {user ? (
-                  <button
-                    onClick={() => {
-                      logout();
-                      setMobileMenuOpen(false);
-                    }}
-                    className="block w-full text-left rounded-lg px-3 py-2.5 text-base font-semibold text-gray-100 hover:bg-gray-800/50"
-                  >
-                    Sign out ({user.username})
-                  </button>
+                  <>
+                    <Link
+                      href="/dashboard"
+                      onClick={() => setMobileMenuOpen(false)}
+                      className="block rounded-lg px-3 py-2.5 text-base font-semibold text-gray-100 hover:bg-gray-800/50"
+                    >
+                      Dashboard
+                    </Link>
+                    <button
+                      onClick={() => {
+                        logout();
+                        setMobileMenuOpen(false);
+                      }}
+                      className="block w-full text-left rounded-lg px-3 py-2.5 text-base font-semibold text-gray-100 hover:bg-gray-800/50 mt-2"
+                    >
+                      Sign out ({user.username})
+                    </button>
+                  </>
                 ) : (
                   <Link
                     href="/login"

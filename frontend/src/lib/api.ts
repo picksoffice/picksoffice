@@ -92,6 +92,7 @@ export async function fetchAPI<T>(
         headers,
         signal: controller.signal,
         cache: 'no-store',
+        credentials: 'include', // Always include cookies for authentication
         next: { revalidate: 0 },
       });
       

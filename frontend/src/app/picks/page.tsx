@@ -2,6 +2,7 @@
 import React from 'react';
 import BlogGrid from '@/components/common/BlogGrid';
 import { getAllPicks, StrapiResponse, Pick } from '@/lib/api';
+import PicksPageClient from './PicksPageClient';
 import {
   Pagination,
   PaginationContent,
@@ -58,14 +59,30 @@ export const metadata = {
   },
 };
 
-const createPaginationUrl = (page: number) => {
-  return `/picks?page=${page}`;
+// Revalidate this page every 5 minutes
+export const revalidate = 300;
+
+const createPaginationUrl = (page: number, searchParams: { league?: string; search?: string }) => {
+  const params = new URLSearchParams();
+  params.set('page', page.toString());
+  
+  if (searchParams.league) {
+    params.set('league', searchParams.league);
+  }
+  
+  if (searchParams.search) {
+    params.set('search', searchParams.search);
+  }
+  
+  return `/picks?${params.toString()}`;
 };
 
-export default async function PicksPage({ searchParams }: { searchParams: { page?: string, league?: string } }) {
+export default async function PicksPage({ searchParams }: { searchParams: { page?: string, league?: string, search?: string } }) {
   let posts: Post[] = [];
   const currentPage = Number(searchParams.page) || 1;
   const itemsPerPage = 9;
+  const league = searchParams.league || '';
+  const search = searchParams.search || '';
 
   try {
     console.log("Fetching picks data...");
@@ -73,10 +90,27 @@ export default async function PicksPage({ searchParams }: { searchParams: { page
     console.log(`Received picks data: ${response.data ? response.data.length : 0} items`);
     const picks = response.data || [];
 
-    const validPicks = picks.filter((pick) => {
+    let validPicks = picks.filter((pick) => {
       const contentLength = getWriteupLength(pick.Writeup);
       return contentLength >= 150 && pick.Slug;
     });
+
+    // Apply league filter
+    if (league && league !== 'all') {
+      validPicks = validPicks.filter(pick => pick.League?.toLowerCase() === league.toLowerCase());
+    }
+
+    // Apply search filter
+    if (search) {
+      const searchLower = search.toLowerCase();
+      validPicks = validPicks.filter(pick => 
+        pick.Pick?.toLowerCase().includes(searchLower) ||
+        pick.Home?.toLowerCase().includes(searchLower) ||
+        pick.Away?.toLowerCase().includes(searchLower) ||
+        pick.Summary?.toLowerCase().includes(searchLower) ||
+        pick.League?.toLowerCase().includes(searchLower)
+      );
+    }
 
     const totalItems = validPicks.length;
     const totalPages = Math.ceil(totalItems / itemsPerPage);
@@ -131,18 +165,15 @@ export default async function PicksPage({ searchParams }: { searchParams: { page
       };
     });
 
-    // Filter by league if specified in the query params
-    const league = searchParams.league?.toUpperCase();
-    const filteredPosts = league ? posts.filter(post => post.league?.toUpperCase() === league) : posts;
-
     return (
       <div className="space-y-12">
+        <PicksPageClient />
         <BlogGrid
           title="Latest Picks & Analysis"
           description="Expert predictions, betting tips, and game breakdowns"
           showViewAll={true}
           showFullGrid={true}
-          posts={filteredPosts}
+          posts={posts}
           viewAllLink="/all-picks"
         />
 
@@ -151,12 +182,12 @@ export default async function PicksPage({ searchParams }: { searchParams: { page
             <PaginationContent>
               <PaginationItem>
                 <PaginationPrevious
-                  href={currentPage > 1 ? createPaginationUrl(currentPage - 1) : undefined}
+                  href={currentPage > 1 ? createPaginationUrl(currentPage - 1, searchParams) : undefined}
                 />
               </PaginationItem>
 
               <PaginationItem>
-                <PaginationLink href={createPaginationUrl(1)} isActive={currentPage === 1}>
+                <PaginationLink href={createPaginationUrl(1, searchParams)} isActive={currentPage === 1}>
                   1
                 </PaginationLink>
               </PaginationItem>
@@ -169,7 +200,7 @@ export default async function PicksPage({ searchParams }: { searchParams: { page
 
               {currentPage > 2 && (
                 <PaginationItem>
-                  <PaginationLink href={createPaginationUrl(currentPage - 1)}>
+                  <PaginationLink href={createPaginationUrl(currentPage - 1, searchParams)}>
                     {currentPage - 1}
                   </PaginationLink>
                 </PaginationItem>
@@ -177,7 +208,7 @@ export default async function PicksPage({ searchParams }: { searchParams: { page
 
               {currentPage !== 1 && currentPage !== totalPages && (
                 <PaginationItem>
-                  <PaginationLink href={createPaginationUrl(currentPage)} isActive>
+                  <PaginationLink href={createPaginationUrl(currentPage, searchParams)} isActive>
                     {currentPage}
                   </PaginationLink>
                 </PaginationItem>
@@ -185,7 +216,7 @@ export default async function PicksPage({ searchParams }: { searchParams: { page
 
               {currentPage < totalPages - 1 && (
                 <PaginationItem>
-                  <PaginationLink href={createPaginationUrl(currentPage + 1)}>
+                  <PaginationLink href={createPaginationUrl(currentPage + 1, searchParams)}>
                     {currentPage + 1}
                   </PaginationLink>
                 </PaginationItem>
@@ -200,7 +231,7 @@ export default async function PicksPage({ searchParams }: { searchParams: { page
               {totalPages > 1 && (
                 <PaginationItem>
                   <PaginationLink
-                    href={createPaginationUrl(totalPages)}
+                    href={createPaginationUrl(totalPages, searchParams)}
                     isActive={currentPage === totalPages}
                   >
                     {totalPages}
@@ -210,7 +241,7 @@ export default async function PicksPage({ searchParams }: { searchParams: { page
 
               <PaginationItem>
                 <PaginationNext
-                  href={currentPage < totalPages ? createPaginationUrl(currentPage + 1) : undefined}
+                  href={currentPage < totalPages ? createPaginationUrl(currentPage + 1, searchParams) : undefined}
                 />
               </PaginationItem>
             </PaginationContent>

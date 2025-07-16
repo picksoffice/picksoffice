@@ -5,7 +5,8 @@
   "scripts": {
     "install": "cd backend && npm install",
     "build": "cd backend && npm run build",
-    "start": "cd backend && npm run start"
+    "start": "cd backend && npm run start",
+    "prepare": "husky"
   },
   "engines": {
     "node": ">=18.0.0 <=22.x.x"
