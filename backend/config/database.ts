@@ -7,15 +7,30 @@ module.exports = ({ env }) => {
     return process.env[key] || defaultValue;
   };
 
-  const databaseUrl = getEnv('DATABASE_URL');
+  const databaseUrl = getEnv('DATABASE_URL', '');  // Hinzugefügt: Default-Wert (z. B. '')
 
   console.log('Environment variables:', typeof env === 'function' ? 'env function exists' : 'env function missing');
   console.log('DATABASE_URL:', databaseUrl ? 'Set' : 'Not set');
 
-  if (!databaseUrl) {
-    throw new Error('DATABASE_URL is required');
+  if (!databaseUrl && process.env.NODE_ENV === 'production') {
+    throw new Error('DATABASE_URL is required in production');
   }
 
+  // Fallback für lokale Development (z. B. SQLite, um Builds zu erlauben)
+  if (!databaseUrl) {
+    return {
+      connection: {
+        client: 'sqlite',
+        connection: {
+          filename: '.tmp/data.db'  // Lokale SQLite-DB für Tests
+        },
+        useNullAsDefault: true,
+        debug: true
+      }
+    };
+  }
+
+  // Production-Config (Postgres auf Render)
   const config = {
     connection: {
       client: 'postgres',
