@@ -43,7 +43,7 @@ module.exports = ({ env }) => {
       },
       pool: {
         min: 0,  // Hinzugefügt: Erlaubt Pool-Leerung, verhindert Timeouts
-        max: 10,
+        max: 30,  // Erhöht: Render erlaubt bis 97
         acquireTimeoutMillis: 120000,  // Erhöht: 120s Timeout
         createTimeoutMillis: 60000,  // Erhöht
         destroyTimeoutMillis: 10000,  // Erhöht
