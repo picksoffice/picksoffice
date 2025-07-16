@@ -1,9 +1,10 @@
-const { createStrapi } = require('@strapi/strapi');
+const strapi = require('@strapi/strapi');
 
-createStrapi({
-  // Enable admin panel in production
+strapi({
+  dir: process.cwd(),
+  distDir: './dist',  // Explizit den kompilierten Ordner laden
   serveAdminPanel: true,
-  autoReload: false,
+  autoReload: false
 }).start()
   .then(() => {
     console.log('✅ Strapi server started successfully');

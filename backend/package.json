@@ -8,7 +8,7 @@
     "console": "strapi console",
     "deploy": "strapi deploy",
     "develop": "NODE_OPTIONS=\"--max-old-space-size=4096\" strapi develop",
-"start": "strapi start",
+"start": "node server.js",
     "start:strapi": "strapi start",
     "start:custom": "NODE_OPTIONS=\"--max-old-space-size=4096\" node start.js",
     "strapi": "strapi",
