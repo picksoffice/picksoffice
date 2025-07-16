@@ -1,14 +1,15 @@
+const winston = require('winston');
+
 module.exports = {
   level: 'debug',
   transports: [
-    {
-      type: 'console',
-      options: {
-        level: 'debug',
-        format: 'simple',
-        prettyPrint: true,
-        timestamp: true
-      }
-    }
+    new winston.transports.Console({
+      level: 'debug',
+      format: winston.format.combine(
+        winston.format.timestamp({ format: 'YYYY-MM-DD HH:mm:ss' }),
+        winston.format.simple(),
+        winston.format.prettyPrint()
+      )
+    })
   ]
 };
