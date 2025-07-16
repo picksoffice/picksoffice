@@ -1,7 +1,7 @@
 console.log('Using simplified database.js version 5.1');
 module.exports = ({ env }) => {
   console.log('Loading database configuration...');
-  console.log('Environment variables:', Object.keys(env()));
+  console.log('Environment variables:', env ? 'env function exists' : 'env function missing');
   console.log('DATABASE_URL:', env('DATABASE_URL'));
   console.log('DATABASE_CLIENT:', env('DATABASE_CLIENT'));
   if (!env('DATABASE_URL')) {
