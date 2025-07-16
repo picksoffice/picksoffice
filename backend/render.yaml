@@ -8,7 +8,7 @@ services:
     healthCheckPath: /_health
     envVars:
       - key: NODE_VERSION
-        value: 18.18.0
+        value: 20.11.0
       - key: NODE_ENV
         value: production
       - key: DATABASE_URL
@@ -21,6 +21,16 @@ services:
         generateValue: true
       - key: APP_KEYS
         generateValue: true
+      - key: API_TOKEN_SALT
+        generateValue: true
+      - key: TRANSFER_TOKEN_SALT
+        generateValue: true
+      - key: HOST
+        value: 0.0.0.0
+      - key: PORT
+        value: 10000
+      - key: CORS_ALLOWED_ORIGINS
+        value: https://picksoffice.vercel.app,https://www.picksoffice.com,http://localhost:3000
 
 databases:
   - name: picksoffice-strapi-db

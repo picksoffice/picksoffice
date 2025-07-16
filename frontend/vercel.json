@@ -1,0 +1,12 @@
+{
+  "env": {
+    "NEXT_PUBLIC_STRAPI_API_URL": "@strapi_api_url",
+    "NEXT_PUBLIC_SITE_URL": "@site_url"
+  },
+  "build": {
+    "env": {
+      "NEXT_PUBLIC_STRAPI_API_URL": "@strapi_api_url",
+      "NEXT_PUBLIC_SITE_URL": "@site_url"
+    }
+  }
+}
