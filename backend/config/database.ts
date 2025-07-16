@@ -36,6 +36,7 @@ module.exports = ({ env }) => {
       client: 'postgres',
       connection: {
         connectionString: databaseUrl,
+        keepAlive: true,  // Hinzugefügt: Verhindert Idle-Timeouts
         ssl: {
           rejectUnauthorized: false  // Für Render's self-signed Certs
         }
@@ -43,12 +44,12 @@ module.exports = ({ env }) => {
       pool: {
         min: 0,
         max: 10,
-        acquireTimeoutMillis: 60000,  // 60s Timeout
-        createTimeoutMillis: 30000,
-        destroyTimeoutMillis: 5000,
-        idleTimeoutMillis: 30000,
+        acquireTimeoutMillis: 120000,  // Erhöht: 120s Timeout
+        createTimeoutMillis: 60000,  // Erhöht
+        destroyTimeoutMillis: 10000,  // Erhöht
+        idleTimeoutMillis: 60000,  // Erhöht
         reapIntervalMillis: 1000,
-        createRetryIntervalMillis: 100
+        createRetryIntervalMillis: 200  // Erhöht
       }
     },
     debug: true  // Aktiviere für mehr DB-Logs

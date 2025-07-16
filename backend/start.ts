@@ -12,7 +12,7 @@ if (!process.env.NODE_ENV) {
 
 // Vorprüfung der Datenbankkonfiguration
 try {
-  const config = require('./config/database.ts')({ env: (key, defaultValue) => {
+  const config = require('./config/database.js')({ env: (key, defaultValue) => {
     return process.env[key] !== undefined ? process.env[key] : defaultValue;
   }});
   console.log('Database configuration loaded successfully');
