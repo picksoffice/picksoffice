@@ -1,4 +1,4 @@
-console.log('Using simplified database.js version 4.0');
+console.log('Using simplified database.js version 5.1');
 module.exports = ({ env }) => {
   console.log('Loading database configuration...');
   console.log('Environment variables:', Object.keys(env()));
