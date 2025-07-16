@@ -1,6 +1,6 @@
-const strapi = require('@strapi/strapi');
+const { createStrapi } = require('@strapi/strapi');
 
-strapi({
+createStrapi({
   // Enable admin panel in production
   serveAdminPanel: true,
   autoReload: false,
