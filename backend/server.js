@@ -1,13 +1,10 @@
 const strapi = require('@strapi/strapi');
 
-const app = strapi({
-  // Disable admin panel serving in production for better performance
-  serveAdminPanel: process.env.NODE_ENV === 'production' ? true : true,
+strapi({
+  // Enable admin panel in production
+  serveAdminPanel: true,
   autoReload: false,
-});
-
-app
-  .start()
+}).start()
   .then(() => {
     console.log('✅ Strapi server started successfully');
     console.log(`Environment: ${process.env.NODE_ENV}`);
