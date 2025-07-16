@@ -37,13 +37,11 @@ module.exports = ({ env }) => {
       connection: {
         connectionString: databaseUrl,
         keepAlive: true,  // Hinzugefügt: Verhindert Idle-Timeouts
-        ssl: {
-          rejectUnauthorized: false  // Hinzugefügt: Erlaubt self-signed Certs
-        }
+        ssl: false  // Hinzugefügt: Deaktiviert SSL für internal Connections
       },
       pool: {
         min: 0,  // Hinzugefügt: Erlaubt Pool-Leerung, verhindert Timeouts
-        max: 30,  // Erhöht: Render erlaubt bis 97
+        max: 10,
         acquireTimeoutMillis: 120000,  // Erhöht: 120s Timeout
         createTimeoutMillis: 60000,  // Erhöht
         destroyTimeoutMillis: 10000,  // Erhöht
