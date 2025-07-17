@@ -30,8 +30,8 @@ const nextConfig = {
   // Enable static generation with ISR for better performance
   experimental: {
     // Use proper experimental options
-    esmExternals: true,
-    isrMemoryCacheSize: 0, // Disable in-memory cache to use on-demand revalidation
+    esmExternals: true
+    // Removed isrMemoryCacheSize as it is deprecated/invalid in Next.js 15 and causes build error
   },
   async headers() {
     const isDev = process.env.NODE_ENV === 'development';
