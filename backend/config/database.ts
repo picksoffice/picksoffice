@@ -7,7 +7,7 @@ module.exports = ({ env }) => {
     return process.env[key] || defaultValue;
   };
 
-  const databaseUrl = getEnv('DATABASE_URL', '');
+  const databaseUrl = getEnv('DATABASE_URL', '');  // Hinzugefügt: Default-Wert (z. B. '')
 
   console.log('Environment variables:', typeof env === 'function' ? 'env function exists' : 'env function missing');
   console.log('DATABASE_URL:', databaseUrl ? 'Set' : 'Not set');
@@ -37,12 +37,10 @@ module.exports = ({ env }) => {
       connection: {
         connectionString: databaseUrl,
         keepAlive: true,  // Verhindert Idle-Timeouts
-        ssl: {
-          rejectUnauthorized: false  // Erlaubt self-signed Certs
-        }
+        ssl: false  // Deaktiviert SSL für internal Connections (private Netzwerk)
       },
       pool: {
-        min: 0,  // Erlaubt Pool-Leerung
+        min: 0,  // Erlaubt Pool-Leerung, verhindert Timeouts
         max: 10,
         acquireTimeoutMillis: 120000,  // 120s Timeout
         createTimeoutMillis: 60000,
