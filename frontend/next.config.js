@@ -1,12 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  /* config options here */
-  // Temporarily ignore TypeScript errors during build
-  // Can be removed once all type issues are fixed
   typescript: {
     ignoreBuildErrors: true,
   },
-  // Disable static optimization to ensure API routes run server-side
   images: {
     domains: ['localhost', '192.168.178.85'],
     remotePatterns: [
@@ -24,14 +20,9 @@ const nextConfig = {
       },
     ],
   },
-  // Disable React StrictMode to prevent double API calls
   reactStrictMode: false,
-  
-  // Enable static generation with ISR for better performance
   experimental: {
-    // Use proper experimental options
-    esmExternals: true
-    // Removed isrMemoryCacheSize as it is deprecated/invalid in Next.js 15 and causes build error
+    esmExternals: true,
   },
   async headers() {
     const isDev = process.env.NODE_ENV === 'development';
