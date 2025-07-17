@@ -1,13 +1,13 @@
 module.exports = ({ env }) => ({
   auth: {
-    secret: env('ADMIN_JWT_SECRET', 'ein-fallback-secret-fuer-lokal'),  // Fallback für lokal
+    secret: env('ADMIN_JWT_SECRET', 'YexWm8EstTDVcIaySkYbWA=='),  // Fallback nur lokal; generiert mit crypto
   },
   apiToken: {
-    salt: env('API_TOKEN_SALT', 'ein-generierter-fallback-salt'),  // Generiere mit crypto.randomBytes(16).toString('base64')
+    salt: env('API_TOKEN_SALT', 'qwN/iMd+NS5s6+IMuzlFwg=='),  // Fallback nur lokal; generiert mit crypto
   },
   transfer: {
     token: {
-      salt: env('TRANSFER_TOKEN_SALT', 'ein-weiterer-fallback-salt'),
+      salt: env('TRANSFER_TOKEN_SALT', 'ESIXHHZiKxINZEhACsOScA=='),  // Fallback nur lokal; generiert mit crypto
     },
   },
   flags: {
