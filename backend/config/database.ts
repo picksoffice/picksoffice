@@ -7,7 +7,7 @@ module.exports = ({ env }) => {
     return process.env[key] || defaultValue;
   };
 
-  const databaseUrl = getEnv('DATABASE_URL', '');  // Hinzugefügt: Default-Wert (z. B. '')
+  const databaseUrl = getEnv('DATABASE_URL', '');
 
   console.log('Environment variables:', typeof env === 'function' ? 'env function exists' : 'env function missing');
   console.log('DATABASE_URL:', databaseUrl ? 'Set' : 'Not set');
@@ -36,21 +36,23 @@ module.exports = ({ env }) => {
       client: 'postgres',
       connection: {
         connectionString: databaseUrl,
-        keepAlive: true,  // Hinzugefügt: Verhindert Idle-Timeouts
-        ssl: false  // Hinzugefügt: Deaktiviert SSL für internal Connections
+        keepAlive: true,  // Verhindert Idle-Timeouts
+        ssl: {
+          rejectUnauthorized: false  // Erlaubt self-signed Certs
+        }
       },
       pool: {
-        min: 0,  // Hinzugefügt: Erlaubt Pool-Leerung, verhindert Timeouts
+        min: 0,  // Erlaubt Pool-Leerung
         max: 10,
-        acquireTimeoutMillis: 120000,  // Erhöht: 120s Timeout
-        createTimeoutMillis: 60000,  // Erhöht
-        destroyTimeoutMillis: 10000,  // Erhöht
-        idleTimeoutMillis: 60000,  // Erhöht
+        acquireTimeoutMillis: 120000,  // 120s Timeout
+        createTimeoutMillis: 60000,
+        destroyTimeoutMillis: 10000,
+        idleTimeoutMillis: 60000,
         reapIntervalMillis: 1000,
-        createRetryIntervalMillis: 200  // Erhöht
+        createRetryIntervalMillis: 200
       }
     },
-    debug: true  // Aktiviere für mehr DB-Logs
+    debug: true  // Mehr DB-Logs
   };
 
   console.log('Database config loaded successfully');
