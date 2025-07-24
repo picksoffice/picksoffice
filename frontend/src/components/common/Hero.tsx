@@ -37,7 +37,7 @@ export default function Hero({
     <div className="relative isolate px-6 pt-10 lg:px-8 bg-transparent overflow-hidden">
       {/* Hero headline blob - specifically positioned behind the hero text */}
       <div
-        aria-hidden="true" 
+        aria-hidden="true"
         className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 -z-10 transform-gpu blur-3xl"
       >
         <div
@@ -60,7 +60,11 @@ export default function Hero({
             </div>
           </div>
         )}
-        <div className={title === "You deserve to Bet with an Edge" ? "text-center" : "text-left sm:text-center"}>
+        <div
+          className={
+            title === 'You deserve to Bet with an Edge' ? 'text-center' : 'text-left sm:text-center'
+          }
+        >
           <h1 className="text-balance text-5xl font-semibold tracking-tight text-white sm:text-7xl">
             {beforeEdge}
             <span className="bg-gradient-to-r from-indigo-200 to-sky-400 bg-clip-text text-transparent">
@@ -68,7 +72,9 @@ export default function Hero({
             </span>
             {afterEdge}
           </h1>
-          <p className="mt-8 text-pretty text-lg font-medium text-gray-300 sm:text-xl/8">{description}</p>
+          <p className="mt-8 text-pretty text-lg font-medium text-gray-300 sm:text-xl/8">
+            {description}
+          </p>
           <div className="mt-10 flex items-center justify-center gap-x-6 sm:justify-center">
             {primaryButtonText && (
               <Link
@@ -79,11 +85,19 @@ export default function Hero({
               </Link>
             )}
             {secondaryButtonText && (
-              <Link href={secondaryButtonLink} className="text-sm font-semibold text-white flex items-center">
+              <Link
+                href={secondaryButtonLink}
+                className="text-sm font-semibold text-white flex items-center"
+              >
                 {secondaryButtonText === 'Follow on' ? (
                   <>
                     {secondaryButtonText}
-                    <svg className="h-3.5 w-3.5 ml-1" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <svg
+                      className="h-3.5 w-3.5 ml-1"
+                      fill="currentColor"
+                      viewBox="0 0 24 24"
+                      aria-hidden="true"
+                    >
                       <path d="M13.6823 10.6218L20.2391 3H18.6854L12.9921 9.61788L8.44486 3H3.2002L10.0765 13.0074L3.2002 21H4.75404L10.7663 14.0113L15.5685 21H20.8131L13.6819 10.6218H13.6823ZM11.5541 13.0956L10.8574 12.0991L5.31391 4.16971H7.70053L12.1742 10.5689L12.8709 11.5655L18.6861 19.8835H16.2995L11.5541 13.096V13.0956Z" />
                     </svg>
                   </>

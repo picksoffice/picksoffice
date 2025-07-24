@@ -6,9 +6,9 @@ import PageLayout from '@/components/layout/PageLayout';
 // Helper function to convert American odds to decimal
 const americanToDecimal = (american: number): number => {
   if (american > 0) {
-    return Number(((american / 100) + 1).toFixed(2));
+    return Number((american / 100 + 1).toFixed(2));
   } else {
-    return Number(((-100 / american) + 1).toFixed(2));
+    return Number((-100 / american + 1).toFixed(2));
   }
 };
 
@@ -21,8 +21,13 @@ const decimalToAmerican = (decimal: number): number => {
   }
 };
 
-// Calculate hedging bet 
-const calculateHedge = (originalStake: number, originalOdds: number, hedgeOdds: number, profitTarget: number | null): {
+// Calculate hedging bet
+const calculateHedge = (
+  originalStake: number,
+  originalOdds: number,
+  hedgeOdds: number,
+  profitTarget: number | null
+): {
   hedgeStake: number;
   guaranteedProfit: number;
   roi: number;
@@ -30,10 +35,10 @@ const calculateHedge = (originalStake: number, originalOdds: number, hedgeOdds: 
 } => {
   // Original potential payout
   const originalPayout = originalStake * originalOdds;
-  
+
   let hedgeStake: number;
   let guaranteedProfit: number;
-  
+
   if (profitTarget !== null && profitTarget >= 0) {
     // Calculate hedge stake to achieve desired profit
     hedgeStake = (originalPayout - profitTarget) / hedgeOdds;
@@ -43,16 +48,16 @@ const calculateHedge = (originalStake: number, originalOdds: number, hedgeOdds: 
     hedgeStake = originalPayout / hedgeOdds;
     guaranteedProfit = originalPayout - hedgeStake;
   }
-  
+
   // Calculate ROI
   const totalStaked = originalStake + hedgeStake;
   const roi = (guaranteedProfit / totalStaked) * 100;
-  
+
   return {
     hedgeStake: hedgeStake,
     guaranteedProfit: guaranteedProfit,
     roi: roi,
-    originalPayout: originalPayout
+    originalPayout: originalPayout,
   };
 };
 
@@ -73,7 +78,7 @@ export default function HedgingCalculator() {
 
   const calculateHedgeBet = () => {
     setErrorMessage(null);
-    
+
     if (!originalStake || !originalOdds || !hedgeOdds) {
       setErrorMessage('Please enter all required fields');
       return;
@@ -83,48 +88,51 @@ export default function HedgingCalculator() {
       // Parse inputs
       const stake = parseFloat(originalStake);
       const customProfit = useCustomProfit && profitTarget ? parseFloat(profitTarget) : null;
-      
+
       if (isNaN(stake) || stake <= 0) {
         throw new Error('Stake must be a positive number');
       }
-      
+
       if (useCustomProfit && customProfit !== null && isNaN(customProfit)) {
         throw new Error('Target profit must be a number');
       }
-      
+
       // Convert odds to decimal if needed
       let decimalOriginalOdds: number;
       let decimalHedgeOdds: number;
-      
+
       if (oddsFormat === 'american') {
         const originalOddsNum = parseFloat(originalOdds);
         const hedgeOddsNum = parseFloat(hedgeOdds);
-        
+
         if (isNaN(originalOddsNum) || isNaN(hedgeOddsNum)) {
           throw new Error('Please enter valid odds');
         }
-        
+
         decimalOriginalOdds = americanToDecimal(originalOddsNum);
         decimalHedgeOdds = americanToDecimal(hedgeOddsNum);
       } else {
         decimalOriginalOdds = parseFloat(originalOdds);
         decimalHedgeOdds = parseFloat(hedgeOdds);
-        
-        if (isNaN(decimalOriginalOdds) || isNaN(decimalHedgeOdds) || 
-            decimalOriginalOdds < 1 || decimalHedgeOdds < 1) {
+
+        if (
+          isNaN(decimalOriginalOdds) ||
+          isNaN(decimalHedgeOdds) ||
+          decimalOriginalOdds < 1 ||
+          decimalHedgeOdds < 1
+        ) {
           throw new Error('Decimal odds must be 1.00 or greater');
         }
       }
-      
+
       // Calculate hedge bet
       const result = calculateHedge(stake, decimalOriginalOdds, decimalHedgeOdds, customProfit);
       setHedgeResult({
         hedgeStake: parseFloat(result.hedgeStake.toFixed(2)),
         guaranteedProfit: parseFloat(result.guaranteedProfit.toFixed(2)),
         roi: parseFloat(result.roi.toFixed(2)),
-        originalPayout: parseFloat(result.originalPayout.toFixed(2))
+        originalPayout: parseFloat(result.originalPayout.toFixed(2)),
       });
-      
     } catch (error) {
       setErrorMessage((error as Error).message || 'An error occurred during calculation');
       setHedgeResult(null);
@@ -147,20 +155,31 @@ export default function HedgingCalculator() {
             className="aspect-[1108/632] w-[40rem] bg-gradient-to-r from-[#80caff] to-[#4f46e5] opacity-15"
           />
         </div>
-        
+
         <div className="py-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
           <div className="mb-10">
             <div className="flex items-center gap-2 mb-4">
               <a href="/calculator" className="text-sky-300 hover:text-sky-400 transition-colors">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18" />
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth={1.5}
+                  stroke="currentColor"
+                  className="w-5 h-5"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18"
+                  />
                 </svg>
               </a>
               <h1 className="text-4xl font-bold tracking-tight">Hedging Calculator</h1>
             </div>
             <p className="text-lg text-gray-400 max-w-3xl">
-              Calculate how to hedge your existing bet to guarantee a profit or minimize potential losses. 
-              This calculator helps you determine the optimal stake for your hedge bet.
+              Calculate how to hedge your existing bet to guarantee a profit or minimize potential
+              losses. This calculator helps you determine the optimal stake for your hedge bet.
             </p>
           </div>
 
@@ -168,27 +187,29 @@ export default function HedgingCalculator() {
             <div className="md:col-span-2">
               <div className="rounded-2xl bg-slate-800/30 backdrop-blur-sm p-6 shadow-lg border border-white/10 ring-1 ring-white/10">
                 <h2 className="text-xl font-semibold mb-6">Hedging Calculator</h2>
-                
+
                 <div className="mb-6">
-                  <label className="block text-sm font-medium text-gray-300 mb-2">Odds Format</label>
+                  <label className="block text-sm font-medium text-gray-300 mb-2">
+                    Odds Format
+                  </label>
                   <div className="grid grid-cols-2 gap-3 max-w-xs">
-                    <button 
+                    <button
                       type="button"
                       onClick={() => setOddsFormat('american')}
                       className={`px-3 py-2 text-sm font-medium rounded-md ${
-                        oddsFormat === 'american' 
-                          ? 'bg-sky-800 text-white' 
+                        oddsFormat === 'american'
+                          ? 'bg-sky-800 text-white'
                           : 'bg-slate-700/50 text-gray-300 hover:bg-slate-700'
                       }`}
                     >
                       American
                     </button>
-                    <button 
+                    <button
                       type="button"
                       onClick={() => setOddsFormat('decimal')}
                       className={`px-3 py-2 text-sm font-medium rounded-md ${
-                        oddsFormat === 'decimal' 
-                          ? 'bg-sky-800 text-white' 
+                        oddsFormat === 'decimal'
+                          ? 'bg-sky-800 text-white'
                           : 'bg-slate-700/50 text-gray-300 hover:bg-slate-700'
                       }`}
                     >
@@ -196,71 +217,80 @@ export default function HedgingCalculator() {
                     </button>
                   </div>
                 </div>
-                
+
                 <div className="mb-6">
                   <h3 className="text-base font-medium text-white mb-3">Original Bet Details</h3>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
-                      <label htmlFor="original-stake" className="block text-sm font-medium text-gray-300 mb-1">
+                      <label
+                        htmlFor="original-stake"
+                        className="block text-sm font-medium text-gray-300 mb-1"
+                      >
                         Original Stake ($)
                       </label>
                       <input
                         id="original-stake"
                         type="text"
                         value={originalStake}
-                        onChange={(e) => setOriginalStake(e.target.value)}
+                        onChange={e => setOriginalStake(e.target.value)}
                         placeholder="e.g., 100"
                         className="w-full bg-slate-800 border-slate-700 rounded-md py-2 px-3 text-white placeholder-gray-500 focus:ring-sky-500 focus:border-sky-500"
                       />
                     </div>
-                    
+
                     <div>
-                      <label htmlFor="original-odds" className="block text-sm font-medium text-gray-300 mb-1">
+                      <label
+                        htmlFor="original-odds"
+                        className="block text-sm font-medium text-gray-300 mb-1"
+                      >
                         Original Odds
                       </label>
                       <input
                         id="original-odds"
                         type="text"
                         value={originalOdds}
-                        onChange={(e) => setOriginalOdds(e.target.value)}
-                        placeholder={oddsFormat === 'american' ? "e.g., +150" : "e.g., 2.50"}
+                        onChange={e => setOriginalOdds(e.target.value)}
+                        placeholder={oddsFormat === 'american' ? 'e.g., +150' : 'e.g., 2.50'}
                         className="w-full bg-slate-800 border-slate-700 rounded-md py-2 px-3 text-white placeholder-gray-500 focus:ring-sky-500 focus:border-sky-500"
                       />
                     </div>
                   </div>
                 </div>
-                
+
                 <div className="mb-6">
                   <h3 className="text-base font-medium text-white mb-3">Hedge Bet Details</h3>
                   <div>
-                    <label htmlFor="hedge-odds" className="block text-sm font-medium text-gray-300 mb-1">
+                    <label
+                      htmlFor="hedge-odds"
+                      className="block text-sm font-medium text-gray-300 mb-1"
+                    >
                       Hedge Odds
                     </label>
                     <input
                       id="hedge-odds"
                       type="text"
                       value={hedgeOdds}
-                      onChange={(e) => setHedgeOdds(e.target.value)}
-                      placeholder={oddsFormat === 'american' ? "e.g., -110" : "e.g., 1.91"}
+                      onChange={e => setHedgeOdds(e.target.value)}
+                      placeholder={oddsFormat === 'american' ? 'e.g., -110' : 'e.g., 1.91'}
                       className="w-full sm:w-1/2 bg-slate-800 border-slate-700 rounded-md py-2 px-3 text-white placeholder-gray-500 focus:ring-sky-500 focus:border-sky-500"
                     />
                   </div>
                 </div>
-                
+
                 <div className="mb-6">
                   <div className="flex items-center mb-2">
                     <input
                       id="custom-profit"
                       type="checkbox"
                       checked={useCustomProfit}
-                      onChange={(e) => setUseCustomProfit(e.target.checked)}
+                      onChange={e => setUseCustomProfit(e.target.checked)}
                       className="h-4 w-4 rounded border-gray-600 bg-slate-800 text-sky-600 focus:ring-sky-500"
                     />
                     <label htmlFor="custom-profit" className="ml-2 block text-sm text-gray-300">
                       Set Target Profit (Optional)
                     </label>
                   </div>
-                  
+
                   {useCustomProfit && (
                     <div className="mt-2">
                       <div className="max-w-xs">
@@ -273,14 +303,15 @@ export default function HedgingCalculator() {
                             name="profit-target"
                             id="profit-target"
                             value={profitTarget}
-                            onChange={(e) => setProfitTarget(e.target.value)}
+                            onChange={e => setProfitTarget(e.target.value)}
                             className="block w-full rounded-md border-0 bg-slate-800 py-1.5 pl-7 pr-12 text-white placeholder:text-gray-500 focus:ring-1 focus:ring-sky-500 sm:text-sm sm:leading-6"
                             placeholder="Target profit"
                           />
                         </div>
                       </div>
                       <p className="mt-1 text-xs text-gray-400">
-                        Enter how much profit you want to lock in. Leave empty for maximum balanced profit.
+                        Enter how much profit you want to lock in. Leave empty for maximum balanced
+                        profit.
                       </p>
                     </div>
                   )}
@@ -305,34 +336,40 @@ export default function HedgingCalculator() {
                     <h3 className="text-lg font-medium mb-4">Hedge Results</h3>
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-6">
                       <div>
-                        <div className="text-sm text-gray-400 mb-1">Original Bet Potential Payout</div>
+                        <div className="text-sm text-gray-400 mb-1">
+                          Original Bet Potential Payout
+                        </div>
                         <div className="text-xl font-semibold text-white">
                           ${hedgeResult.originalPayout}
                         </div>
                       </div>
-                      
+
                       <div>
                         <div className="text-sm text-gray-400 mb-1">Hedge Bet Amount</div>
                         <div className="text-xl font-semibold text-emerald-400">
                           ${hedgeResult.hedgeStake}
                         </div>
-                        <div className="text-xs text-gray-500 mt-1">This is how much to bet on the opposite outcome</div>
+                        <div className="text-xs text-gray-500 mt-1">
+                          This is how much to bet on the opposite outcome
+                        </div>
                       </div>
-                      
+
                       <div>
                         <div className="text-sm text-gray-400 mb-1">Guaranteed Profit</div>
                         <div className="text-xl font-semibold text-emerald-400">
                           ${hedgeResult.guaranteedProfit}
                         </div>
-                        <div className="text-xs text-gray-500 mt-1">You'll win this amount regardless of outcome</div>
+                        <div className="text-xs text-gray-500 mt-1">
+                          You'll win this amount regardless of outcome
+                        </div>
                       </div>
-                      
+
                       <div>
                         <div className="text-sm text-gray-400 mb-1">ROI on Total Risk</div>
-                        <div className="text-xl font-semibold text-white">
-                          {hedgeResult.roi}%
+                        <div className="text-xl font-semibold text-white">{hedgeResult.roi}%</div>
+                        <div className="text-xs text-gray-500 mt-1">
+                          Return on investment across both bets
                         </div>
-                        <div className="text-xs text-gray-500 mt-1">Return on investment across both bets</div>
                       </div>
                     </div>
                   </div>
@@ -343,11 +380,12 @@ export default function HedgingCalculator() {
             <div>
               <div className="rounded-2xl bg-slate-800/30 backdrop-blur-sm p-6 shadow-lg border border-white/10 ring-1 ring-white/10">
                 <h2 className="text-xl font-semibold mb-4">When to Hedge Your Bets</h2>
-                
+
                 <p className="text-sm text-gray-400 mb-4">
-                  Hedging is a strategy where you place a second bet against your original wager to guarantee a profit or minimize losses.
+                  Hedging is a strategy where you place a second bet against your original wager to
+                  guarantee a profit or minimize losses.
                 </p>
-                
+
                 <h3 className="font-medium text-sky-300 mt-4">Good Times to Hedge</h3>
                 <ul className="text-sm text-gray-400 mt-1 space-y-2">
                   <li>• When your original bet has gained significant value</li>
@@ -355,36 +393,43 @@ export default function HedgingCalculator() {
                   <li>• When odds have shifted dramatically in your favor</li>
                   <li>• To secure profit in a volatile market</li>
                 </ul>
-                
+
                 <h3 className="font-medium text-sky-300 mt-4">Downsides of Hedging</h3>
                 <ul className="text-sm text-gray-400 mt-1 space-y-2">
                   <li>• Reduces your maximum potential profit</li>
                   <li>• Increases total amount risked</li>
                   <li>• Can be inefficient if not calculated properly</li>
                 </ul>
-                
+
                 <div className="mt-4 p-3 bg-sky-900/30 border border-sky-500/20 rounded-md">
                   <h3 className="font-medium text-sky-300 mb-1">Pro Tip</h3>
                   <p className="text-sm text-gray-300">
-                    The larger the odds change since your original bet, the more profitable your hedge can be. Perfect for futures bets that have gained value over time.
+                    The larger the odds change since your original bet, the more profitable your
+                    hedge can be. Perfect for futures bets that have gained value over time.
                   </p>
                 </div>
               </div>
-              
+
               <div className="mt-6 rounded-2xl bg-slate-800/30 backdrop-blur-sm p-6 shadow-lg border border-white/10 ring-1 ring-white/10">
                 <h2 className="text-xl font-semibold mb-4">Hedging Examples</h2>
-                
+
                 <div className="text-sm text-gray-400 space-y-4">
                   <p>
-                    <span className="text-white">Playoff Futures:</span> You bet $100 on a team to win the championship at +1000 before the season. They reach the finals and are now +150. You can hedge to guarantee profit.
+                    <span className="text-white">Playoff Futures:</span> You bet $100 on a team to
+                    win the championship at +1000 before the season. They reach the finals and are
+                    now +150. You can hedge to guarantee profit.
                   </p>
-                  
+
                   <p>
-                    <span className="text-white">Live Betting:</span> You bet $100 on the underdog at +250 pre-game. They take an early lead and their opponent is now +200. A hedge bet locks in profit.
+                    <span className="text-white">Live Betting:</span> You bet $100 on the underdog
+                    at +250 pre-game. They take an early lead and their opponent is now +200. A
+                    hedge bet locks in profit.
                   </p>
-                  
+
                   <p>
-                    <span className="text-white">Parlay Final Leg:</span> You have a $50 parlay with a $1,000 payout riding on the final game. Hedging can ensure you walk away with some profit.
+                    <span className="text-white">Parlay Final Leg:</span> You have a $50 parlay with
+                    a $1,000 payout riding on the final game. Hedging can ensure you walk away with
+                    some profit.
                   </p>
                 </div>
               </div>
@@ -393,29 +438,39 @@ export default function HedgingCalculator() {
 
           <div className="mt-12">
             <h2 className="text-2xl font-semibold mb-6">Smart Hedging Strategies</h2>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <div className="rounded-xl bg-slate-800/30 backdrop-blur-sm p-6 shadow-lg border border-white/10">
-                <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-sky-800 text-white mb-4">1</div>
+                <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-sky-800 text-white mb-4">
+                  1
+                </div>
                 <h3 className="text-xl font-medium mb-2">Partial Hedges</h3>
                 <p className="text-gray-400">
-                  Instead of hedging for equal profit, consider a partial hedge where you guarantee some profit while maintaining upside potential if your original bet wins.
+                  Instead of hedging for equal profit, consider a partial hedge where you guarantee
+                  some profit while maintaining upside potential if your original bet wins.
                 </p>
               </div>
-              
+
               <div className="rounded-xl bg-slate-800/30 backdrop-blur-sm p-6 shadow-lg border border-white/10">
-                <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-sky-800 text-white mb-4">2</div>
+                <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-sky-800 text-white mb-4">
+                  2
+                </div>
                 <h3 className="text-xl font-medium mb-2">Shop for the Best Odds</h3>
                 <p className="text-gray-400">
-                  When hedging, small differences in odds can significantly impact your guaranteed profit. Compare odds across multiple sportsbooks to maximize your return.
+                  When hedging, small differences in odds can significantly impact your guaranteed
+                  profit. Compare odds across multiple sportsbooks to maximize your return.
                 </p>
               </div>
-              
+
               <div className="rounded-xl bg-slate-800/30 backdrop-blur-sm p-6 shadow-lg border border-white/10">
-                <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-sky-800 text-white mb-4">3</div>
+                <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-sky-800 text-white mb-4">
+                  3
+                </div>
                 <h3 className="text-xl font-medium mb-2">Consider the Vig</h3>
                 <p className="text-gray-400">
-                  Remember that the bookmaker's margin (vig) affects hedging efficiency. The lower the combined vig between your original and hedge bets, the better your guaranteed profit will be.
+                  Remember that the bookmaker's margin (vig) affects hedging efficiency. The lower
+                  the combined vig between your original and hedge bets, the better your guaranteed
+                  profit will be.
                 </p>
               </div>
             </div>

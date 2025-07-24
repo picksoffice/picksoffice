@@ -15,11 +15,13 @@ Aktuell zeigt die Anwendung Buttons für die Anmeldung mit Apple, Google und X (
 Für jeden Provider benötigst du Client-ID und Client-Secret:
 
 #### Apple
+
 1. Registriere deine App im [Apple Developer Portal](https://developer.apple.com)
 2. Erstelle einen "Services ID" und konfiguriere "Sign In with Apple"
 3. Stelle sicher, dass du die Redirect-URL korrekt einstellst: `http://localhost:1337/api/connect/apple/callback`
 
 #### Google
+
 1. Gehe zur [Google Cloud Console](https://console.cloud.google.com/)
 2. Erstelle ein neues Projekt oder nutze ein bestehendes
 3. Navigiere zu "APIs & Services" > "Credentials"
@@ -27,6 +29,7 @@ Für jeden Provider benötigst du Client-ID und Client-Secret:
 5. Füge als autorisierte Redirect-URI hinzu: `http://localhost:1337/api/connect/google/callback`
 
 #### X (Twitter)
+
 1. Gehe zum [Twitter Developer Portal](https://developer.twitter.com/)
 2. Erstelle eine neue App
 3. Konfiguriere die OAuth-Einstellungen
@@ -48,7 +51,7 @@ module.exports = ({ env }) => ({
         from: 'noreply@picksoffice.com',
         replyTo: 'noreply@picksoffice.com',
         emailTemplate: 'reset-password',
-        baseUrl: 'http://localhost:3000'
+        baseUrl: 'http://localhost:3000',
       },
       providers: {
         apple: {
@@ -103,25 +106,25 @@ Erstelle eine neue Datei `/frontend/src/app/api/auth/[provider]/callback/route.t
 ```typescript
 import { NextRequest, NextResponse } from 'next/server';
 
-export async function GET(
-  request: NextRequest,
-  { params }: { params: { provider: string } }
-) {
+export async function GET(request: NextRequest, { params }: { params: { provider: string } }) {
   const { searchParams } = new URL(request.url);
   const accessToken = searchParams.get('access_token');
-  
+
   if (!accessToken) {
     return NextResponse.redirect(new URL('/login?error=Social login failed', request.url));
   }
 
   // Token aus dem Social-Provider an Strapi senden
   try {
-    const response = await fetch(`${process.env.NEXT_PUBLIC_STRAPI_API_URL}/api/auth/${params.provider}/callback?access_token=${accessToken}`, {
-      method: 'GET',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-    });
+    const response = await fetch(
+      `${process.env.NEXT_PUBLIC_STRAPI_API_URL}/api/auth/${params.provider}/callback?access_token=${accessToken}`,
+      {
+        method: 'GET',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      }
+    );
 
     if (!response.ok) {
       throw new Error('Failed to authenticate');
@@ -158,9 +161,9 @@ Für `login-form.tsx`:
 import { socialLogin } from '@/lib/auth';
 
 // Dann die Buttons aktualisieren:
-<Button 
-  variant="secondary" 
-  className="w-full flex items-center justify-center py-2.5" 
+<Button
+  variant="secondary"
+  className="w-full flex items-center justify-center py-2.5"
   type="button"
   onClick={() => socialLogin('apple')}
 >
@@ -171,7 +174,7 @@ import { socialLogin } from '@/lib/auth';
     />
   </svg>
   <span className="sr-only">Login with Apple</span>
-</Button>
+</Button>;
 ```
 
 Mache dasselbe für die Google- und Twitter-Buttons mit dem entsprechenden Provider-Parameter.
@@ -186,15 +189,18 @@ Mache dasselbe für die Google- und Twitter-Buttons mit dem entsprechenden Provi
 ## 4. Zusätzliche Anmerkungen
 
 ### Produktionsumgebung
+
 - In der Produktionsumgebung müssen die Callback-URLs aktualisiert werden, um auf die Live-Domain zu verweisen
 - Verwende Umgebungsvariablen für Client-IDs und Secrets
 
 ### Sicherheitsüberlegungen
+
 - Verwende sichere HTTP-Only-Cookies für die JWT-Speicherung
 - Implementiere CSRF-Schutz
 - Validiere Benutzerprofile nach der Anmeldung
 
 ### Datenschutz
+
 - Stelle sicher, dass deine Datenschutzrichtlinien die Nutzung von Social-Login abdecken
 - Informiere Benutzer, welche Daten von sozialen Netzwerken erfasst werden
 

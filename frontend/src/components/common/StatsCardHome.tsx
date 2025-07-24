@@ -20,8 +20,18 @@ interface StatsResponse {
 const defaultStats: Stat[] = [
   { id: 1, name: 'Win Rate', value: '0%', icon: <ChartBarIcon className="w-6 h-6" /> },
   { id: 2, name: 'ROI', value: '0%', icon: <ChartBarIcon className="w-6 h-6" /> },
-  { id: 3, name: 'Data Points Per Game', value: '3000+', icon: <ComputerDesktopIcon className="w-6 h-6" /> },
-  { id: 4, name: 'Years of Experience', value: '10+', icon: <AcademicCapIcon className="w-6 h-6" /> },
+  {
+    id: 3,
+    name: 'Data Points Per Game',
+    value: '3000+',
+    icon: <ComputerDesktopIcon className="w-6 h-6" />,
+  },
+  {
+    id: 4,
+    name: 'Years of Experience',
+    value: '10+',
+    icon: <AcademicCapIcon className="w-6 h-6" />,
+  },
 ];
 
 export default function StatsCardHome() {
@@ -35,12 +45,32 @@ export default function StatsCardHome() {
         const defaultROI = 7.5;
 
         setStats([
-          { id: 1, name: 'Win Rate', value: `${defaultWinRate}%`, icon: <ChartBarIcon className="w-6 h-6" /> },
-          { id: 2, name: 'ROI', value: `${defaultROI}%`, icon: <ChartBarIcon className="w-6 h-6" /> },
-          { id: 3, name: 'Data Points Per Game', value: '3000+', icon: <ComputerDesktopIcon className="w-6 h-6" /> },
-          { id: 4, name: 'Years of Experience', value: '10+', icon: <AcademicCapIcon className="w-6 h-6" /> },
+          {
+            id: 1,
+            name: 'Win Rate',
+            value: `${defaultWinRate}%`,
+            icon: <ChartBarIcon className="w-6 h-6" />,
+          },
+          {
+            id: 2,
+            name: 'ROI',
+            value: `${defaultROI}%`,
+            icon: <ChartBarIcon className="w-6 h-6" />,
+          },
+          {
+            id: 3,
+            name: 'Data Points Per Game',
+            value: '3000+',
+            icon: <ComputerDesktopIcon className="w-6 h-6" />,
+          },
+          {
+            id: 4,
+            name: 'Years of Experience',
+            value: '10+',
+            icon: <AcademicCapIcon className="w-6 h-6" />,
+          },
         ]);
-        
+
         const response = await fetch(
           `${process.env.NEXT_PUBLIC_STRAPI_API_URL || 'https://picksoffice.onrender.com'}/api/picks/all-for-stats?mode=calculated`,
           {
@@ -55,10 +85,30 @@ export default function StatsCardHome() {
           // Nur aktualisieren, wenn gültige Werte zurückgegeben werden
           if (data.overallStats && data.overallStats.winRate && data.overallStats.roi) {
             setStats([
-              { id: 1, name: 'Win Rate', value: `${data.overallStats.winRate}%`, icon: <ChartBarIcon className="w-6 h-6" /> },
-              { id: 2, name: 'ROI', value: `${data.overallStats.roi}%`, icon: <ChartBarIcon className="w-6 h-6" /> },
-              { id: 3, name: 'Data Points Per Game', value: '3000+', icon: <ComputerDesktopIcon className="w-6 h-6" /> },
-              { id: 4, name: 'Years of Experience', value: '10+', icon: <AcademicCapIcon className="w-6 h-6" /> },
+              {
+                id: 1,
+                name: 'Win Rate',
+                value: `${data.overallStats.winRate}%`,
+                icon: <ChartBarIcon className="w-6 h-6" />,
+              },
+              {
+                id: 2,
+                name: 'ROI',
+                value: `${data.overallStats.roi}%`,
+                icon: <ChartBarIcon className="w-6 h-6" />,
+              },
+              {
+                id: 3,
+                name: 'Data Points Per Game',
+                value: '3000+',
+                icon: <ComputerDesktopIcon className="w-6 h-6" />,
+              },
+              {
+                id: 4,
+                name: 'Years of Experience',
+                value: '10+',
+                icon: <AcademicCapIcon className="w-6 h-6" />,
+              },
             ]);
           }
         } else {
@@ -91,9 +141,7 @@ export default function StatsCardHome() {
         aria-hidden="true"
         className="absolute right-[20%] bottom-[20%] -z-10 transform-gpu blur-3xl"
       >
-        <div
-          className="aspect-[1/1] w-[30rem] rounded-full bg-gradient-to-r from-[#4f46e5] to-[#80caff] opacity-15"
-        />
+        <div className="aspect-[1/1] w-[30rem] rounded-full bg-gradient-to-r from-[#4f46e5] to-[#80caff] opacity-15" />
       </div>
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:max-w-none">
@@ -106,7 +154,7 @@ export default function StatsCardHome() {
             </p>
           </div>
           <dl className="mt-10 sm:mt-16 grid grid-cols-2 gap-4 lg:grid-cols-4 sm:gap-6">
-            {stats.map((stat) => (
+            {stats.map(stat => (
               <div
                 key={stat.id}
                 className="flex flex-col rounded-2xl bg-slate-800/30 backdrop-blur-sm p-5 sm:p-6 shadow-lg border border-white/10 ring-1 ring-white/10 hover:bg-slate-800/40 transition-colors"
@@ -115,14 +163,22 @@ export default function StatsCardHome() {
                   <dt className="text-xs sm:text-sm font-semibold text-gray-300">
                     {stat.name === 'Data Points Per Game' ? (
                       <>
-                        <span className="sm:hidden">Data Points<br />Per Game</span>
+                        <span className="sm:hidden">
+                          Data Points
+                          <br />
+                          Per Game
+                        </span>
                         <span className="hidden sm:inline">Data Points Per Game</span>
                       </>
-                    ) : stat.name}
+                    ) : (
+                      stat.name
+                    )}
                   </dt>
                   <div className="text-sky-300">{stat.icon}</div>
                 </div>
-                <dd className="text-xl sm:text-2xl lg:text-3xl font-semibold tracking-tight text-white">{stat.value}</dd>
+                <dd className="text-xl sm:text-2xl lg:text-3xl font-semibold tracking-tight text-white">
+                  {stat.value}
+                </dd>
               </div>
             ))}
           </dl>

@@ -1,5 +1,5 @@
 // Learn more: https://github.com/testing-library/jest-dom
-import '@testing-library/jest-dom'
+import '@testing-library/jest-dom';
 
 // Mock next/navigation
 jest.mock('next/navigation', () => ({
@@ -9,17 +9,17 @@ jest.mock('next/navigation', () => ({
       replace: jest.fn(),
       prefetch: jest.fn(),
       back: jest.fn(),
-    }
+    };
   },
   useSearchParams() {
     return {
       get: jest.fn(),
-    }
+    };
   },
   usePathname() {
-    return ''
+    return '';
   },
-}))
+}));
 
 // Mock window.matchMedia
 Object.defineProperty(window, 'matchMedia', {
@@ -34,7 +34,7 @@ Object.defineProperty(window, 'matchMedia', {
     removeEventListener: jest.fn(),
     dispatchEvent: jest.fn(),
   })),
-})
+});
 
 // Setup fetch mock
-global.fetch = jest.fn()
+global.fetch = jest.fn();

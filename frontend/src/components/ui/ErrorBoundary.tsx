@@ -22,16 +22,18 @@ class ErrorBoundary extends Component<Props, State> {
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo): void {
-    console.error("Uncaught error:", error, errorInfo);
+    console.error('Uncaught error:', error, errorInfo);
   }
 
   render(): ReactNode {
     if (this.state.hasError) {
-      return this.props.fallback || (
-        <div className="p-6 bg-red-900/20 rounded-lg border border-red-500/30 text-red-300 my-4">
-          <h2 className="text-xl font-bold mb-2">Something went wrong</h2>
-          <p>Please try refreshing the page or contact support if the problem persists.</p>
-        </div>
+      return (
+        this.props.fallback || (
+          <div className="p-6 bg-red-900/20 rounded-lg border border-red-500/30 text-red-300 my-4">
+            <h2 className="text-xl font-bold mb-2">Something went wrong</h2>
+            <p>Please try refreshing the page or contact support if the problem persists.</p>
+          </div>
+        )
       );
     }
 

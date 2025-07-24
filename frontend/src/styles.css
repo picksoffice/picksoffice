@@ -5,8 +5,8 @@
 
 /* Additional mobile optimizations */
 @media (max-width: 640px) {
-  button, 
-  [role="button"],
+  button,
+  [role='button'],
   a[href] {
     cursor: pointer;
     touch-action: manipulation;

@@ -54,12 +54,7 @@ import { Button } from '@/components/ui/button'
 ### Neuer Ansatz (bevorzugt):
 
 ```jsx
-<Button
-  type="submit"
-  variant="primary"
-  color="blue"
-  size="md"
->
+<Button type="submit" variant="primary" color="blue" size="md">
   Abschicken
 </Button>
 ```
@@ -74,15 +69,15 @@ import { Button } from '@/components/ui/button'
 
 ## Button-Properties
 
-| Property | Typ | Standard | Beschreibung |
-|----------|-----|---------|-------------|
-| variant | 'primary' \| 'secondary' \| 'tertiary' \| 'ghost' | 'primary' | Der visuelle Stil des Buttons |
-| color | 'indigo' \| 'blue' \| 'green' \| 'red' \| 'gray' | 'indigo' | Die Farbvariante des Buttons |
-| size | 'sm' \| 'md' \| 'lg' \| 'xl' | 'md' | Die Größe des Buttons |
-| isLoading | boolean | false | Zeigt einen Ladeindikator an |
-| href | string | undefined | Verwandelt den Button in einen Link |
-| fullWidth | boolean | false | Button nimmt die volle verfügbare Breite ein |
-| disabled | boolean | false | Deaktiviert den Button |
+| Property  | Typ                                               | Standard  | Beschreibung                                 |
+| --------- | ------------------------------------------------- | --------- | -------------------------------------------- |
+| variant   | 'primary' \| 'secondary' \| 'tertiary' \| 'ghost' | 'primary' | Der visuelle Stil des Buttons                |
+| color     | 'indigo' \| 'blue' \| 'green' \| 'red' \| 'gray'  | 'indigo'  | Die Farbvariante des Buttons                 |
+| size      | 'sm' \| 'md' \| 'lg' \| 'xl'                      | 'md'      | Die Größe des Buttons                        |
+| isLoading | boolean                                           | false     | Zeigt einen Ladeindikator an                 |
+| href      | string                                            | undefined | Verwandelt den Button in einen Link          |
+| fullWidth | boolean                                           | false     | Button nimmt die volle verfügbare Breite ein |
+| disabled  | boolean                                           | false     | Deaktiviert den Button                       |
 
 ## Richtlinien für die Nutzung
 

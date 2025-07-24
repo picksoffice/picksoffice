@@ -106,7 +106,7 @@ export async function register(credentials: RegisterCredentials): Promise<AuthRe
     const errorMessage = error.message?.includes('Email or Username are already taken')
       ? 'Email or username already exists. Please try another.'
       : 'Registration failed. Please check your information and try again.';
-    
+
     throw new AuthError(errorMessage);
   }
 }
@@ -116,13 +116,15 @@ export async function register(credentials: RegisterCredentials): Promise<AuthRe
  * @param credentials - Email address for password reset
  * @returns Promise with the response
  */
-export async function forgotPassword(credentials: ForgotPasswordCredentials): Promise<{ ok: boolean }> {
+export async function forgotPassword(
+  credentials: ForgotPasswordCredentials
+): Promise<{ ok: boolean }> {
   try {
     await fetchAPI('/auth/forgot-password', {
       method: 'POST',
       body: JSON.stringify(credentials),
     });
-    
+
     return { ok: true };
   } catch (error) {
     console.error('Forgot password error:', error);
@@ -135,26 +137,28 @@ export async function forgotPassword(credentials: ForgotPasswordCredentials): Pr
  * @param credentials - Reset password data including code and new password
  * @returns Promise with the response
  */
-export async function resetPassword(credentials: ResetPasswordCredentials): Promise<{ ok: boolean }> {
+export async function resetPassword(
+  credentials: ResetPasswordCredentials
+): Promise<{ ok: boolean }> {
   try {
     // Ensure proper payload format with passwordConfirmation
     const payload = {
       code: credentials.code,
       password: credentials.password,
-      passwordConfirmation: credentials.passwordConfirmation
+      passwordConfirmation: credentials.passwordConfirmation,
     };
-    
+
     console.log('Reset password request payload:', {
       code: credentials.code.substring(0, 10) + '...',
-      password: '******', 
-      passwordConfirmation: '******'
+      password: '******',
+      passwordConfirmation: '******',
     });
-    
+
     await fetchAPI('/auth/reset-password', {
       method: 'POST',
       body: JSON.stringify(payload),
     });
-    
+
     return { ok: true };
   } catch (error) {
     console.error('Reset password error:', error);
@@ -188,7 +192,7 @@ export function getCurrentUser(): User | null {
   if (typeof window === 'undefined') {
     return null;
   }
-  
+
   const user = localStorage.getItem('user');
   return user ? JSON.parse(user) : null;
 }
@@ -234,10 +238,10 @@ export function getAuthFetchConfig(config: RequestInit = {}): RequestInit {
  */
 export function socialLogin(provider: SocialProvider): void {
   const STRAPI_API_URL = process.env.NEXT_PUBLIC_STRAPI_API_URL || 'http://localhost:1337';
-  
+
   // Create the auth URL
   const authUrl = `${STRAPI_API_URL}/api/connect/${provider}`;
-  
+
   // Redirect to the provider's auth page
   window.location.href = authUrl;
 }

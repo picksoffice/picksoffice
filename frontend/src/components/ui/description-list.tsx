@@ -1,4 +1,4 @@
-import clsx from 'clsx'
+import clsx from 'clsx';
 
 export function DescriptionList({ className, ...props }: React.ComponentPropsWithoutRef<'dl'>) {
   return (
@@ -9,7 +9,7 @@ export function DescriptionList({ className, ...props }: React.ComponentPropsWit
         'grid grid-cols-1 text-base/6 sm:grid-cols-[minmax(50%,20rem)_auto] sm:text-sm/6'
       )}
     />
-  )
+  );
 }
 
 export function DescriptionTerm({ className, ...props }: React.ComponentPropsWithoutRef<'dt'>) {
@@ -21,7 +21,7 @@ export function DescriptionTerm({ className, ...props }: React.ComponentPropsWit
         'col-start-1 border-t border-white/5 pt-3 text-zinc-400 first:border-none sm:border-t sm:border-white/5 sm:py-3'
       )}
     />
-  )
+  );
 }
 
 export function DescriptionDetails({ className, ...props }: React.ComponentPropsWithoutRef<'dd'>) {
@@ -33,5 +33,5 @@ export function DescriptionDetails({ className, ...props }: React.ComponentProps
         'pt-1 pb-3 text-white sm:border-t sm:border-white/5 sm:py-3 sm:nth-2:border-none'
       )}
     />
-  )
+  );
 }

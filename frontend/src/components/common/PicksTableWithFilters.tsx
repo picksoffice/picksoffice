@@ -1,7 +1,14 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { Table, TableHead, TableBody, TableRow, TableHeader, TableCell } from '@/components/ui/table';
+import {
+  Table,
+  TableHead,
+  TableBody,
+  TableRow,
+  TableHeader,
+  TableCell,
+} from '@/components/ui/table';
 import { SimpleDatePicker } from '@/components/ui/simple-date-picker';
 import { ResultBadge } from '@/components/ui/result-badge';
 import Link from 'next/link';
@@ -62,33 +69,34 @@ const formatAmericanOdds = (decimalOdds: number) => {
 
 export default function PicksTableWithFilters({ picks, pagination }: PicksTableProps) {
   // Ensure picks are valid objects
-  const safePicksArray = Array.isArray(picks) 
-    ? picks.filter(pick => pick && pick.League) 
-    : (picks && picks.League) ? [picks] : [];
-  
+  const safePicksArray = Array.isArray(picks)
+    ? picks.filter(pick => pick && pick.League)
+    : picks && picks.League
+      ? [picks]
+      : [];
+
   const [currentPage, setCurrentPage] = useState<number>(pagination?.page || 1);
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [displayedPicks, setDisplayedPicks] = useState<PickData[]>(safePicksArray);
   const [filteredPicks, setFilteredPicks] = useState<PickData[]>(safePicksArray);
   const [leagueFilter, setLeagueFilter] = useState('');
-  const [dateFilter, setDateFilter] = useState<{ from?: string, to?: string }>({});
-  
+  const [dateFilter, setDateFilter] = useState<{ from?: string; to?: string }>({});
+
   // Get unique leagues
-  const leagues = safePicksArray.length > 0 
-    ? [...new Set(safePicksArray
-        .filter(pick => pick.League)
-        .map(pick => pick.League))]
-    : [];
+  const leagues =
+    safePicksArray.length > 0
+      ? [...new Set(safePicksArray.filter(pick => pick.League).map(pick => pick.League))]
+      : [];
 
   // Apply filters when they change
   useEffect(() => {
     let result = [...displayedPicks];
-    
+
     // Apply league filter
     if (leagueFilter) {
       result = result.filter(pick => pick.League === leagueFilter);
     }
-    
+
     // Apply date filter
     if (dateFilter.from) {
       result = result.filter(pick => new Date(pick.Date) >= new Date(dateFilter.from!));
@@ -96,20 +104,22 @@ export default function PicksTableWithFilters({ picks, pagination }: PicksTableP
     if (dateFilter.to) {
       result = result.filter(pick => new Date(pick.Date) <= new Date(dateFilter.to!));
     }
-    
+
     setFilteredPicks(result);
   }, [displayedPicks, leagueFilter, dateFilter]);
 
   const handleLeagueFilterChange = async (e: React.ChangeEvent<HTMLSelectElement>) => {
     const selectedLeague = e.target.value;
     setLeagueFilter(selectedLeague);
-    
+
     if (selectedLeague) {
       try {
         setIsLoading(true);
-        const response = await fetch(`/api/picks?sort=Date:desc&filters[League][$eq]=${selectedLeague}&populate=*&pagination[pageSize]=20&pagination[page]=1`);
+        const response = await fetch(
+          `/api/picks?sort=Date:desc&filters[League][$eq]=${selectedLeague}&populate=*&pagination[pageSize]=20&pagination[page]=1`
+        );
         const data = await response.json();
-        
+
         if (data.data && Array.isArray(data.data)) {
           setDisplayedPicks(data.data);
         }
@@ -124,27 +134,27 @@ export default function PicksTableWithFilters({ picks, pagination }: PicksTableP
     }
   };
 
-  const handleDateFilterChange = (dates: { from?: string, to?: string }) => {
+  const handleDateFilterChange = (dates: { from?: string; to?: string }) => {
     setDateFilter(dates);
   };
 
   const loadMorePicks = async () => {
     if (!pagination || currentPage >= pagination.pageCount || isLoading) return;
-    
+
     try {
       setIsLoading(true);
       const nextPage = currentPage + 1;
-      
+
       let url = `/api/picks?sort=Date:desc&populate=*&pagination[pageSize]=20&pagination[page]=${nextPage}`;
-      
+
       // Add league filter if present
       if (leagueFilter) {
         url += `&filters[League][$eq]=${leagueFilter}`;
       }
-      
+
       const response = await fetch(url);
       const data = await response.json();
-      
+
       if (data.data && Array.isArray(data.data)) {
         setDisplayedPicks(prev => [...prev, ...data.data]);
         setCurrentPage(nextPage);
@@ -159,11 +169,11 @@ export default function PicksTableWithFilters({ picks, pagination }: PicksTableP
   // Profit berechnen
   const calculateProfit = (pick: PickData) => {
     if (!pick) return '0.00u';
-    
+
     const { Result, Odds, Stake } = pick;
-    
+
     if (!Result || !Odds || !Stake) return '0.00u';
-    
+
     if (Result === 'Win') {
       const profit = Stake * (Odds - 1);
       return `+${profit.toFixed(2)}u`;
@@ -183,7 +193,7 @@ export default function PicksTableWithFilters({ picks, pagination }: PicksTableP
           Keine Picks gefunden. Bitte überprüfen Sie die API-Verbindung.
         </div>
       )}
-      
+
       {filteredPicks.length > 0 || isLoading ? (
         <>
           <div className="mb-6 w-full">
@@ -195,42 +205,39 @@ export default function PicksTableWithFilters({ picks, pagination }: PicksTableP
                   className="px-4 py-2 rounded-lg bg-slate-800/75 text-slate-300 border border-white/10 hover:border-white/20 shadow-sm focus:ring-2 focus:ring-sky-300 focus:outline-none text-sm md:min-w-[150px]"
                 >
                   <option value="">Alle Ligen</option>
-                  {leagues.map((league) => (
+                  {leagues.map(league => (
                     <option key={league} value={league}>
                       {league}
                     </option>
                   ))}
                 </select>
-                
-                <SimpleDatePicker 
-                  className="w-full md:w-auto" 
-                  onChange={handleDateFilterChange}
-                />
+
+                <SimpleDatePicker className="w-full md:w-auto" onChange={handleDateFilterChange} />
               </div>
-              
-              <Link 
-                href="/picks" 
+
+              <Link
+                href="/picks"
                 className="inline-flex items-center text-sky-300 hover:text-indigo-300 underline text-sm whitespace-nowrap"
               >
-                <svg 
-                  xmlns="http://www.w3.org/2000/svg" 
-                  className="h-4 w-4 mr-2" 
-                  fill="none" 
-                  viewBox="0 0 24 24" 
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-4 w-4 mr-2"
+                  fill="none"
+                  viewBox="0 0 24 24"
                   stroke="currentColor"
                 >
-                  <path 
-                    strokeLinecap="round" 
-                    strokeLinejoin="round" 
-                    strokeWidth={2} 
-                    d="M10 19l-7-7m0 0l7-7m-7 7h18" 
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M10 19l-7-7m0 0l7-7m-7 7h18"
                   />
                 </svg>
                 Zurück zur Statistik
               </Link>
             </div>
           </div>
-          
+
           {isLoading && filteredPicks.length === 0 ? (
             <div className="text-center py-10">
               <div className="inline-block animate-spin rounded-full h-8 w-8 border-b-2 border-sky-300"></div>
@@ -252,19 +259,20 @@ export default function PicksTableWithFilters({ picks, pagination }: PicksTableP
                     </TableRow>
                   </TableHead>
                   <TableBody className="divide-y divide-gray-700">
-                    {filteredPicks.map((pick) => (
-                      <TableRow 
-                        key={pick.id} 
-                        className="bg-transparent hover:bg-slate-800/30"
-                      >
+                    {filteredPicks.map(pick => (
+                      <TableRow key={pick.id} className="bg-transparent hover:bg-slate-800/30">
                         <TableCell className="text-gray-300">{pick.League}</TableCell>
-                        <TableCell className="text-gray-300 whitespace-nowrap">{formatAmericanDate(pick.Date)}</TableCell>
+                        <TableCell className="text-gray-300 whitespace-nowrap">
+                          {formatAmericanDate(pick.Date)}
+                        </TableCell>
                         <TableCell className="text-gray-300">{`${pick.Away} @ ${pick.Home}`}</TableCell>
                         <TableCell className="text-gray-300">{pick.Pick}</TableCell>
                         <TableCell>
                           <ResultBadge result={pick.Result} />
                         </TableCell>
-                        <TableCell className={`font-medium ${pick.Result === 'Win' ? 'text-emerald-400' : pick.Result === 'Loss' ? 'text-red-400' : 'text-gray-300'}`}>
+                        <TableCell
+                          className={`font-medium ${pick.Result === 'Win' ? 'text-emerald-400' : pick.Result === 'Loss' ? 'text-red-400' : 'text-gray-300'}`}
+                        >
                           {pick.Result === 'Pending' ? '' : calculateProfit(pick)}
                         </TableCell>
                       </TableRow>
@@ -272,26 +280,32 @@ export default function PicksTableWithFilters({ picks, pagination }: PicksTableP
                   </TableBody>
                 </Table>
               </div>
-              
+
               {/* Mobile View: Streamlined Layout */}
               <div className="md:hidden overflow-hidden">
                 <table className="min-w-full divide-y divide-gray-700">
                   <tbody className="divide-y divide-gray-800">
-                    {filteredPicks.map((pick) => (
+                    {filteredPicks.map(pick => (
                       <tr key={pick.id} className="hover:bg-slate-800/20">
                         <td className="py-3 pl-1 pr-3">
                           <div>
                             <div className="flex items-baseline gap-2">
                               <p className="font-medium">{pick.Pick}</p>
-                              <p className="text-xs text-gray-400">@{formatAmericanOdds(pick.Odds)}</p>
+                              <p className="text-xs text-gray-400">
+                                @{formatAmericanOdds(pick.Odds)}
+                              </p>
                             </div>
-                            <p className="text-xs text-gray-400">{pick.League} - {formatAmericanDate(pick.Date)}</p>
+                            <p className="text-xs text-gray-400">
+                              {pick.League} - {formatAmericanDate(pick.Date)}
+                            </p>
                             <p className="text-xs text-gray-400">{`${pick.Away} @ ${pick.Home}`}</p>
                           </div>
                         </td>
                         <td className="py-3 pl-3 pr-1 text-right whitespace-nowrap">
                           <div className="flex items-center justify-end gap-3">
-                            <span className={`text-sm font-medium ${pick.Result === 'Win' ? 'text-emerald-400' : pick.Result === 'Loss' ? 'text-red-400' : 'text-gray-400'}`}>
+                            <span
+                              className={`text-sm font-medium ${pick.Result === 'Win' ? 'text-emerald-400' : pick.Result === 'Loss' ? 'text-red-400' : 'text-gray-400'}`}
+                            >
                               {pick.Result === 'Pending' ? '' : calculateProfit(pick)}
                             </span>
                             <ResultBadge result={pick.Result} />
@@ -304,7 +318,7 @@ export default function PicksTableWithFilters({ picks, pagination }: PicksTableP
               </div>
             </>
           )}
-          
+
           {pagination && currentPage < pagination.pageCount && filteredPicks.length > 0 && (
             <div className="flex justify-center mt-6">
               <button

@@ -21,6 +21,7 @@ Ich habe die grundlegende Integration der Social-Login-Funktionalität für Pick
 Du musst Apps/Projekte bei den folgenden Diensten registrieren, um die Anmeldedaten zu erhalten:
 
 #### Google:
+
 1. Gehe zum [Google Cloud Console](https://console.cloud.google.com/)
 2. Erstelle ein neues Projekt
 3. Navigiere zu "APIs & Services" > "Credentials"
@@ -30,12 +31,14 @@ Du musst Apps/Projekte bei den folgenden Diensten registrieren, um die Anmeldeda
 7. Kopiere die Client-ID und das Client-Secret
 
 #### Twitter:
+
 1. Gehe zum [Twitter Developer Portal](https://developer.twitter.com/)
 2. Erstelle eine neue App
 3. Setze den Callback-URL auf: `http://localhost:1337/api/connect/twitter/callback`
 4. Kopiere die API-Schlüssel und -Secrets
 
 #### Apple:
+
 1. Registriere dich im [Apple Developer Portal](https://developer.apple.com/)
 2. Erstelle einen "Service ID" und aktiviere "Sign In with Apple"
 3. Setze die Callback-URL auf: `http://localhost:1337/api/connect/apple/callback`
@@ -60,12 +63,14 @@ APPLE_CLIENT_SECRET=dein_apple_client_secret
 ### 3. Testen
 
 1. Starte den Strapi-Server neu:
+
    ```
    cd backend
    npm run develop
    ```
 
 2. Starte den Frontend-Server:
+
    ```
    cd frontend
    npm run dev

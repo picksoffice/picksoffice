@@ -65,7 +65,7 @@ const navigation = {
       ),
     },
   ],
-}
+};
 
 export default function Footer() {
   return (
@@ -80,10 +80,11 @@ export default function Footer() {
               style={{ width: 'auto' }}
             />
             <p className="text-balance text-sm/6 text-gray-400">
-              Making sports betting smarter through data-driven analysis and advanced statistical models
+              Making sports betting smarter through data-driven analysis and advanced statistical
+              models
             </p>
             <div className="flex gap-x-6">
-              {navigation.social.map((item) => (
+              {navigation.social.map(item => (
                 <a key={item.name} href={item.href} className="text-gray-400 hover:text-white">
                   <span className="sr-only">{item.name}</span>
                   <item.icon aria-hidden="true" className="size-6" />
@@ -96,7 +97,7 @@ export default function Footer() {
               <div>
                 <h3 className="text-sm/6 font-semibold text-white">Sports</h3>
                 <ul role="list" className="mt-6 space-y-4">
-                  {navigation.sports.map((item) => (
+                  {navigation.sports.map(item => (
                     <li key={item.name}>
                       <a href={item.href} className="text-sm/6 text-gray-400 hover:text-white">
                         {item.name}
@@ -108,7 +109,7 @@ export default function Footer() {
               <div>
                 <h3 className="text-sm/6 font-semibold text-white">Tools</h3>
                 <ul role="list" className="mt-6 space-y-4">
-                  {navigation.tools.map((item) => (
+                  {navigation.tools.map(item => (
                     <li key={item.name}>
                       <a href={item.href} className="text-sm/6 text-gray-400 hover:text-white">
                         {item.name}
@@ -122,7 +123,7 @@ export default function Footer() {
               <div>
                 <h3 className="text-sm/6 font-semibold text-white">Resources</h3>
                 <ul role="list" className="mt-6 space-y-4">
-                  {navigation.resources.map((item) => (
+                  {navigation.resources.map(item => (
                     <li key={item.name}>
                       <a href={item.href} className="text-sm/6 text-gray-400 hover:text-white">
                         {item.name}
@@ -134,7 +135,7 @@ export default function Footer() {
               <div>
                 <h3 className="text-sm/6 font-semibold text-white">Legal</h3>
                 <ul role="list" className="mt-6 space-y-4">
-                  {navigation.legal.map((item) => (
+                  {navigation.legal.map(item => (
                     <li key={item.name}>
                       <a href={item.href} className="text-sm/6 text-gray-400 hover:text-white">
                         {item.name}
@@ -147,9 +148,12 @@ export default function Footer() {
           </div>
         </div>
         <div className="mt-16 border-t border-gray-700/30 pt-8 sm:mt-20 lg:mt-24">
-          <p className="text-sm/6 text-gray-400">&copy; 2025 PicksOffice, All rights reserved. Sports betting should be viewed as entertainment only. 21+</p>
+          <p className="text-sm/6 text-gray-400">
+            &copy; 2025 PicksOffice, All rights reserved. Sports betting should be viewed as
+            entertainment only. 21+
+          </p>
         </div>
       </div>
     </footer>
-  )
+  );
 }

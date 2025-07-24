@@ -11,11 +11,11 @@ interface SearchBarProps {
   autoFocus?: boolean;
 }
 
-export default function SearchBar({ 
-  placeholder = 'Search picks...', 
-  onSearch, 
+export default function SearchBar({
+  placeholder = 'Search picks...',
+  onSearch,
   className = '',
-  autoFocus = false 
+  autoFocus = false,
 }: SearchBarProps) {
   const [query, setQuery] = useState('');
   const debouncedQuery = useDebounce(query, 300);
@@ -36,7 +36,7 @@ export default function SearchBar({
         <input
           type="text"
           value={query}
-          onChange={(e) => setQuery(e.target.value)}
+          onChange={e => setQuery(e.target.value)}
           placeholder={placeholder}
           autoFocus={autoFocus}
           className="w-full pl-10 pr-10 py-2 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent"

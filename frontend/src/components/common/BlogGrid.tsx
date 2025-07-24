@@ -63,14 +63,16 @@ export default function BlogGrid({
 
       <div className="py-6 sm:py-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         <div className="mx-auto max-w-2xl text-left sm:text-center mb-8 sm:mb-12">
-          <h1 className="text-3xl sm:text-4xl font-bold tracking-tight sm:text-5xl mb-2">{title}</h1>
+          <h1 className="text-3xl sm:text-4xl font-bold tracking-tight sm:text-5xl mb-2">
+            {title}
+          </h1>
           <p className="text-base sm:text-lg text-gray-400">{description}</p>
         </div>
 
         {showFullGrid ? (
           <div className="grid grid-rows-1 sm:grid-rows-2 gap-y-8 sm:gap-y-16">
             <div className="grid grid-cols-1 gap-x-4 gap-y-8 md:gap-y-12 md:grid-cols-2 lg:grid-cols-3">
-              {posts.slice(0, 3).map((post) => (
+              {posts.slice(0, 3).map(post => (
                 <article
                   key={post.id}
                   className="flex flex-col items-start justify-between group transition-all-300 hover:transform hover:translate-y-[-4px] hover:shadow-lg rounded-2xl"
@@ -85,14 +87,18 @@ export default function BlogGrid({
                     {post.league && post.awayTeam && getTeamLogoUrl(post.league, post.awayTeam) && (
                       <img
                         alt={`${post.awayTeam} logo`}
-                        src={getTeamLogoUrl(post.league, post.awayTeam) || '/images/logos/default.png'}
+                        src={
+                          getTeamLogoUrl(post.league, post.awayTeam) || '/images/logos/default.png'
+                        }
                         className="absolute top-1/2 -translate-y-1/2 left-4 md:left-6 h-32 w-32 md:h-36 md:w-36 object-contain z-10 hover:scale-110 transition-transform"
                       />
                     )}
                     {post.league && post.homeTeam && getTeamLogoUrl(post.league, post.homeTeam) && (
                       <img
                         alt={`${post.homeTeam} logo`}
-                        src={getTeamLogoUrl(post.league, post.homeTeam) || '/images/logos/default.png'}
+                        src={
+                          getTeamLogoUrl(post.league, post.homeTeam) || '/images/logos/default.png'
+                        }
                         className="absolute top-1/2 -translate-y-1/2 right-4 md:right-6 h-32 w-32 md:h-36 md:w-36 object-contain z-10 hover:scale-110 transition-transform"
                       />
                     )}
@@ -134,7 +140,9 @@ export default function BlogGrid({
                             {post.author.name}
                           </Link>
                         </p>
-                        <p className="text-gray-400 group-hover:text-gray-300 transition-colors-300">{post.author.role}</p>
+                        <p className="text-gray-400 group-hover:text-gray-300 transition-colors-300">
+                          {post.author.role}
+                        </p>
                       </div>
                     </div>
                   </div>
@@ -143,7 +151,7 @@ export default function BlogGrid({
             </div>
 
             <div className="grid grid-cols-1 gap-x-4 gap-y-8 md:gap-x-6 lg:gap-x-8 md:grid-cols-2 lg:grid-cols-3">
-              {posts.slice(3, 6).map((post) => (
+              {posts.slice(3, 6).map(post => (
                 <article
                   key={post.id}
                   className="flex flex-col items-start justify-between group transition-all-300 hover:transform hover:translate-y-[-4px] hover:shadow-lg rounded-2xl"
@@ -158,14 +166,18 @@ export default function BlogGrid({
                     {post.league && post.awayTeam && getTeamLogoUrl(post.league, post.awayTeam) && (
                       <img
                         alt={`${post.awayTeam} logo`}
-                        src={getTeamLogoUrl(post.league, post.awayTeam) || '/images/logos/default.png'}
+                        src={
+                          getTeamLogoUrl(post.league, post.awayTeam) || '/images/logos/default.png'
+                        }
                         className="absolute top-1/2 -translate-y-1/2 left-4 md:left-6 h-32 w-32 md:h-36 md:w-36 object-contain z-10 hover:scale-110 transition-transform"
                       />
                     )}
                     {post.league && post.homeTeam && getTeamLogoUrl(post.league, post.homeTeam) && (
                       <img
                         alt={`${post.homeTeam} logo`}
-                        src={getTeamLogoUrl(post.league, post.homeTeam) || '/images/logos/default.png'}
+                        src={
+                          getTeamLogoUrl(post.league, post.homeTeam) || '/images/logos/default.png'
+                        }
                         className="absolute top-1/2 -translate-y-1/2 right-4 md:right-6 h-32 w-32 md:h-36 md:w-36 object-contain z-10 hover:scale-110 transition-transform"
                       />
                     )}
@@ -207,7 +219,9 @@ export default function BlogGrid({
                             {post.author.name}
                           </Link>
                         </p>
-                        <p className="text-gray-400 group-hover:text-gray-300 transition-colors-300">{post.author.role}</p>
+                        <p className="text-gray-400 group-hover:text-gray-300 transition-colors-300">
+                          {post.author.role}
+                        </p>
                       </div>
                     </div>
                   </div>
@@ -217,7 +231,7 @@ export default function BlogGrid({
           </div>
         ) : (
           <div className="mx-auto grid grid-cols-1 gap-x-4 gap-y-8 md:gap-y-12 md:gap-x-6 lg:gap-x-8 md:grid-cols-2 lg:grid-cols-3">
-            {posts.slice(0, 3).map((post) => (
+            {posts.slice(0, 3).map(post => (
               <article
                 key={post.id}
                 className="flex flex-col items-start justify-between group transition-all-300 hover:transform hover:translate-y-[-4px] hover:shadow-lg rounded-2xl"
@@ -232,14 +246,18 @@ export default function BlogGrid({
                   {post.league && post.awayTeam && getTeamLogoUrl(post.league, post.awayTeam) && (
                     <img
                       alt={`${post.awayTeam} logo`}
-                      src={getTeamLogoUrl(post.league, post.awayTeam) || '/images/logos/default.png'}
+                      src={
+                        getTeamLogoUrl(post.league, post.awayTeam) || '/images/logos/default.png'
+                      }
                       className="absolute top-1/2 -translate-y-1/2 left-4 md:left-6 h-14 md:h-36 w-14 md:w-36 object-contain z-10 hover:scale-110 transition-transform"
                     />
                   )}
                   {post.league && post.homeTeam && getTeamLogoUrl(post.league, post.homeTeam) && (
                     <img
                       alt={`${post.homeTeam} logo`}
-                      src={getTeamLogoUrl(post.league, post.homeTeam) || '/images/logos/default.png'}
+                      src={
+                        getTeamLogoUrl(post.league, post.homeTeam) || '/images/logos/default.png'
+                      }
                       className="absolute top-1/2 -translate-y-1/2 right-4 md:right-6 h-14 md:h-36 w-14 md:w-36 object-contain z-10 hover:scale-110 transition-transform"
                     />
                   )}
@@ -281,7 +299,9 @@ export default function BlogGrid({
                           {post.author.name}
                         </Link>
                       </p>
-                      <p className="text-gray-400 group-hover:text-gray-300 transition-colors-300">{post.author.role}</p>
+                      <p className="text-gray-400 group-hover:text-gray-300 transition-colors-300">
+                        {post.author.role}
+                      </p>
                     </div>
                   </div>
                 </div>

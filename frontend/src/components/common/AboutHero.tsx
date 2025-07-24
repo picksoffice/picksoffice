@@ -1,4 +1,4 @@
-import { Popover, PopoverButton, PopoverGroup, PopoverPanel } from '@headlessui/react'
+import { Popover, PopoverButton, PopoverGroup, PopoverPanel } from '@headlessui/react';
 import {
   Bars3Icon,
   ChatBubbleBottomCenterTextIcon,
@@ -6,9 +6,9 @@ import {
   InboxIcon,
   QuestionMarkCircleIcon,
   XMarkIcon,
-} from '@heroicons/react/24/outline'
-import { ChevronDownIcon } from '@heroicons/react/20/solid'
-import { Button } from '@/components/ui/button'
+} from '@heroicons/react/24/outline';
+import { ChevronDownIcon } from '@heroicons/react/20/solid';
+import { Button } from '@/components/ui/button';
 
 const solutions = [
   {
@@ -35,12 +35,12 @@ const solutions = [
     href: '#',
     icon: QuestionMarkCircleIcon,
   },
-]
+];
 const navigation = [
   { name: 'Pricing', href: '#' },
   { name: 'Partners', href: '#' },
   { name: 'Company', href: '#' },
-]
+];
 
 export default function Example() {
   return (
@@ -67,11 +67,10 @@ export default function Example() {
               </div>
             </div>
           </div>
-
         </div>
 
         {/* More main page content here... */}
       </main>
     </div>
-  )
+  );
 }

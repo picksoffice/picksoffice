@@ -1,7 +1,16 @@
 'use client';
 
 import React, { createContext, useContext, useEffect, useState } from 'react';
-import { User, login as loginApi, register as registerApi, logout as logoutApi, getCurrentUser, LoginCredentials, RegisterCredentials, AuthError } from './auth';
+import {
+  User,
+  login as loginApi,
+  register as registerApi,
+  logout as logoutApi,
+  getCurrentUser,
+  LoginCredentials,
+  RegisterCredentials,
+  AuthError,
+} from './auth';
 
 interface AuthContextType {
   user: User | null;
@@ -34,7 +43,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   const login = async (credentials: LoginCredentials) => {
     setLoading(true);
     setError(null);
-    
+
     try {
       const data = await loginApi(credentials);
       setUser(data.user);
@@ -53,7 +62,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   const register = async (credentials: RegisterCredentials) => {
     setLoading(true);
     setError(null);
-    
+
     try {
       const data = await registerApi(credentials);
       setUser(data.user);
@@ -97,10 +106,10 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
 
 export function useAuth() {
   const context = useContext(AuthContext);
-  
+
   if (context === undefined) {
     throw new Error('useAuth must be used within an AuthProvider');
   }
-  
+
   return context;
 }

@@ -1,4 +1,4 @@
-import { BuildingOffice2Icon, EnvelopeIcon, PhoneIcon } from '@heroicons/react/24/outline'
+import { BuildingOffice2Icon, EnvelopeIcon, PhoneIcon } from '@heroicons/react/24/outline';
 
 export default function ContactPage() {
   return (
@@ -6,9 +6,13 @@ export default function ContactPage() {
       <div className="mx-auto grid max-w-7xl grid-cols-1 lg:grid-cols-2">
         <div className="relative px-6 pb-20 pt-24 sm:pt-32 lg:static lg:px-8 lg:py-48">
           <div className="mx-auto max-w-xl lg:mx-0 lg:max-w-lg">
-            <h2 className="text-pretty text-4xl font-semibold tracking-tight text-gray-100 sm:text-5xl">Get in touch</h2>
+            <h2 className="text-pretty text-4xl font-semibold tracking-tight text-gray-100 sm:text-5xl">
+              Get in touch
+            </h2>
             <p className="mt-6 text-lg/8 text-gray-300">
-              Have questions about our picks or need assistance with your betting strategy? Our team at PicksOffice is here to help you make the most informed decisions for your sports wagers.
+              Have questions about our picks or need assistance with your betting strategy? Our team
+              at PicksOffice is here to help you make the most informed decisions for your sports
+              wagers.
             </p>
             <dl className="mt-10 space-y-4 text-base/7 text-gray-300">
               <div className="flex gap-x-4">
@@ -17,7 +21,10 @@ export default function ContactPage() {
                   <EnvelopeIcon aria-hidden="true" className="h-7 w-6 text-sky-300" />
                 </dt>
                 <dd>
-                  <a href="mailto:support@picksoffice.com" className="text-sky-300 hover:text-sky-400">
+                  <a
+                    href="mailto:support@picksoffice.com"
+                    className="text-sky-300 hover:text-sky-400"
+                  >
                     support@picksoffice.com
                   </a>
                 </dd>
@@ -36,12 +43,24 @@ export default function ContactPage() {
               <div className="flex gap-x-4">
                 <dt className="flex-none">
                   <span className="sr-only">Twitter</span>
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="h-7 w-6 text-sky-300">
-                    <path d="M13.6823 10.6218L20.2391 3H18.6854L12.9921 9.61788L8.44486 3H3.2002L10.0765 13.0074L3.2002 21H4.75404L10.7663 14.0113L15.5685 21H20.8131L13.6819 10.6218H13.6823ZM11.5541 13.0956L10.8574 12.0991L5.31391 4.16971H7.70053L12.1742 10.5689L12.8709 11.5655L18.6861 19.8835H16.2995L11.5541 13.096V13.0956Z" fill="currentColor" />
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    className="h-7 w-6 text-sky-300"
+                  >
+                    <path
+                      d="M13.6823 10.6218L20.2391 3H18.6854L12.9921 9.61788L8.44486 3H3.2002L10.0765 13.0074L3.2002 21H4.75404L10.7663 14.0113L15.5685 21H20.8131L13.6819 10.6218H13.6823ZM11.5541 13.0956L10.8574 12.0991L5.31391 4.16971H7.70053L12.1742 10.5689L12.8709 11.5655L18.6861 19.8835H16.2995L11.5541 13.096V13.0956Z"
+                      fill="currentColor"
+                    />
                   </svg>
                 </dt>
                 <dd>
-                  <a href="https://x.com/picksoffice" target="_blank" rel="noopener noreferrer" className="text-sky-300 hover:text-sky-400">
+                  <a
+                    href="https://x.com/picksoffice"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-sky-300 hover:text-sky-400"
+                  >
                     @PicksOffice
                   </a>
                 </dd>
@@ -95,7 +114,10 @@ export default function ContactPage() {
                 </div>
               </div>
               <div className="sm:col-span-2">
-                <label htmlFor="phone-number" className="block text-sm/6 font-semibold text-gray-200">
+                <label
+                  htmlFor="phone-number"
+                  className="block text-sm/6 font-semibold text-gray-200"
+                >
                   Phone number
                 </label>
                 <div className="mt-2.5">
@@ -135,5 +157,5 @@ export default function ContactPage() {
         </form>
       </div>
     </div>
-  )
+  );
 }

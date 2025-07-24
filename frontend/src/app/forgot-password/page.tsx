@@ -1,11 +1,11 @@
-'use client'
+'use client';
 
-import { z } from 'zod'
-import { zodResolver } from '@hookform/resolvers/zod'
-import { useForm } from 'react-hook-form'
-import { toast } from 'sonner'
-import Link from 'next/link'
-import GradientBlobs from '@/components/common/GradientBlobs'
+import { z } from 'zod';
+import { zodResolver } from '@hookform/resolvers/zod';
+import { useForm } from 'react-hook-form';
+import { toast } from 'sonner';
+import Link from 'next/link';
+import GradientBlobs from '@/components/common/GradientBlobs';
 
 import {
   Form,
@@ -14,15 +14,15 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from '@/components/ui/form'
-import { Button } from '@/components/ui/button'
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card'
-import { Input } from '@/components/ui/input'
+} from '@/components/ui/form';
+import { Button } from '@/components/ui/button';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
+import { Input } from '@/components/ui/input';
 
 // Schema for email validation
 const formSchema = z.object({
   email: z.string().email({ message: 'Invalid email address' }),
-})
+});
 
 export default function ForgotPasswordPage() {
   const form = useForm<z.infer<typeof formSchema>>({
@@ -30,21 +30,21 @@ export default function ForgotPasswordPage() {
     defaultValues: {
       email: '',
     },
-  })
+  });
 
   async function onSubmit(values: z.infer<typeof formSchema>) {
     try {
       // Import the forgotPassword function
-      const { forgotPassword } = await import('@/lib/auth')
-      
+      const { forgotPassword } = await import('@/lib/auth');
+
       // Send the password reset request
-      await forgotPassword({ email: values.email })
-      
+      await forgotPassword({ email: values.email });
+
       // Show success message
-      toast.success('Password reset email sent. Please check your inbox.')
+      toast.success('Password reset email sent. Please check your inbox.');
     } catch (error) {
-      console.error('Error sending password reset email', error)
-      toast.error('Failed to send password reset email. Please try again.')
+      console.error('Error sending password reset email', error);
+      toast.error('Failed to send password reset email. Please try again.');
     }
   }
 
@@ -52,7 +52,7 @@ export default function ForgotPasswordPage() {
     <div className="relative isolate overflow-hidden flex min-h-svh flex-col items-center justify-center bg-slate-950 p-6 md:p-10">
       {/* Import gradient blobs */}
       <GradientBlobs />
-      
+
       <div className="w-full max-w-sm relative z-10">
         <Card>
           <CardHeader>
@@ -88,7 +88,7 @@ export default function ForgotPasswordPage() {
                   <Button type="submit" className="w-full">
                     Send Reset Link
                   </Button>
-                  
+
                   <div className="text-center mt-4">
                     <Link href="/login" className="text-sm text-sky-400 hover:text-sky-300">
                       Back to Login
@@ -101,5 +101,5 @@ export default function ForgotPasswordPage() {
         </Card>
       </div>
     </div>
-  )
+  );
 }

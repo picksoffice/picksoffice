@@ -1,4 +1,4 @@
-import clsx from 'clsx'
+import clsx from 'clsx';
 
 export function Divider({
   soft = false,
@@ -16,5 +16,5 @@ export function Divider({
         !soft && 'border-white/10'
       )}
     />
-  )
+  );
 }

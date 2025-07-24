@@ -10,24 +10,24 @@ async function getAllPicks() {
   try {
     const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:1337/api';
     const url = `${API_URL}/picks?sort=Date:desc&populate=*&pagination[pageSize]=20&pagination[page]=1`;
-    
+
     console.log('Trying direct fetch to:', url);
-    
+
     const response = await fetch(url, {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
       },
-      cache: 'no-store'
+      cache: 'no-store',
     });
-    
+
     if (!response.ok) {
       throw new Error(`API error: ${response.status}`);
     }
-    
+
     const data = await response.json();
     console.log('getAllPicks direct fetch response:', data);
-    
+
     return data;
   } catch (error) {
     console.error('Error fetching picks:', error);
@@ -37,11 +37,16 @@ async function getAllPicks() {
 
 export default async function AllPicksPage() {
   const picksResponse = await getAllPicks();
-  
+
   // Daten direkt verwenden, ohne Mapping
   const picks = picksResponse?.data || [];
-  const pagination = picksResponse?.meta?.pagination || { page: 1, pageSize: 20, pageCount: 0, total: 0 };
-  
+  const pagination = picksResponse?.meta?.pagination || {
+    page: 1,
+    pageSize: 20,
+    pageCount: 0,
+    total: 0,
+  };
+
   return (
     <div className="min-h-screen pb-20 relative isolate">
       {/* Main blob */}
@@ -57,17 +62,15 @@ export default async function AllPicksPage() {
           className="aspect-[1108/632] w-[40rem] bg-gradient-to-r from-[#80caff] to-[#4f46e5] opacity-15"
         />
       </div>
-      
+
       {/* Secondary blob */}
       <div
         aria-hidden="true"
         className="absolute right-[20%] bottom-[20%] -z-10 transform-gpu blur-3xl"
       >
-        <div
-          className="aspect-[1/1] w-[30rem] rounded-full bg-gradient-to-r from-[#4f46e5] to-[#80caff] opacity-15"
-        />
+        <div className="aspect-[1/1] w-[30rem] rounded-full bg-gradient-to-r from-[#4f46e5] to-[#80caff] opacity-15" />
       </div>
-    
+
       <div className="py-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         <div className="mb-8">
           <h1 className="text-4xl font-bold tracking-tight mb-2">Historical Picks Archive</h1>
@@ -75,7 +78,7 @@ export default async function AllPicksPage() {
             Complete history of all past betting picks with results
           </p>
         </div>
-        
+
         <div>
           {picks.length > 0 ? (
             <PicksTable picks={picks} pagination={pagination} />

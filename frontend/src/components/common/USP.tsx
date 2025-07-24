@@ -1,4 +1,4 @@
-import { ArrowPathIcon, CloudArrowUpIcon, LockClosedIcon } from '@heroicons/react/20/solid'
+import { ArrowPathIcon, CloudArrowUpIcon, LockClosedIcon } from '@heroicons/react/20/solid';
 
 const features = [
   {
@@ -22,12 +22,14 @@ const features = [
     href: '/betting-abc',
     icon: ArrowPathIcon,
   },
-]
+];
 
 export default function Example() {
   return (
-    <div className="bg-transparent
-   py-24 sm:py-32">
+    <div
+      className="bg-transparent
+   py-24 sm:py-32"
+    >
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
           <h2 className="text-base/7 font-semibold text-sky-300">The PicksOffice Difference</h2>
@@ -35,12 +37,14 @@ export default function Example() {
             Why My Approach Delivers Results
           </p>
           <p className="mt-6 text-lg/8 text-gray-300">
-            What separates my betting analysis from others is a relentless focus on finding true value through rigorous statistical modeling and a long-term investment mindset. I don't chase wins - I chase mathematical edge.
+            What separates my betting analysis from others is a relentless focus on finding true
+            value through rigorous statistical modeling and a long-term investment mindset. I don't
+            chase wins - I chase mathematical edge.
           </p>
         </div>
         <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
           <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-3">
-            {features.map((feature) => (
+            {features.map(feature => (
               <div key={feature.name} className="flex flex-col">
                 <dt className="flex items-center gap-x-3 text-base/7 font-semibold text-gray-100">
                   <feature.icon aria-hidden="true" className="size-5 flex-none text-sky-300" />
@@ -60,5 +64,5 @@ export default function Example() {
         </div>
       </div>
     </div>
-  )
+  );
 }

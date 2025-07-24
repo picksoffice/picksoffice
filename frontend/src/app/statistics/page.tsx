@@ -44,10 +44,10 @@ const calculateProfit = (pick: Pick): number => {
 
 const calculateOverallStats = (picks: Pick[]) => {
   const totalPicks = picks.length;
-  const wins = picks.filter((pick) => pick.Result === 'Win').length;
-  const losses = picks.filter((pick) => pick.Result === 'Loss').length;
-  const pushes = picks.filter((pick) => pick.Result === 'Push').length;
-  const decidedPicksForRoi = picks.filter((pick) => pick.Result === 'Win' || pick.Result === 'Loss');
+  const wins = picks.filter(pick => pick.Result === 'Win').length;
+  const losses = picks.filter(pick => pick.Result === 'Loss').length;
+  const pushes = picks.filter(pick => pick.Result === 'Push').length;
+  const decidedPicksForRoi = picks.filter(pick => pick.Result === 'Win' || pick.Result === 'Loss');
   const profit = decidedPicksForRoi.reduce((acc, pick) => acc + calculateProfit(pick), 0);
   const totalDecidedStake = decidedPicksForRoi.reduce((acc, pick) => acc + pick.Stake, 0);
   const winRate = wins + losses > 0 ? (wins / (wins + losses)) * 100 : 0;
@@ -66,7 +66,7 @@ const calculateOverallStats = (picks: Pick[]) => {
 
 const calculateSportsPerformance = (picks: Pick[]) => {
   const desiredOrder = ['NBA', 'NFL', 'MLB', 'NHL', 'NCAAB', 'NCAAF', 'WNBA'];
-  const leagues = Array.from(new Set(picks.map((pick) => pick.League))).sort((a, b) => {
+  const leagues = Array.from(new Set(picks.map(pick => pick.League))).sort((a, b) => {
     const aIndex = desiredOrder.indexOf(a);
     const bIndex = desiredOrder.indexOf(b);
     if (aIndex === -1) return 1;
@@ -75,12 +75,14 @@ const calculateSportsPerformance = (picks: Pick[]) => {
   });
 
   return leagues.map((league, index) => {
-    const leaguePicks = picks.filter((pick) => pick.League === league);
+    const leaguePicks = picks.filter(pick => pick.League === league);
     const picksCount = leaguePicks.length;
-    const wins = leaguePicks.filter((pick) => pick.Result === 'Win').length;
-    const losses = leaguePicks.filter((pick) => pick.Result === 'Loss').length;
-    const pushes = leaguePicks.filter((pick) => pick.Result === 'Push').length;
-    const decidedPicksForRoi = leaguePicks.filter((pick) => pick.Result === 'Win' || pick.Result === 'Loss');
+    const wins = leaguePicks.filter(pick => pick.Result === 'Win').length;
+    const losses = leaguePicks.filter(pick => pick.Result === 'Loss').length;
+    const pushes = leaguePicks.filter(pick => pick.Result === 'Push').length;
+    const decidedPicksForRoi = leaguePicks.filter(
+      pick => pick.Result === 'Win' || pick.Result === 'Loss'
+    );
     const profit = decidedPicksForRoi.reduce((acc, pick) => acc + calculateProfit(pick), 0);
     const totalDecidedStake = decidedPicksForRoi.reduce((acc, pick) => acc + pick.Stake, 0);
     const winRate = wins + losses > 0 ? (wins / (wins + losses)) * 100 : 0;
@@ -102,35 +104,62 @@ const calculateSportsPerformance = (picks: Pick[]) => {
 
 export default async function StatisticsPage() {
   // Standardwerte für Statistiken
-  let recentStats = { totalPicks: 0, wins: 0, losses: 0, pushes: 0, winRate: '0.00', profit: 0, roi: '0.00' };
-  let sportsPerformance: { id: number; name: string; picks: number; wins: number; losses: number; pushes: number; winRate: string; roi: string; profit: number }[] = [];
-  let recentBets: { id: string; bet: string; sport: string; date: string; result: string; odds: number; stake: number; profit: number }[] = [];
+  let recentStats = {
+    totalPicks: 0,
+    wins: 0,
+    losses: 0,
+    pushes: 0,
+    winRate: '0.00',
+    profit: 0,
+    roi: '0.00',
+  };
+  let sportsPerformance: {
+    id: number;
+    name: string;
+    picks: number;
+    wins: number;
+    losses: number;
+    pushes: number;
+    winRate: string;
+    roi: string;
+    profit: number;
+  }[] = [];
+  let recentBets: {
+    id: string;
+    bet: string;
+    sport: string;
+    date: string;
+    result: string;
+    odds: number;
+    stake: number;
+    profit: number;
+  }[] = [];
 
   try {
     // Verwende den neuen Endpunkt mit vorberechneten Statistiken
-    console.log("Fetching pre-calculated statistics...");
+    console.log('Fetching pre-calculated statistics...');
     const controller = new AbortController();
     const timeoutId = setTimeout(() => controller.abort(), 30000); // 30 Sekunden Timeout
 
     try {
       // Verwende den mode=calculated Parameter, um vorberechnete Statistiken zu erhalten
       const response = await fetch(
-        `${process.env.NEXT_PUBLIC_STRAPI_API_URL || 'http://localhost:1337'}/api/picks/all-for-stats?mode=calculated`, 
+        `${process.env.NEXT_PUBLIC_STRAPI_API_URL || 'http://localhost:1337'}/api/picks/all-for-stats?mode=calculated`,
         {
           method: 'GET',
           headers: { 'Content-Type': 'application/json' },
           signal: controller.signal,
           cache: 'no-store',
-          next: { revalidate: 0 }
+          next: { revalidate: 0 },
         }
       );
-      
+
       clearTimeout(timeoutId);
-      
+
       if (response.ok) {
         const data = await response.json();
-        console.log("Received pre-calculated statistics:", data);
-        
+        console.log('Received pre-calculated statistics:', data);
+
         if (data.overallStats && data.sportsPerformance && data.recentBets) {
           // Direkt die vorberechneten Statistiken verwenden
           recentStats = {
@@ -140,51 +169,59 @@ export default async function StatisticsPage() {
             pushes: data.overallStats.pushes || 0,
             winRate: data.overallStats.winRate || '0.00',
             profit: data.overallStats.profit || 0,
-            roi: data.overallStats.roi || '0.00'
+            roi: data.overallStats.roi || '0.00',
           };
-          
+
           sportsPerformance = data.sportsPerformance || [];
-          
+
           // Daten für die letzten Wetten formatieren
           recentBets = (data.recentBets || []).map((bet: any) => ({
             id: bet.id,
             bet: bet.bet,
             sport: bet.sport,
-            date: new Date(bet.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }),
+            date: new Date(bet.date).toLocaleDateString('en-US', {
+              month: 'short',
+              day: 'numeric',
+              year: 'numeric',
+            }),
             result: bet.result,
             odds: bet.odds,
             stake: bet.stake,
-            profit: bet.profit
+            profit: bet.profit,
           }));
-          
+
           console.log(`Successfully loaded statistics with ${recentStats.totalPicks} total picks`);
         } else {
-          throw new Error("Invalid data structure from statistics endpoint");
+          throw new Error('Invalid data structure from statistics endpoint');
         }
       } else {
         throw new Error(`API error: ${response.status} ${response.statusText}`);
       }
     } catch (error) {
-      console.error("Error with pre-calculated statistics:", error);
-      console.log("Falling back to regular getAllPicks method");
-      
+      console.error('Error with pre-calculated statistics:', error);
+      console.log('Falling back to regular getAllPicks method');
+
       // Fallback: Wir holen die Daten und berechnen sie selbst
       const rawData = await getAllPicks();
       const picks = rawData.data || [];
-      
+
       console.log(`Fallback: Processing ${picks.length} total picks`);
-      
+
       recentStats = calculateOverallStats(picks);
       console.log('Overall stats calculated:', recentStats);
-      
+
       sportsPerformance = calculateSportsPerformance(picks);
-      
+
       // Nur die 9 neuesten Picks für die "Last Bets" Anzeige verwenden
-      recentBets = picks.slice(0, 9).map((pick) => ({
+      recentBets = picks.slice(0, 9).map(pick => ({
         id: pick.documentId || String(pick.id),
         bet: pick.Pick,
         sport: pick.League,
-        date: new Date(pick.Date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }),
+        date: new Date(pick.Date).toLocaleDateString('en-US', {
+          month: 'short',
+          day: 'numeric',
+          year: 'numeric',
+        }),
         result: pick.Result,
         odds: pick.Odds,
         stake: pick.Stake,
@@ -224,7 +261,9 @@ export default async function StatisticsPage() {
           <div className="grid grid-cols-2 gap-4 lg:grid-cols-4 sm:gap-6">
             <div className="flex flex-col rounded-2xl bg-slate-800/30 backdrop-blur-sm p-5 sm:p-6 shadow-lg border border-white/10 ring-1 ring-white/10 hover:bg-slate-800/40 transition-colors">
               <div className="flex justify-between items-start mb-2">
-                <dt className="text-xs sm:text-sm font-semibold text-gray-300 whitespace-pre-line">Total Picks</dt>
+                <dt className="text-xs sm:text-sm font-semibold text-gray-300 whitespace-pre-line">
+                  Total Picks
+                </dt>
                 <div className="text-sky-300">
                   <CalculatorIcon className="w-6 h-6" />
                 </div>
@@ -235,7 +274,9 @@ export default async function StatisticsPage() {
             </div>
             <div className="flex flex-col rounded-2xl bg-slate-800/30 backdrop-blur-sm p-5 sm:p-6 shadow-lg border border-white/10 ring-1 ring-white/10 hover:bg-slate-800/40 transition-colors">
               <div className="flex justify-between items-start mb-2">
-                <dt className="text-xs sm:text-sm font-semibold text-gray-300 whitespace-pre-line">Win Rate</dt>
+                <dt className="text-xs sm:text-sm font-semibold text-gray-300 whitespace-pre-line">
+                  Win Rate
+                </dt>
                 <div className="text-sky-300">
                   <CheckBadgeIcon className="w-6 h-6" />
                 </div>
@@ -246,7 +287,9 @@ export default async function StatisticsPage() {
             </div>
             <div className="flex flex-col rounded-2xl bg-slate-800/30 backdrop-blur-sm p-5 sm:p-6 shadow-lg border border-white/10 ring-1 ring-white/10 hover:bg-slate-800/40 transition-colors">
               <div className="flex justify-between items-start mb-2">
-                <dt className="text-xs sm:text-sm font-semibold text-gray-300 whitespace-pre-line">Profit</dt>
+                <dt className="text-xs sm:text-sm font-semibold text-gray-300 whitespace-pre-line">
+                  Profit
+                </dt>
                 <div className="text-sky-300">
                   <ArrowTrendingUpIcon className="w-6 h-6" />
                 </div>
@@ -257,7 +300,9 @@ export default async function StatisticsPage() {
             </div>
             <div className="flex flex-col rounded-2xl bg-slate-800/30 backdrop-blur-sm p-5 sm:p-6 shadow-lg border border-white/10 ring-1 ring-white/10 hover:bg-slate-800/40 transition-colors">
               <div className="flex justify-between items-start mb-2">
-                <dt className="text-xs sm:text-sm font-semibold text-gray-300 whitespace-pre-line">ROI</dt>
+                <dt className="text-xs sm:text-sm font-semibold text-gray-300 whitespace-pre-line">
+                  ROI
+                </dt>
                 <div className="text-sky-300">
                   <ChartBarIcon className="w-6 h-6" />
                 </div>
@@ -277,13 +322,15 @@ export default async function StatisticsPage() {
               </div>
               <div className="space-y-6">
                 {sportsPerformance.length > 0 ? (
-                  sportsPerformance.map((sport) => (
+                  sportsPerformance.map(sport => (
                     <div key={sport.id} className="flex flex-col">
                       <div className="flex justify-between mb-2">
                         <div className="flex items-center">
                           <span className="font-medium">{sport.name}</span>
                         </div>
-                        <div className="font-medium text-emerald-400">{formatProfit(sport.profit)}</div>
+                        <div className="font-medium text-emerald-400">
+                          {formatProfit(sport.profit)}
+                        </div>
                       </div>
                       <div className="w-full h-2 bg-slate-700 rounded-full relative overflow-hidden">
                         <div
@@ -308,7 +355,10 @@ export default async function StatisticsPage() {
             <div className="rounded-2xl bg-slate-800/30 backdrop-blur-sm shadow-lg border border-white/10 ring-1 ring-white/10 p-6">
               <div className="flex items-center justify-between mb-6">
                 <h2 className="text-xl font-bold">Last Bets</h2>
-                <a href="/all-picks" className="inline-flex items-center text-sky-300 hover:text-indigo-300">
+                <a
+                  href="/all-picks"
+                  className="inline-flex items-center text-sky-300 hover:text-indigo-300"
+                >
                   View All Picks
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -317,7 +367,12 @@ export default async function StatisticsPage() {
                     viewBox="0 0 24 24"
                     stroke="currentColor"
                   >
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M9 5l7 7-7 7"
+                    />
                   </svg>
                 </a>
               </div>
@@ -325,13 +380,15 @@ export default async function StatisticsPage() {
                 <table className="min-w-full divide-y divide-gray-700">
                   <tbody className="divide-y divide-gray-800">
                     {recentBets.length > 0 ? (
-                      recentBets.map((bet) => (
+                      recentBets.map(bet => (
                         <tr key={bet.id} className="hover:bg-slate-800/20">
                           <td className="py-3 pl-1 pr-3">
                             <div>
                               <div className="flex items-baseline gap-2">
                                 <p className="font-medium">{bet.bet}</p>
-                                <p className="text-xs text-gray-400">{formatAmericanOdds(bet.odds)}</p>
+                                <p className="text-xs text-gray-400">
+                                  {formatAmericanOdds(bet.odds)}
+                                </p>
                               </div>
                               <p className="text-xs text-gray-400">
                                 {bet.sport} - {bet.date}
@@ -345,8 +402,8 @@ export default async function StatisticsPage() {
                                   bet.profit > 0
                                     ? 'text-emerald-400'
                                     : bet.profit < 0
-                                    ? 'text-red-400'
-                                    : 'text-gray-400'
+                                      ? 'text-red-400'
+                                      : 'text-gray-400'
                                 }`}
                               >
                                 {bet.result === 'Pending'

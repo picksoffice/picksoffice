@@ -1,54 +1,58 @@
-import type { Metadata } from "next";
-import { Space_Grotesk } from "next/font/google";
-import "./globals.css";
-import Header from "@/components/layout/Header";
-import Footer from "@/components/layout/Footer";
-import Newsletter from "@/components/layout/Newsletter";
-import { AuthProvider } from "@/lib/AuthContext";
-import { ThemeProvider } from "@/lib/ThemeContext";
-import { Toaster } from "sonner";
+import type { Metadata } from 'next';
+import { Space_Grotesk } from 'next/font/google';
+import './globals.css';
+import Header from '@/components/layout/Header';
+import Footer from '@/components/layout/Footer';
+import Newsletter from '@/components/layout/Newsletter';
+import { AuthProvider } from '@/lib/AuthContext';
+import { ThemeProvider } from '@/lib/ThemeContext';
+import { Toaster } from 'sonner';
 
 // Space Grotesk for everything
 const spaceGrotesk = Space_Grotesk({
-  subsets: ["latin"],
-  variable: "--font-space-grotesk",
+  subsets: ['latin'],
+  variable: '--font-space-grotesk',
 });
 
 export const metadata: Metadata = {
-  title: "PicksOffice | Expert Sports Betting Picks & Analysis",
-  description: "Get winning sports betting picks and expert analysis for NFL, NBA, MLB, NHL and more. Maximize your edge with our proven betting strategy.",
-  keywords: "sports betting, picks, NFL picks, NBA picks, MLB picks, NHL picks, betting analysis, sports predictions, betting tips, sports handicapping",
-  authors: [{ name: "PicksOffice Team" }],
-  creator: "PicksOffice",
-  publisher: "PicksOffice",
+  title: 'PicksOffice | Expert Sports Betting Picks & Analysis',
+  description:
+    'Get winning sports betting picks and expert analysis for NFL, NBA, MLB, NHL and more. Maximize your edge with our proven betting strategy.',
+  keywords:
+    'sports betting, picks, NFL picks, NBA picks, MLB picks, NHL picks, betting analysis, sports predictions, betting tips, sports handicapping',
+  authors: [{ name: 'PicksOffice Team' }],
+  creator: 'PicksOffice',
+  publisher: 'PicksOffice',
   // Next.js App Router verwendet automatisch die favicon.ico, icon.png und apple-icon.png aus dem /app-Verzeichnis
   manifest: '/manifest.json',
   appleWebApp: {
-    title: "PicksOffice",
-    statusBarStyle: "default",
+    title: 'PicksOffice',
+    statusBarStyle: 'default',
   },
   openGraph: {
-    type: "website",
-    locale: "en_US",
-    url: "https://picksoffice.com",
-    title: "PicksOffice | Expert Sports Betting Picks & Analysis",
-    description: "Get winning sports betting picks and expert analysis for NFL, NBA, MLB, NHL and more. Maximize your edge with our proven betting strategy.",
-    siteName: "PicksOffice",
+    type: 'website',
+    locale: 'en_US',
+    url: 'https://picksoffice.com',
+    title: 'PicksOffice | Expert Sports Betting Picks & Analysis',
+    description:
+      'Get winning sports betting picks and expert analysis for NFL, NBA, MLB, NHL and more. Maximize your edge with our proven betting strategy.',
+    siteName: 'PicksOffice',
     images: [
       {
-        url: "/images/og-image.jpg",
+        url: '/images/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: "PicksOffice - Sports Betting Picks & Analysis",
+        alt: 'PicksOffice - Sports Betting Picks & Analysis',
       },
     ],
   },
   twitter: {
-    card: "summary_large_image",
-    title: "PicksOffice | Expert Sports Betting Picks & Analysis",
-    description: "Get winning sports betting picks and expert analysis for NFL, NBA, MLB, NHL and more.",
-    images: ["/images/twitter-image.jpg"],
-    creator: "@picksoffice",
+    card: 'summary_large_image',
+    title: 'PicksOffice | Expert Sports Betting Picks & Analysis',
+    description:
+      'Get winning sports betting picks and expert analysis for NFL, NBA, MLB, NHL and more.',
+    images: ['/images/twitter-image.jpg'],
+    creator: '@picksoffice',
   },
   robots: {
     index: true,
@@ -61,7 +65,7 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: "https://picksoffice.com",
+    canonical: 'https://picksoffice.com',
   },
 };
 

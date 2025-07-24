@@ -9,6 +9,7 @@ Da die E-Mail im Ethereal-Webinterface keinen klickbaren Link zeigt, müssen wir
 2. Füge `http://localhost:3000/reset-password` vor dem `?code=...` ein, um den vollständigen Link zu erhalten.
 
 3. Für den aktuellsten Token ist der vollständige Link:
+
 ```
 http://localhost:3000/reset-password?code=8c63fcbc7da889871b20c60b8a3aa5fb97919e64f2cbe6952e1b0c58a54d497956859c281ecb6b6651351fd9cef725a8f4a6236aeee5faddb931e63592df87ec
 ```
@@ -37,6 +38,7 @@ http://localhost:3000/reset-password?code=8c63fcbc7da889871b20c60b8a3aa5fb97919e
 ## Ethereal-Mail Zugriff
 
 Um die gesendeten E-Mails zu sehen:
+
 - Gehe zu https://ethereal.email/messages
 - Anmelden mit:
   - Email: emmanuelle.abshire19@ethereal.email

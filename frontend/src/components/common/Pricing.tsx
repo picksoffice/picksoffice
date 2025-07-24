@@ -1,7 +1,7 @@
-'use client'
+'use client';
 
-import { useState, useEffect } from 'react'
-import { CheckIcon } from '@heroicons/react/20/solid'
+import { useState, useEffect } from 'react';
+import { CheckIcon } from '@heroicons/react/20/solid';
 
 const tiers = [
   {
@@ -61,28 +61,28 @@ const tiers = [
     mostPopular: false,
     isCustom: true,
   },
-]
+];
 
 function classNames(...classes) {
-  return classes.filter(Boolean).join(' ')
+  return classes.filter(Boolean).join(' ');
 }
 
 export default function Pricing() {
-  const [customDays, setCustomDays] = useState(15)
-  const [customPrice, setCustomPrice] = useState('$29.99')
+  const [customDays, setCustomDays] = useState(15);
+  const [customPrice, setCustomPrice] = useState('$29.99');
 
   useEffect(() => {
     // Calculate price based on days selected
-    const pricePerDay = 1.99
-    const price = (customDays * pricePerDay).toFixed(2)
+    const pricePerDay = 1.99;
+    const price = (customDays * pricePerDay).toFixed(2);
     // Apply discount for longer periods
-    let discountedPrice = price
-    if (customDays >= 10) discountedPrice = (price * 0.9).toFixed(2)
-    if (customDays >= 20) discountedPrice = (price * 0.8).toFixed(2)
-    if (customDays >= 28) discountedPrice = 59.99
-    
-    setCustomPrice(`$${discountedPrice}`)
-  }, [customDays])
+    let discountedPrice = price;
+    if (customDays >= 10) discountedPrice = (price * 0.9).toFixed(2);
+    if (customDays >= 20) discountedPrice = (price * 0.8).toFixed(2);
+    if (customDays >= 28) discountedPrice = 59.99;
+
+    setCustomPrice(`$${discountedPrice}`);
+  }, [customDays]);
 
   return (
     <div className="py-16 sm:py-24 bg-transparent" id="pricing">
@@ -94,16 +94,19 @@ export default function Pricing() {
           </p>
         </div>
         <p className="mx-auto mt-6 max-w-2xl text-pretty text-center text-base font-medium text-gray-300 sm:text-lg/7">
-          Choose a plan that fits your betting strategy. All plans include access to our expert picks and analysis.
+          Choose a plan that fits your betting strategy. All plans include access to our expert
+          picks and analysis.
         </p>
-       
+
         <div className="isolate mx-auto mt-10 grid max-w-md grid-cols-1 gap-6 md:max-w-2xl md:grid-cols-2 lg:max-w-4xl xl:mx-0 xl:max-w-none xl:grid-cols-4">
-          {tiers.map((tier) => (
+          {tiers.map(tier => (
             <div
               key={tier.id}
               className={classNames(
-                tier.mostPopular ? 'ring-2 ring-sky-500 bg-slate-800/40 backdrop-blur-sm' : 'ring-1 ring-gray-700 bg-slate-800/20 backdrop-blur-sm',
-                'rounded-xl p-6 relative',
+                tier.mostPopular
+                  ? 'ring-2 ring-sky-500 bg-slate-800/40 backdrop-blur-sm'
+                  : 'ring-1 ring-gray-700 bg-slate-800/20 backdrop-blur-sm',
+                'rounded-xl p-6 relative'
               )}
             >
               <div className="flex items-center gap-2">
@@ -111,7 +114,7 @@ export default function Pricing() {
                   id={tier.id}
                   className={classNames(
                     tier.mostPopular ? 'text-sky-400' : 'text-white',
-                    'text-lg font-semibold',
+                    'text-lg font-semibold'
                   )}
                 >
                   {tier.name}
@@ -128,10 +131,13 @@ export default function Pricing() {
                   {tier.isCustom ? customPrice : tier.price}
                 </span>
               </p>
-              
+
               {tier.isCustom && (
                 <div className="mt-4">
-                  <label htmlFor="custom-days" className="block text-xs font-medium text-gray-300 mb-1.5">
+                  <label
+                    htmlFor="custom-days"
+                    className="block text-xs font-medium text-gray-300 mb-1.5"
+                  >
                     Select days: {customDays}
                   </label>
                   <input
@@ -140,7 +146,7 @@ export default function Pricing() {
                     min="1"
                     max="30"
                     value={customDays}
-                    onChange={(e) => setCustomDays(parseInt(e.target.value))}
+                    onChange={e => setCustomDays(parseInt(e.target.value))}
                     className="w-full h-1.5 bg-gray-700 rounded-lg appearance-none cursor-pointer accent-sky-500"
                   />
                   <div className="flex justify-between text-xs text-gray-400 mt-1">
@@ -149,7 +155,7 @@ export default function Pricing() {
                   </div>
                 </div>
               )}
-              
+
               <a
                 href="https://bet105.com/picksoffice"
                 target="_blank"
@@ -159,13 +165,13 @@ export default function Pricing() {
                   tier.mostPopular
                     ? 'bg-sky-600 text-white shadow-sm hover:bg-sky-500'
                     : 'text-sky-400 ring-1 ring-inset ring-sky-500/30 hover:ring-sky-400',
-                  'mt-5 block rounded-md px-3 py-1.5 text-center text-sm font-medium focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-600 transition-all',
+                  'mt-5 block rounded-md px-3 py-1.5 text-center text-sm font-medium focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-600 transition-all'
                 )}
               >
                 Get access
               </a>
               <ul role="list" className="mt-6 space-y-2.5 text-sm text-gray-300">
-                {tier.features.map((feature) => (
+                {tier.features.map(feature => (
                   <li key={feature} className="flex gap-x-2">
                     <CheckIcon className="h-5 w-4 flex-none text-sky-400" aria-hidden="true" />
                     {feature}
@@ -175,8 +181,7 @@ export default function Pricing() {
             </div>
           ))}
         </div>
-        
       </div>
     </div>
-  )
+  );
 }

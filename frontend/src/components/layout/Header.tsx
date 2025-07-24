@@ -1,15 +1,15 @@
-'use client'
+'use client';
 
-import { useState } from 'react'
-import * as Headless from '@headlessui/react'
-import { Bars3Icon, XMarkIcon, UserCircleIcon } from '@heroicons/react/24/outline'
-import Link from 'next/link'
-import { usePathname } from 'next/navigation'
-import { useAuth } from '@/lib/AuthContext'
+import { useState } from 'react';
+import * as Headless from '@headlessui/react';
+import { Bars3Icon, XMarkIcon, UserCircleIcon } from '@heroicons/react/24/outline';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+import { useAuth } from '@/lib/AuthContext';
 
 const navigation = [
-  { 
-    name: 'Picks', 
+  {
+    name: 'Picks',
     href: '/picks',
     dropdown: [
       { name: 'NBA', href: '/picks?league=NBA', icon: '🏀' },
@@ -17,19 +17,19 @@ const navigation = [
       { name: 'MLB', href: '/picks?league=MLB', icon: '⚾' },
       { name: 'NHL', href: '/picks?league=NHL', icon: '🏒' },
       { name: 'NCAAB', href: '/picks?league=NCAAB', icon: '🏀' },
-      { name: 'NCAAF', href: '/picks?league=NCAAF', icon: '🏈' }
-    ]
+      { name: 'NCAAF', href: '/picks?league=NCAAF', icon: '🏈' },
+    ],
   },
   { name: 'Statistics', href: '/statistics' },
   { name: 'Blog', href: '/blog' },
   { name: 'About', href: '/about' },
-]
+];
 
 export default function Header() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-  const [userMenuOpen, setUserMenuOpen] = useState(false)
-  const pathname = usePathname()
-  const { user, logout } = useAuth()
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [userMenuOpen, setUserMenuOpen] = useState(false);
+  const pathname = usePathname();
+  const { user, logout } = useAuth();
 
   return (
     <header>
@@ -37,11 +37,11 @@ export default function Header() {
         <div className="flex lg:flex-1">
           <Link href="/" className="-m-1.5 p-1.5">
             <span className="sr-only">PicksOffice</span>
-            <img 
-              src="/picksoffice-logo.svg?v=1" 
-              alt="PicksOffice" 
+            <img
+              src="/picksoffice-logo.svg?v=1"
+              alt="PicksOffice"
               className="h-7"
-              style={{ width: 'auto' }} 
+              style={{ width: 'auto' }}
             />
           </Link>
         </div>
@@ -56,8 +56,8 @@ export default function Header() {
               {user.username.split('_')[0]}
             </button>
           ) : (
-            <Link 
-              href="/login" 
+            <Link
+              href="/login"
               className="text-sky-300 hover:text-indigo-300 bg-slate-800/50 px-3 py-1.5 rounded-lg text-xs inline-flex items-center transition-all"
             >
               Log in
@@ -73,30 +73,30 @@ export default function Header() {
           </button>
         </div>
         <div className="hidden lg:flex lg:gap-x-8">
-          {navigation.map((item) => (
+          {navigation.map(item =>
             item.dropdown ? (
               <div className="relative group" key={item.name}>
-                <Link 
+                <Link
                   href={item.href}
                   className={`text-sm/6 font-semibold px-3.5 py-2 rounded-lg transition-all inline-flex items-center ${
-                    pathname.startsWith(item.href) 
-                      ? 'text-sky-300 bg-slate-800/50' 
+                    pathname.startsWith(item.href)
+                      ? 'text-sky-300 bg-slate-800/50'
                       : 'text-gray-100 hover:text-sky-300 hover:bg-slate-800/50'
                   }`}
                 >
                   <span className="flex items-center">
                     {item.name}
-                    <svg 
-                      className="ml-1.5 h-4 w-4 transition-transform duration-200 group-hover:rotate-180" 
-                      fill="none" 
-                      viewBox="0 0 24 24" 
+                    <svg
+                      className="ml-1.5 h-4 w-4 transition-transform duration-200 group-hover:rotate-180"
+                      fill="none"
+                      viewBox="0 0 24 24"
                       stroke="currentColor"
                     >
-                      <path 
-                        strokeLinecap="round" 
-                        strokeLinejoin="round" 
-                        strokeWidth={2} 
-                        d="M19 9l-7 7-7-7" 
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M19 9l-7 7-7-7"
                       />
                     </svg>
                   </span>
@@ -116,7 +116,9 @@ export default function Header() {
                           index !== item.dropdown.length - 1 ? 'border-b border-gray-800/50' : ''
                         }`}
                       >
-                        <span className="text-lg mr-3 flex items-center justify-center w-6">{dropdownItem.icon}</span>
+                        <span className="text-lg mr-3 flex items-center justify-center w-6">
+                          {dropdownItem.icon}
+                        </span>
                         {dropdownItem.name}
                       </Link>
                     ))}
@@ -124,19 +126,19 @@ export default function Header() {
                 </div>
               </div>
             ) : (
-              <Link 
-                key={item.name} 
-                href={item.href} 
+              <Link
+                key={item.name}
+                href={item.href}
                 className={`text-sm/6 font-semibold px-3 py-2 rounded-lg transition-all ${
-                  pathname === item.href 
-                    ? 'text-sky-300 bg-slate-800/50' 
+                  pathname === item.href
+                    ? 'text-sky-300 bg-slate-800/50'
                     : 'text-gray-100 hover:text-sky-300 hover:bg-slate-800/50'
                 }`}
               >
                 {item.name}
               </Link>
             )
-          ))}
+          )}
         </div>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
           {user ? (
@@ -173,8 +175,8 @@ export default function Header() {
               </Headless.MenuItems>
             </Headless.Menu>
           ) : (
-            <Link 
-              href="/login" 
+            <Link
+              href="/login"
               className="text-sky-300 hover:text-indigo-300 bg-slate-800/50 px-4 sm:px-5 py-2 rounded-lg text-sm inline-flex items-center transition-all"
             >
               Log in
@@ -182,24 +184,22 @@ export default function Header() {
           )}
         </div>
       </nav>
-      <Headless.Dialog 
+      <Headless.Dialog
         as="div"
-        open={mobileMenuOpen} 
+        open={mobileMenuOpen}
         onClose={() => setMobileMenuOpen(false)}
         className="lg:hidden"
       >
-        <Headless.DialogBackdrop
-          className="fixed inset-0 z-50 bg-gray-900 bg-opacity-75 transition-opacity"
-        />
+        <Headless.DialogBackdrop className="fixed inset-0 z-50 bg-gray-900 bg-opacity-75 transition-opacity" />
         <Headless.DialogPanel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-slate-950 dark:bg-slate-950 px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-100/10">
           <div className="flex items-center justify-between">
             <Link href="/" className="-m-1.5 p-1.5">
               <span className="sr-only">PicksOffice</span>
-              <img 
-                src="/picksoffice-logo.svg?v=1" 
-                alt="PicksOffice" 
+              <img
+                src="/picksoffice-logo.svg?v=1"
+                alt="PicksOffice"
                 className="h-7"
-                style={{ width: 'auto' }} 
+                style={{ width: 'auto' }}
               />
             </Link>
             <button
@@ -214,14 +214,14 @@ export default function Header() {
           <div className="mt-6 flow-root">
             <div className="-my-6 divide-y divide-gray-500/30">
               <div className="space-y-2 py-6">
-                {navigation.map((item) => (
+                {navigation.map(item => (
                   <Link
                     key={item.name}
                     href={item.href}
                     onClick={() => setMobileMenuOpen(false)}
                     className={`-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold ${
-                      pathname.startsWith(item.href) 
-                        ? 'text-sky-300 bg-gray-800/50' 
+                      pathname.startsWith(item.href)
+                        ? 'text-sky-300 bg-gray-800/50'
                         : 'text-gray-100 hover:bg-gray-800/50'
                     }`}
                   >
@@ -259,11 +259,15 @@ export default function Header() {
                   </Link>
                 )}
                 <div className="mt-6 px-3">
-                  <a href="https://bet105.com/picksoffice" target="_blank" rel="noopener noreferrer">
-                    <img 
-                      src="/images/bet105_300x250.gif" 
-                      alt="Bet105" 
-                      className="w-full rounded-lg shadow-lg" 
+                  <a
+                    href="https://bet105.com/picksoffice"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img
+                      src="/images/bet105_300x250.gif"
+                      alt="Bet105"
+                      className="w-full rounded-lg shadow-lg"
                     />
                   </a>
                 </div>
@@ -273,5 +277,5 @@ export default function Header() {
         </Headless.DialogPanel>
       </Headless.Dialog>
     </header>
-  )
+  );
 }

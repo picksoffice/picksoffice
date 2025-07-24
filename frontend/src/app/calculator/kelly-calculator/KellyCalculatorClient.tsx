@@ -6,9 +6,9 @@ import React, { useState } from 'react';
 const americanToDecimal = (american: number): number => {
   let result: number;
   if (american > 0) {
-    result = (american / 100) + 1;
+    result = american / 100 + 1;
   } else {
-    result = (-100 / american) + 1;
+    result = -100 / american + 1;
   }
   // Normalize precision to avoid hydration mismatches
   return Math.round(result * 100) / 100;
@@ -27,7 +27,7 @@ const calculateKelly = (decimalOdds: number, winProbability: number): number => 
 
   // Kelly formula: (bp - q) / b
   // where: b = odds - 1, p = probability of winning, q = probability of losing (1 - p)
-  const kellyPercentage = ((decimalMinusOne * probability) - (1 - probability)) / decimalMinusOne;
+  const kellyPercentage = (decimalMinusOne * probability - (1 - probability)) / decimalMinusOne;
 
   return Math.max(Math.round(kellyPercentage * 10000) / 100, 0); // Round to 2 decimal places and ensure it's not negative
 };
@@ -139,15 +139,27 @@ export default function KellyCalculatorClient() {
         <div className="mb-10">
           <div className="flex items-center gap-2 mb-4">
             <a href="/calculator" className="text-sky-300 hover:text-sky-400 transition-colors">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18" />
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth={1.5}
+                stroke="currentColor"
+                className="w-5 h-5"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18"
+                />
               </svg>
             </a>
             <h1 className="text-4xl font-bold tracking-tight">Kelly Criterion Calculator</h1>
           </div>
           <p className="text-lg text-gray-400 max-w-3xl">
-            Calculate the optimal bet size based on your bankroll and edge using the Kelly Criterion formula. 
-            This mathematical formula helps maximize long-term growth while minimizing risk.
+            Calculate the optimal bet size based on your bankroll and edge using the Kelly Criterion
+            formula. This mathematical formula helps maximize long-term growth while minimizing
+            risk.
           </p>
         </div>
 
@@ -159,23 +171,23 @@ export default function KellyCalculatorClient() {
               <div className="mb-6">
                 <label className="block text-sm font-medium text-gray-300 mb-2">Odds Format</label>
                 <div className="grid grid-cols-2 gap-3 max-w-xs">
-                  <button 
+                  <button
                     type="button"
                     onClick={() => setOddsFormat('american')}
                     className={`px-3 py-2 text-sm font-medium rounded-md ${
-                      oddsFormat === 'american' 
-                        ? 'bg-sky-800 text-white' 
+                      oddsFormat === 'american'
+                        ? 'bg-sky-800 text-white'
                         : 'bg-slate-700/50 text-gray-300 hover:bg-slate-700'
                     }`}
                   >
                     American
                   </button>
-                  <button 
+                  <button
                     type="button"
                     onClick={() => setOddsFormat('decimal')}
                     className={`px-3 py-2 text-sm font-medium rounded-md ${
-                      oddsFormat === 'decimal' 
-                        ? 'bg-sky-800 text-white' 
+                      oddsFormat === 'decimal'
+                        ? 'bg-sky-800 text-white'
                         : 'bg-slate-700/50 text-gray-300 hover:bg-slate-700'
                     }`}
                   >
@@ -193,35 +205,43 @@ export default function KellyCalculatorClient() {
                     id="odds"
                     type="text"
                     value={odds}
-                    onChange={(e) => setOdds(e.target.value)}
-                    placeholder={oddsFormat === 'american' ? "e.g., -110, +150" : "e.g., 1.91, 2.50"}
+                    onChange={e => setOdds(e.target.value)}
+                    placeholder={
+                      oddsFormat === 'american' ? 'e.g., -110, +150' : 'e.g., 1.91, 2.50'
+                    }
                     className="w-full bg-slate-800 border-slate-700 rounded-md py-2 px-3 text-white placeholder-gray-500 focus:ring-sky-500 focus:border-sky-500"
                   />
                 </div>
 
                 <div>
-                  <label htmlFor="win-probability" className="block text-sm font-medium text-gray-300 mb-2">
+                  <label
+                    htmlFor="win-probability"
+                    className="block text-sm font-medium text-gray-300 mb-2"
+                  >
                     Your Estimated Win Probability (%)
                   </label>
                   <input
                     id="win-probability"
                     type="text"
                     value={winProbability}
-                    onChange={(e) => setWinProbability(e.target.value)}
+                    onChange={e => setWinProbability(e.target.value)}
                     placeholder="e.g., 55"
                     className="w-full bg-slate-800 border-slate-700 rounded-md py-2 px-3 text-white placeholder-gray-500 focus:ring-sky-500 focus:border-sky-500"
                   />
                 </div>
 
                 <div>
-                  <label htmlFor="bankroll" className="block text-sm font-medium text-gray-300 mb-2">
+                  <label
+                    htmlFor="bankroll"
+                    className="block text-sm font-medium text-gray-300 mb-2"
+                  >
                     Your Bankroll ($)
                   </label>
                   <input
                     id="bankroll"
                     type="text"
                     value={bankroll}
-                    onChange={(e) => setBankroll(e.target.value)}
+                    onChange={e => setBankroll(e.target.value)}
                     placeholder="e.g., 1000"
                     className="w-full bg-slate-800 border-slate-700 rounded-md py-2 px-3 text-white placeholder-gray-500 focus:ring-sky-500 focus:border-sky-500"
                   />
@@ -256,14 +276,15 @@ export default function KellyCalculatorClient() {
                       </div>
                       <div>
                         <div className="text-sm text-gray-400 mb-1">Your Fair Odds</div>
-                        <div className="text-xl font-semibold text-white">
-                          {fairOdds}
-                        </div>
+                        <div className="text-xl font-semibold text-white">{fairOdds}</div>
                       </div>
                       <div>
                         <div className="text-sm text-gray-400 mb-1">Edge</div>
-                        <div className={`text-xl font-semibold ${edge && edge > 0 ? 'text-emerald-400' : 'text-red-400'}`}>
-                          {edge && edge > 0 ? '+' : ''}{edge}%
+                        <div
+                          className={`text-xl font-semibold ${edge && edge > 0 ? 'text-emerald-400' : 'text-red-400'}`}
+                        >
+                          {edge && edge > 0 ? '+' : ''}
+                          {edge}%
                         </div>
                       </div>
                     </div>
@@ -274,15 +295,11 @@ export default function KellyCalculatorClient() {
                     <div className="grid grid-cols-1 sm:grid-cols-4 gap-4">
                       <div>
                         <div className="text-sm text-gray-400 mb-1">Kelly Percentage</div>
-                        <div className="text-xl font-semibold text-white">
-                          {kellyPercentage}%
-                        </div>
+                        <div className="text-xl font-semibold text-white">{kellyPercentage}%</div>
                       </div>
                       <div>
                         <div className="text-sm text-gray-400 mb-1">Full Kelly</div>
-                        <div className="text-xl font-semibold text-emerald-400">
-                          ${kellyAmount}
-                        </div>
+                        <div className="text-xl font-semibold text-emerald-400">${kellyAmount}</div>
                       </div>
                       <div>
                         <div className="text-sm text-gray-400 mb-1">Half Kelly</div>
@@ -308,25 +325,38 @@ export default function KellyCalculatorClient() {
               <h2 className="text-xl font-semibold mb-4">Understanding Kelly Criterion</h2>
 
               <p className="text-sm text-gray-400 mb-4">
-                The Kelly Criterion is a mathematical formula used to determine the optimal size of bets to maximize long-term bankroll growth.
+                The Kelly Criterion is a mathematical formula used to determine the optimal size of
+                bets to maximize long-term bankroll growth.
               </p>
 
               <h3 className="font-medium text-sky-300 mt-4">How It Works</h3>
               <p className="text-sm text-gray-400 mt-1">
-                Kelly calculates what percentage of your bankroll to wager based on your edge and the odds offered. The formula balances the competing goals of growth and security.
+                Kelly calculates what percentage of your bankroll to wager based on your edge and
+                the odds offered. The formula balances the competing goals of growth and security.
               </p>
 
               <h3 className="font-medium text-sky-300 mt-4">Kelly Variations</h3>
               <ul className="text-sm text-gray-400 mt-1 space-y-2">
-                <li><span className="text-white">Full Kelly:</span> Mathematically optimal but high volatility</li>
-                <li><span className="text-white">Half Kelly:</span> 50% of the optimal bet (recommended)</li>
-                <li><span className="text-white">Quarter Kelly:</span> 25% of the optimal bet (conservative)</li>
+                <li>
+                  <span className="text-white">Full Kelly:</span> Mathematically optimal but high
+                  volatility
+                </li>
+                <li>
+                  <span className="text-white">Half Kelly:</span> 50% of the optimal bet
+                  (recommended)
+                </li>
+                <li>
+                  <span className="text-white">Quarter Kelly:</span> 25% of the optimal bet
+                  (conservative)
+                </li>
               </ul>
 
               <div className="mt-4 p-3 bg-sky-900/30 border border-sky-500/20 rounded-md">
                 <h3 className="font-medium text-sky-300 mb-1">Important Note</h3>
                 <p className="text-sm text-gray-300">
-                  Kelly only works when your probability estimate is accurate. If your probability is off, Kelly can lead to overbetting. Most professional bettors use fractional Kelly (like Half or Quarter Kelly) for safety.
+                  Kelly only works when your probability estimate is accurate. If your probability
+                  is off, Kelly can lead to overbetting. Most professional bettors use fractional
+                  Kelly (like Half or Quarter Kelly) for safety.
                 </p>
               </div>
             </div>
@@ -335,7 +365,8 @@ export default function KellyCalculatorClient() {
               <h2 className="text-xl font-semibold mb-4">Edge Explained</h2>
 
               <p className="text-sm text-gray-400 mb-2">
-                Your edge is the difference between your estimated probability and the implied probability from the odds.
+                Your edge is the difference between your estimated probability and the implied
+                probability from the odds.
               </p>
 
               <div className="mt-2 space-y-2">
@@ -365,26 +396,35 @@ export default function KellyCalculatorClient() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="rounded-xl bg-slate-800/30 backdrop-blur-sm p-6 shadow-lg border border-white/10">
-              <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-sky-800 text-white mb-4">1</div>
+              <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-sky-800 text-white mb-4">
+                1
+              </div>
               <h3 className="text-xl font-medium mb-2">Be Conservative</h3>
               <p className="text-gray-400">
-                Use Half or Quarter Kelly sizes instead of Full Kelly to reduce variance while still capturing most of the growth benefits.
+                Use Half or Quarter Kelly sizes instead of Full Kelly to reduce variance while still
+                capturing most of the growth benefits.
               </p>
             </div>
 
             <div className="rounded-xl bg-slate-800/30 backdrop-blur-sm p-6 shadow-lg border border-white/10">
-              <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-sky-800 text-white mb-4">2</div>
+              <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-sky-800 text-white mb-4">
+                2
+              </div>
               <h3 className="text-xl font-medium mb-2">Assess Probabilities Realistically</h3>
               <p className="text-gray-400">
-                Be honest and accurate with your probability estimates. Overstating your edge will lead to overbetting and potential bankroll destruction.
+                Be honest and accurate with your probability estimates. Overstating your edge will
+                lead to overbetting and potential bankroll destruction.
               </p>
             </div>
 
             <div className="rounded-xl bg-slate-800/30 backdrop-blur-sm p-6 shadow-lg border border-white/10">
-              <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-sky-800 text-white mb-4">3</div>
+              <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-sky-800 text-white mb-4">
+                3
+              </div>
               <h3 className="text-xl font-medium mb-2">Set Maximum Bet Limits</h3>
               <p className="text-gray-400">
-                Consider setting a maximum bet size (e.g., 5% of bankroll) regardless of what Kelly suggests, especially for bets with uncertain probabilities.
+                Consider setting a maximum bet size (e.g., 5% of bankroll) regardless of what Kelly
+                suggests, especially for bets with uncertain probabilities.
               </p>
             </div>
           </div>

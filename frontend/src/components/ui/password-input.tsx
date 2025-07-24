@@ -1,21 +1,17 @@
-'use client'
+'use client';
 
-import React, { useState } from 'react'
-import { Input } from './input'
-import { Button } from './button'
+import React, { useState } from 'react';
+import { Input } from './input';
+import { Button } from './button';
 
 interface PasswordInputProps extends React.InputHTMLAttributes<HTMLInputElement> {}
 
 export function PasswordInput({ className, ...props }: PasswordInputProps) {
-  const [showPassword, setShowPassword] = useState(false)
+  const [showPassword, setShowPassword] = useState(false);
 
   return (
     <div className="relative">
-      <Input
-        type={showPassword ? 'text' : 'password'}
-        className={className}
-        {...props}
-      />
+      <Input type={showPassword ? 'text' : 'password'} className={className} {...props} />
       <Button
         type="button"
         variant="ghost"
@@ -24,15 +20,11 @@ export function PasswordInput({ className, ...props }: PasswordInputProps) {
         onClick={() => setShowPassword(!showPassword)}
         tabIndex={-1}
       >
-        {showPassword ? (
-          <EyeOffIcon className="h-4 w-4" />
-        ) : (
-          <EyeIcon className="h-4 w-4" />
-        )}
+        {showPassword ? <EyeOffIcon className="h-4 w-4" /> : <EyeIcon className="h-4 w-4" />}
         <span className="sr-only">{showPassword ? 'Hide password' : 'Show password'}</span>
       </Button>
     </div>
-  )
+  );
 }
 
 function EyeIcon(props: React.SVGProps<SVGSVGElement>) {
@@ -52,7 +44,7 @@ function EyeIcon(props: React.SVGProps<SVGSVGElement>) {
       <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z" />
       <circle cx="12" cy="12" r="3" />
     </svg>
-  )
+  );
 }
 
 function EyeOffIcon(props: React.SVGProps<SVGSVGElement>) {
@@ -74,5 +66,5 @@ function EyeOffIcon(props: React.SVGProps<SVGSVGElement>) {
       <path d="M6.61 6.61A13.526 13.526 0 0 0 2 12s3 7 10 7a9.74 9.74 0 0 0 5.39-1.61" />
       <line x1="2" x2="22" y1="2" y2="22" />
     </svg>
-  )
+  );
 }

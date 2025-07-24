@@ -13,15 +13,15 @@ import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 // @ts-ignore -- Ignore TS error for now, fix types later
 import { Badge } from '@/components/ui/badge';
-import { 
-  UserIcon, 
-  ChartBarIcon, 
+import {
+  UserIcon,
+  ChartBarIcon,
   CalendarDaysIcon,
   CogIcon,
   ArrowRightOnRectangleIcon,
   TrophyIcon,
   CurrencyDollarIcon,
-  ClockIcon
+  ClockIcon,
 } from '@heroicons/react/24/outline';
 
 interface UserStats {
@@ -98,9 +98,7 @@ export default function DashboardPage() {
                   <h2 className="text-xl font-semibold text-white">{user.username}</h2>
                   <p className="text-gray-400">{user.email}</p>
                   <div className="flex items-center space-x-2 mt-1">
-                    <Badge variant="secondary">
-                      {user.confirmed ? 'Verified' : 'Unverified'}
-                    </Badge>
+                    <Badge variant="secondary">{user.confirmed ? 'Verified' : 'Unverified'}</Badge>
                     {stats && (
                       <span className="text-sm text-gray-500">
                         Member since {new Date(stats.memberSince).toLocaleDateString()}
@@ -109,8 +107,8 @@ export default function DashboardPage() {
                   </div>
                 </div>
               </div>
-              <Button 
-                variant="ghost" 
+              <Button
+                variant="ghost"
                 color="red"
                 onClick={handleLogout}
                 className="flex items-center space-x-2"
@@ -164,9 +162,7 @@ export default function DashboardPage() {
                   <span className="text-gray-400">Total Profit</span>
                   <CurrencyDollarIcon className="h-5 w-5 text-gray-500" />
                 </div>
-                <p className="text-2xl font-bold text-white">
-                  ${stats.totalProfit.toFixed(2)}
-                </p>
+                <p className="text-2xl font-bold text-white">${stats.totalProfit.toFixed(2)}</p>
               </div>
             </Card>
 
@@ -177,10 +173,9 @@ export default function DashboardPage() {
                   <ClockIcon className="h-5 w-5 text-gray-500" />
                 </div>
                 <p className="text-lg font-semibold text-white">
-                  {stats.lastBetDate 
+                  {stats.lastBetDate
                     ? new Date(stats.lastBetDate).toLocaleDateString()
-                    : 'No activity yet'
-                  }
+                    : 'No activity yet'}
                 </p>
               </div>
             </Card>

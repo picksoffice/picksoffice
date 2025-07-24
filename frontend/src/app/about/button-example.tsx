@@ -2,12 +2,12 @@
 
 import React, { useState } from 'react';
 import { Button, IconButton } from '@/components/ui/button';
-import { 
-  PlusIcon, 
-  BellIcon, 
-  PencilIcon, 
-  TrashIcon, 
-  ArrowRightIcon 
+import {
+  PlusIcon,
+  BellIcon,
+  PencilIcon,
+  TrashIcon,
+  ArrowRightIcon,
 } from '@heroicons/react/24/outline';
 
 /**
@@ -25,7 +25,7 @@ export default function ButtonExample() {
   return (
     <div className="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
       <h1 className="text-3xl font-bold mb-8">Button System Example</h1>
-      
+
       {/* Button Variants */}
       <section className="mb-12">
         <h2 className="text-xl font-semibold mb-4">Button Variants</h2>
@@ -36,7 +36,7 @@ export default function ButtonExample() {
           <Button variant="ghost">Ghost Button</Button>
         </div>
       </section>
-      
+
       {/* Button Colors */}
       <section className="mb-12">
         <h2 className="text-xl font-semibold mb-4">Button Colors</h2>
@@ -44,46 +44,80 @@ export default function ButtonExample() {
           <div>
             <h3 className="text-sm font-medium mb-2">Indigo</h3>
             <div className="flex flex-col gap-2">
-              <Button color="indigo" variant="primary">Primary</Button>
-              <Button color="indigo" variant="secondary">Secondary</Button>
-              <Button color="indigo" variant="tertiary">Tertiary</Button>
-              <Button color="indigo" variant="ghost">Ghost</Button>
+              <Button color="indigo" variant="primary">
+                Primary
+              </Button>
+              <Button color="indigo" variant="secondary">
+                Secondary
+              </Button>
+              <Button color="indigo" variant="tertiary">
+                Tertiary
+              </Button>
+              <Button color="indigo" variant="ghost">
+                Ghost
+              </Button>
             </div>
           </div>
           <div>
             <h3 className="text-sm font-medium mb-2">Blue</h3>
             <div className="flex flex-col gap-2">
-              <Button color="blue" variant="primary">Primary</Button>
-              <Button color="blue" variant="secondary">Secondary</Button>
-              <Button color="blue" variant="tertiary">Tertiary</Button>
-              <Button color="blue" variant="ghost">Ghost</Button>
+              <Button color="blue" variant="primary">
+                Primary
+              </Button>
+              <Button color="blue" variant="secondary">
+                Secondary
+              </Button>
+              <Button color="blue" variant="tertiary">
+                Tertiary
+              </Button>
+              <Button color="blue" variant="ghost">
+                Ghost
+              </Button>
             </div>
           </div>
           <div>
             <h3 className="text-sm font-medium mb-2">Green</h3>
             <div className="flex flex-col gap-2">
-              <Button color="green" variant="primary">Primary</Button>
-              <Button color="green" variant="secondary">Secondary</Button>
-              <Button color="green" variant="tertiary">Tertiary</Button>
-              <Button color="green" variant="ghost">Ghost</Button>
+              <Button color="green" variant="primary">
+                Primary
+              </Button>
+              <Button color="green" variant="secondary">
+                Secondary
+              </Button>
+              <Button color="green" variant="tertiary">
+                Tertiary
+              </Button>
+              <Button color="green" variant="ghost">
+                Ghost
+              </Button>
             </div>
           </div>
           <div>
             <h3 className="text-sm font-medium mb-2">Red</h3>
             <div className="flex flex-col gap-2">
-              <Button color="red" variant="primary">Primary</Button>
-              <Button color="red" variant="secondary">Secondary</Button>
-              <Button color="red" variant="tertiary">Tertiary</Button>
-              <Button color="red" variant="ghost">Ghost</Button>
+              <Button color="red" variant="primary">
+                Primary
+              </Button>
+              <Button color="red" variant="secondary">
+                Secondary
+              </Button>
+              <Button color="red" variant="tertiary">
+                Tertiary
+              </Button>
+              <Button color="red" variant="ghost">
+                Ghost
+              </Button>
             </div>
           </div>
         </div>
         <div>
           <h3 className="text-sm font-medium mb-2">Gray (Ghost only)</h3>
-          <Button variant="ghost" color="gray">Gray Ghost</Button>
+          <Button variant="ghost" color="gray">
+            Gray Ghost
+          </Button>
         </div>
       </section>
-      
+
       {/* Button Sizes */}
       <section className="mb-12">
         <h2 className="text-xl font-semibold mb-4">Button Sizes</h2>
@@ -94,7 +128,7 @@ export default function ButtonExample() {
           <Button size="xl">Extra Large</Button>
         </div>
       </section>
-      
+
       {/* Icon Buttons */}
       <section className="mb-12">
         <h2 className="text-xl font-semibold mb-4">Icon Buttons</h2>
@@ -112,7 +146,7 @@ export default function ButtonExample() {
             <TrashIcon className="h-5 w-5" />
           </IconButton>
         </div>
-        
+
         <h3 className="text-sm font-medium mb-2">Icon Button Sizes</h3>
         <div className="flex flex-wrap items-center gap-4">
           <IconButton aria-label="Small" size="sm" variant="ghost">
@@ -126,7 +160,7 @@ export default function ButtonExample() {
           </IconButton>
         </div>
       </section>
-      
+
       {/* Button with Icon */}
       <section className="mb-12">
         <h2 className="text-xl font-semibold mb-4">Button with Icon</h2>
@@ -139,7 +173,7 @@ export default function ButtonExample() {
           </Button>
         </div>
       </section>
-      
+
       {/* Button States */}
       <section className="mb-12">
         <h2 className="text-xl font-semibold mb-4">Button States</h2>
@@ -151,27 +185,31 @@ export default function ButtonExample() {
           <Button fullWidth>Full Width Button</Button>
         </div>
       </section>
-      
+
       {/* Common Patterns */}
       <section className="mb-12">
         <h2 className="text-xl font-semibold mb-4">Common Patterns</h2>
-        
+
         <h3 className="text-sm font-medium mb-2">Form Actions</h3>
         <div className="p-4 border border-gray-200 dark:border-gray-700 rounded-lg mb-6">
           <div className="mb-4">
             <label className="block text-sm font-medium mb-1">Form Example</label>
-            <input 
-              type="text" 
-              className="w-full p-2 border border-gray-300 dark:border-gray-600 rounded-md" 
+            <input
+              type="text"
+              className="w-full p-2 border border-gray-300 dark:border-gray-600 rounded-md"
               placeholder="Enter some text"
             />
           </div>
           <div className="flex items-center justify-end gap-4">
-            <Button variant="secondary" color="red">Cancel</Button>
-            <Button variant="primary" color="green">Save Changes</Button>
+            <Button variant="secondary" color="red">
+              Cancel
+            </Button>
+            <Button variant="primary" color="green">
+              Save Changes
+            </Button>
           </div>
         </div>
-        
+
         <h3 className="text-sm font-medium mb-2">Card Actions</h3>
         <div className="p-4 border border-gray-200 dark:border-gray-700 rounded-lg">
           <h4 className="font-medium mb-2">Card Title</h4>
@@ -180,7 +218,9 @@ export default function ButtonExample() {
           </p>
           <div className="flex items-center justify-between">
             <Button variant="tertiary">Learn More</Button>
-            <Button variant="primary" size="sm">Get Started</Button>
+            <Button variant="primary" size="sm">
+              Get Started
+            </Button>
           </div>
         </div>
       </section>

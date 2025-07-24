@@ -1,7 +1,3 @@
-export default function SuccessLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function SuccessLayout({ children }: { children: React.ReactNode }) {
   return children;
 }

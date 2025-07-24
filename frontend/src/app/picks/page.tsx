@@ -42,8 +42,7 @@ const getWriteupLength = (writeup: string | null | any): number => {
         }
         return '';
       })
-      .join('')
-      .length;
+      .join('').length;
   }
 
   return 0;
@@ -65,19 +64,23 @@ export const revalidate = 300;
 const createPaginationUrl = (page: number, searchParams: { league?: string; search?: string }) => {
   const params = new URLSearchParams();
   params.set('page', page.toString());
-  
+
   if (searchParams.league) {
     params.set('league', searchParams.league);
   }
-  
+
   if (searchParams.search) {
     params.set('search', searchParams.search);
   }
-  
+
   return `/picks?${params.toString()}`;
 };
 
-export default async function PicksPage({ searchParams }: { searchParams: { page?: string, league?: string, search?: string } }) {
+export default async function PicksPage({
+  searchParams,
+}: {
+  searchParams: { page?: string; league?: string; search?: string };
+}) {
   let posts: Post[] = [];
   const currentPage = Number(searchParams.page) || 1;
   const itemsPerPage = 9;
@@ -85,12 +88,12 @@ export default async function PicksPage({ searchParams }: { searchParams: { page
   const search = searchParams.search || '';
 
   try {
-    console.log("Fetching picks data...");
+    console.log('Fetching picks data...');
     const response = await getAllPicks();
     console.log(`Received picks data: ${response.data ? response.data.length : 0} items`);
     const picks = response.data || [];
 
-    let validPicks = picks.filter((pick) => {
+    let validPicks = picks.filter(pick => {
       const contentLength = getWriteupLength(pick.Writeup);
       return contentLength >= 150 && pick.Slug;
     });
@@ -103,12 +106,13 @@ export default async function PicksPage({ searchParams }: { searchParams: { page
     // Apply search filter
     if (search) {
       const searchLower = search.toLowerCase();
-      validPicks = validPicks.filter(pick => 
-        pick.Pick?.toLowerCase().includes(searchLower) ||
-        pick.Home?.toLowerCase().includes(searchLower) ||
-        pick.Away?.toLowerCase().includes(searchLower) ||
-        pick.Summary?.toLowerCase().includes(searchLower) ||
-        pick.League?.toLowerCase().includes(searchLower)
+      validPicks = validPicks.filter(
+        pick =>
+          pick.Pick?.toLowerCase().includes(searchLower) ||
+          pick.Home?.toLowerCase().includes(searchLower) ||
+          pick.Away?.toLowerCase().includes(searchLower) ||
+          pick.Summary?.toLowerCase().includes(searchLower) ||
+          pick.League?.toLowerCase().includes(searchLower)
       );
     }
 
@@ -119,7 +123,7 @@ export default async function PicksPage({ searchParams }: { searchParams: { page
     const endIndex = startIndex + itemsPerPage;
     const paginatedPicks = validPicks.slice(startIndex, endIndex);
 
-    posts = paginatedPicks.map((pick) => {
+    posts = paginatedPicks.map(pick => {
       const getBackgroundImage = (league: string | undefined) => {
         if (!league) return undefined;
 
@@ -182,12 +186,17 @@ export default async function PicksPage({ searchParams }: { searchParams: { page
             <PaginationContent>
               <PaginationItem>
                 <PaginationPrevious
-                  href={currentPage > 1 ? createPaginationUrl(currentPage - 1, searchParams) : undefined}
+                  href={
+                    currentPage > 1 ? createPaginationUrl(currentPage - 1, searchParams) : undefined
+                  }
                 />
               </PaginationItem>
 
               <PaginationItem>
-                <PaginationLink href={createPaginationUrl(1, searchParams)} isActive={currentPage === 1}>
+                <PaginationLink
+                  href={createPaginationUrl(1, searchParams)}
+                  isActive={currentPage === 1}
+                >
                   1
                 </PaginationLink>
               </PaginationItem>
@@ -241,7 +250,11 @@ export default async function PicksPage({ searchParams }: { searchParams: { page
 
               <PaginationItem>
                 <PaginationNext
-                  href={currentPage < totalPages ? createPaginationUrl(currentPage + 1, searchParams) : undefined}
+                  href={
+                    currentPage < totalPages
+                      ? createPaginationUrl(currentPage + 1, searchParams)
+                      : undefined
+                  }
                 />
               </PaginationItem>
             </PaginationContent>
@@ -257,36 +270,52 @@ export default async function PicksPage({ searchParams }: { searchParams: { page
         id: 1,
         title: 'NBA Picks - Timberwolves vs Nuggets',
         href: '#',
-        description: 'The Wolves are showing incredible defensive prowess in this series and should cover the spread again.',
+        description:
+          'The Wolves are showing incredible defensive prowess in this series and should cover the spread again.',
         imageUrl: '/images/backgrounds/nba_background.png',
-        date: new Date().toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' }),
+        date: new Date().toLocaleDateString('en-US', {
+          month: 'long',
+          day: 'numeric',
+          year: 'numeric',
+        }),
         datetime: new Date().toISOString(),
         category: { title: 'NBA', href: '#nba' },
         author: {
           name: 'PicksOffice',
           role: 'Analyst',
           href: '#',
-          imageUrl: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+          imageUrl:
+            'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
         },
-        league: 'NBA'
-      }
+        league: 'NBA',
+      },
     ];
-    
+
     return (
       <div className="space-y-12">
         <div className="rounded-md bg-yellow-50 p-4 mb-8">
           <div className="flex">
             <div className="flex-shrink-0">
-              <svg className="h-5 w-5 text-yellow-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                <path fillRule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clipRule="evenodd" />
+              <svg
+                className="h-5 w-5 text-yellow-400"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z"
+                  clipRule="evenodd"
+                />
               </svg>
             </div>
             <div className="ml-3">
               <h3 className="text-sm font-medium text-yellow-800">API Connection Issue</h3>
               <div className="mt-2 text-sm text-yellow-700">
                 <p>
-                  Unable to connect to the picks database. This could happen if the backend server is not running.
-                  Showing sample content instead.
+                  Unable to connect to the picks database. This could happen if the backend server
+                  is not running. Showing sample content instead.
                 </p>
               </div>
             </div>

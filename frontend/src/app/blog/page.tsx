@@ -55,8 +55,7 @@ const getContentLength = (content: string | null | any): number => {
         }
         return '';
       })
-      .join('')
-      .length;
+      .join('').length;
   }
 
   return 0;
@@ -82,7 +81,8 @@ export default async function BlogPage({ searchParams }: { searchParams: { page?
   const itemsPerPage = 9;
 
   try {
-    const query = 'publicationState=live&sort=PublishedDate:desc&pagination[pageSize]=1000&populate=Image';
+    const query =
+      'publicationState=live&sort=PublishedDate:desc&pagination[pageSize]=1000&populate=Image';
     const response = await fetchAPI<Blog>('/blogs', {}, query, true); // Set skipAuth to true
     const blogs = response.data || [];
 

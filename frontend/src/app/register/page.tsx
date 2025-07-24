@@ -1,7 +1,7 @@
 'use client';
 
-import { RegisterForm } from "@/components/register-form";
-import { GalleryVerticalEnd } from "lucide-react";
+import { RegisterForm } from '@/components/register-form';
+import { GalleryVerticalEnd } from 'lucide-react';
 
 export default function RegisterPage() {
   return (

@@ -1,10 +1,10 @@
-import React from 'react'
-import { Button } from './button'
-import { cn } from '@/lib/utils'
-import Link from 'next/link'
+import React from 'react';
+import { Button } from './button';
+import { cn } from '@/lib/utils';
+import Link from 'next/link';
 
 interface PaginationProps extends React.ComponentPropsWithoutRef<'nav'> {
-  'aria-label'?: string
+  'aria-label'?: string;
 }
 
 export function Pagination({
@@ -12,39 +12,24 @@ export function Pagination({
   className,
   ...props
 }: PaginationProps) {
-  return (
-    <nav aria-label={ariaLabel} className={cn('mx-auto w-full', className)} {...props} />
-  )
+  return <nav aria-label={ariaLabel} className={cn('mx-auto w-full', className)} {...props} />;
 }
 
-export function PaginationContent({
-  className,
-  ...props
-}: React.ComponentPropsWithoutRef<'ul'>) {
+export function PaginationContent({ className, ...props }: React.ComponentPropsWithoutRef<'ul'>) {
   return (
-    <ul
-      className={cn('flex flex-wrap items-center justify-center gap-1', className)}
-      {...props}
-    />
-  )
+    <ul className={cn('flex flex-wrap items-center justify-center gap-1', className)} {...props} />
+  );
 }
 
-export function PaginationItem({
-  className,
-  ...props
-}: React.ComponentPropsWithoutRef<'li'>) {
-  return <li className={cn('', className)} {...props} />
+export function PaginationItem({ className, ...props }: React.ComponentPropsWithoutRef<'li'>) {
+  return <li className={cn('', className)} {...props} />;
 }
 
 interface PaginationLinkProps extends React.ComponentPropsWithoutRef<'a'> {
-  isActive?: boolean
+  isActive?: boolean;
 }
 
-export function PaginationLink({
-  className,
-  isActive,
-  ...props
-}: PaginationLinkProps) {
+export function PaginationLink({ className, isActive, ...props }: PaginationLinkProps) {
   return (
     <a
       aria-current={isActive ? 'page' : undefined}
@@ -52,13 +37,13 @@ export function PaginationLink({
         'flex h-9 min-w-9 items-center justify-center rounded-md border border-slate-700/30 px-3 py-2 text-sm transition-colors hover:bg-sky-600/10 hover:text-sky-300',
         {
           'bg-sky-600/20 text-sky-300 pointer-events-none': isActive,
-          'text-slate-400': !isActive
+          'text-slate-400': !isActive,
         },
         className
       )}
       {...props}
     />
-  )
+  );
 }
 
 export function PaginationPrevious({
@@ -86,7 +71,7 @@ export function PaginationPrevious({
       </svg>
       <span>Previous</span>
     </PaginationLink>
-  )
+  );
 }
 
 export function PaginationNext({
@@ -114,7 +99,7 @@ export function PaginationNext({
         <path d="M9 18l6-6-6-6" />
       </svg>
     </PaginationLink>
-  )
+  );
 }
 
 export function PaginationEllipsis({
@@ -143,5 +128,5 @@ export function PaginationEllipsis({
       </svg>
       <span className="sr-only">More pages</span>
     </span>
-  )
+  );
 }

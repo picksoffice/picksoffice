@@ -27,10 +27,10 @@ export function useApiQuery<T>(
 
     const fetchData = async () => {
       setState(prev => ({ ...prev, isLoading: true }));
-      
+
       try {
         const result = await fetchFn();
-        
+
         if (isMounted) {
           setState({
             data: result,

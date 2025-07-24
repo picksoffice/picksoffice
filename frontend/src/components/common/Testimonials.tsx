@@ -59,37 +59,46 @@ export default function Example() {
             What My Subscribers Say
           </p>
           <p className="mt-6 text-lg text-gray-300">
-            See how my betting analysis and picks have helped sports bettors achieve consistent profits
+            See how my betting analysis and picks have helped sports bettors achieve consistent
+            profits
           </p>
         </div>
-        
+
         <div className="mx-auto mt-16 max-w-7xl">
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {testimonials.slice(0, 3).map((testimonial) => (
+            {testimonials.slice(0, 3).map(testimonial => (
               <div key={testimonial.author.handle} className="flex flex-col h-full">
                 <figure className="flex flex-col flex-1 rounded-2xl bg-slate-800/30 backdrop-blur-sm p-8 shadow-lg border border-white/10 ring-1 ring-white/10 hover:bg-slate-800/40 transition-colors">
                   <blockquote className="flex-1 text-dark-text">
                     <p className="text-lg">{`"${testimonial.body}"`}</p>
                   </blockquote>
                   <figcaption className="mt-6 flex flex-col gap-y-2 border-t border-white/10 pt-6">
-                    <div className="font-semibold text-dark-text">{testimonial.author.name.split(' ')[0]}</div>
-                    <div className="text-xs text-gray-400">X Follower since {testimonial.author.followSince}</div>
+                    <div className="font-semibold text-dark-text">
+                      {testimonial.author.name.split(' ')[0]}
+                    </div>
+                    <div className="text-xs text-gray-400">
+                      X Follower since {testimonial.author.followSince}
+                    </div>
                   </figcaption>
                 </figure>
               </div>
             ))}
           </div>
-          
+
           <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {testimonials.slice(3, 6).map((testimonial) => (
+            {testimonials.slice(3, 6).map(testimonial => (
               <div key={testimonial.author.handle} className="flex flex-col h-full">
                 <figure className="flex flex-col flex-1 rounded-2xl bg-slate-800/30 backdrop-blur-sm p-8 shadow-lg border border-white/10 ring-1 ring-white/10 hover:bg-slate-800/40 transition-colors">
                   <blockquote className="flex-1 text-dark-text">
                     <p className="text-lg">{`"${testimonial.body}"`}</p>
                   </blockquote>
                   <figcaption className="mt-6 flex flex-col gap-y-2 border-t border-white/10 pt-6">
-                    <div className="font-semibold text-dark-text">{testimonial.author.name.split(' ')[0]}</div>
-                    <div className="text-xs text-gray-400">X Follower since {testimonial.author.followSince}</div>
+                    <div className="font-semibold text-dark-text">
+                      {testimonial.author.name.split(' ')[0]}
+                    </div>
+                    <div className="text-xs text-gray-400">
+                      X Follower since {testimonial.author.followSince}
+                    </div>
                   </figcaption>
                 </figure>
               </div>
