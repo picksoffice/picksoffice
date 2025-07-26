@@ -8,6 +8,21 @@ export interface Pick {
   attributes: {
     Title: string;
     Summary: string;
-    // Füge deine Fields hinzu, z. B. Date: string; League: string; etc.
+    Date?: string;
+    Author?: string;
+    Image?: {
+      data?: {
+        attributes?: {
+          url?: string;
+        };
+      };
+    };
+    Slug?: string;
+    League?: string;
+    Home?: string;
+    Away?: string;
+    Pick?: string;
+    Writeup?: string | null | any;
+    publishedAt?: string;
   };
 }

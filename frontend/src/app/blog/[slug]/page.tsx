@@ -38,7 +38,7 @@ export async function generateMetadata({ params }: { params: Promise<Props['para
         description: attributes.Summary,
         url: `https://picksoffice.com/picks/${slug}`,
         type: 'article',
-        publishedTime: attributes.publishedAt,
+        publishedTime: attributes.publishedAt || attributes.Date || new Date().toISOString(),
         authors: [attributes.Author],
         images: [
           {
@@ -76,7 +76,7 @@ export default async function PickPage({ params }: { params: Promise<Props['para
 
     const pick = response.data[0];
 
-    return <ContentTemplate attributes={pick.attributes} />;
+    return <ContentTemplate type="pick" attributes={pick.attributes} />;
   } catch (error) {
     console.error('Error fetching pick for slug:', slug, error);
     notFound();
