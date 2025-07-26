@@ -77,9 +77,9 @@ const createPaginationUrl = (page: number, searchParams: { league?: string; sear
 };
 
 export default async function PicksPage({
-  searchParams,
+  searchParams = {},
 }: {
-  searchParams: { page?: string; league?: string; search?: string };
+  searchParams?: { page?: string; league?: string; search?: string };
 }) {
   let posts: Post[] = [];
   const currentPage = Number(searchParams.page) || 1;
