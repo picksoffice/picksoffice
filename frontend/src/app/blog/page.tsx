@@ -1,7 +1,7 @@
 // src/app/blog/page.tsx
 import React from 'react';
-import BlogGrid from '@/components/common/BlogGrid';
-import { fetchAPI, StrapiResponse } from '@/lib/api';
+import BlogGrid from '../../components/common/BlogGrid';
+import { fetchAPI, StrapiResponse } from '../../lib/api';
 import {
   Pagination,
   PaginationContent,
@@ -10,7 +10,10 @@ import {
   PaginationLink,
   PaginationNext,
   PaginationPrevious,
-} from '@/components/ui/pagination';
+} from '../../components/ui/pagination';
+
+// …restlicher Code bleibt unverändert…
+
 
 interface Blog {
   id: number;

@@ -8,17 +8,18 @@
     "noEmit": true,
     "esModuleInterop": true,
     "module": "esnext",
-    "moduleResolution": "bundler",
+    // Bisher stand hier "bundler" – das verursacht die Alias‑Fehler
+    "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
-    "forceConsistentCasingInFileNames": true, // Neu: Fix casing issues
+    // erzwingt konsistente Groß-/Kleinschreibung
+    "forceConsistentCasingInFileNames": true,
     "plugins": [
-      {
-        "name": "next"
-      }
+      { "name": "next" }
     ],
+    // Basisverzeichnis und Alias bleiben bestehen
     "baseUrl": "./src",
     "paths": {
       "@/*": ["./src/*"]
