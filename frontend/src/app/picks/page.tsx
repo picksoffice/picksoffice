@@ -61,31 +61,32 @@ export const metadata = {
 // Revalidate this page every 5 minutes
 export const revalidate = 300;
 
-const createPaginationUrl = (page: number, searchParams: { league?: string; search?: string }) => {
-  const params = new URLSearchParams();
-  params.set('page', page.toString());
+const createPaginationUrl = (page: number, params: { league?: string; search?: string }) => {
+  const urlParams = new URLSearchParams();
+  urlParams.set('page', page.toString());
 
-  if (searchParams.league) {
-    params.set('league', searchParams.league);
+  if (params.league) {
+    urlParams.set('league', params.league);
   }
 
-  if (searchParams.search) {
-    params.set('search', searchParams.search);
+  if (params.search) {
+    urlParams.set('search', params.search);
   }
 
-  return `/picks?${params.toString()}`;
+  return `/picks?${urlParams.toString()}`;
 };
 
 export default async function PicksPage({
-  searchParams = {},
+  searchParams,
 }: {
-  searchParams?: { page?: string; league?: string; search?: string };
+  searchParams: Promise<{ page?: string; league?: string; search?: string }>;
 }) {
+  const params = await searchParams;
   let posts: Post[] = [];
-  const currentPage = Number(searchParams.page) || 1;
+  const currentPage = Number(params.page) || 1;
   const itemsPerPage = 9;
-  const league = searchParams.league || '';
-  const search = searchParams.search || '';
+  const league = params.league || '';
+  const search = params.search || '';
 
   try {
     console.log('Fetching picks data...');
@@ -187,14 +188,14 @@ export default async function PicksPage({
               <PaginationItem>
                 <PaginationPrevious
                   href={
-                    currentPage > 1 ? createPaginationUrl(currentPage - 1, searchParams) : undefined
+                    currentPage > 1 ? createPaginationUrl(currentPage - 1, params) : undefined
                   }
                 />
               </PaginationItem>
 
               <PaginationItem>
                 <PaginationLink
-                  href={createPaginationUrl(1, searchParams)}
+                  href={createPaginationUrl(1, params)}
                   isActive={currentPage === 1}
                 >
                   1
@@ -209,7 +210,7 @@ export default async function PicksPage({
 
               {currentPage > 2 && (
                 <PaginationItem>
-                  <PaginationLink href={createPaginationUrl(currentPage - 1, searchParams)}>
+                  <PaginationLink href={createPaginationUrl(currentPage - 1, params)}>
                     {currentPage - 1}
                   </PaginationLink>
                 </PaginationItem>
@@ -217,7 +218,7 @@ export default async function PicksPage({
 
               {currentPage !== 1 && currentPage !== totalPages && (
                 <PaginationItem>
-                  <PaginationLink href={createPaginationUrl(currentPage, searchParams)} isActive>
+                  <PaginationLink href={createPaginationUrl(currentPage, params)} isActive>
                     {currentPage}
                   </PaginationLink>
                 </PaginationItem>
@@ -225,7 +226,7 @@ export default async function PicksPage({
 
               {currentPage < totalPages - 1 && (
                 <PaginationItem>
-                  <PaginationLink href={createPaginationUrl(currentPage + 1, searchParams)}>
+                  <PaginationLink href={createPaginationUrl(currentPage + 1, params)}>
                     {currentPage + 1}
                   </PaginationLink>
                 </PaginationItem>
@@ -240,7 +241,7 @@ export default async function PicksPage({
               {totalPages > 1 && (
                 <PaginationItem>
                   <PaginationLink
-                    href={createPaginationUrl(totalPages, searchParams)}
+                    href={createPaginationUrl(totalPages, params)}
                     isActive={currentPage === totalPages}
                   >
                     {totalPages}
@@ -252,7 +253,7 @@ export default async function PicksPage({
                 <PaginationNext
                   href={
                     currentPage < totalPages
-                      ? createPaginationUrl(currentPage + 1, searchParams)
+                      ? createPaginationUrl(currentPage + 1, params)
                       : undefined
                   }
                 />
