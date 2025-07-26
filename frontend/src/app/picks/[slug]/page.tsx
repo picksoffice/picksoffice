@@ -5,22 +5,23 @@ import { fetchAPI, StrapiResponse, Pick } from '@/lib/api';
 import { notFound } from 'next/navigation';
 
 interface Props {
-  params: {
-    slug: string;
-  };
+  params: Promise<{ slug: string }>; // Geändert zu Promise für dynamic route
 }
 
 export async function generateMetadata({ params }: Props) {
+  const resolvedParams = await params; // Await params
+  const slug = resolvedParams.slug;
+
   try {
     try {
       const response = await fetchAPI<Pick>(
         '/picks',
         {},
-        `filters[Slug][$eq]=${encodeURIComponent(params.slug)}&publicationState=live`
+        `filters[Slug][$eq]=${encodeURIComponent(slug)}&publicationState=live`
       );
       console.log(
         'Metadata API Response for slug:',
-        params.slug,
+        slug,
         JSON.stringify(response, null, 2)
       );
       const pickData = response.data && response.data[0];
@@ -32,14 +33,14 @@ export async function generateMetadata({ params }: Props) {
           openGraph: {
             title: `${pickData.Home} vs ${pickData.Away}`,
             description: pickData.Summary || 'No summary available',
-            url: `https://picksoffice.com/picks/${params.slug}`,
+            url: `https://picksoffice.com/picks/${slug}`,
           },
         };
       }
 
       // Verwende Mock-Daten für die Metadaten, wenn die API keine Daten liefert
-      console.log('No pick found in API for metadata, using mock data, slug:', params.slug);
-      const mockPick = getMockPickBySlug(params.slug);
+      console.log('No pick found in API for metadata, using mock data, slug:', slug);
+      const mockPick = getMockPickBySlug(slug);
 
       return {
         title: `${mockPick.Home} vs ${mockPick.Away} - Betting Pick`,
@@ -47,13 +48,13 @@ export async function generateMetadata({ params }: Props) {
         openGraph: {
           title: `${mockPick.Home} vs ${mockPick.Away}`,
           description: mockPick.Summary || 'No summary available',
-          url: `https://picksoffice.com/picks/${params.slug}`,
+          url: `https://picksoffice.com/picks/${slug}`,
         },
       };
     } catch (apiError) {
       // Bei API-Fehler verwende Mock-Daten für die Metadaten
       console.error('API error generating metadata, using mock data instead:', apiError);
-      const mockPick = getMockPickBySlug(params.slug);
+      const mockPick = getMockPickBySlug(slug);
 
       return {
         title: `${mockPick.Home} vs ${mockPick.Away} - Betting Pick`,
@@ -61,12 +62,12 @@ export async function generateMetadata({ params }: Props) {
         openGraph: {
           title: `${mockPick.Home} vs ${mockPick.Away}`,
           description: mockPick.Summary || 'No summary available',
-          url: `https://picksoffice.com/picks/${params.slug}`,
+          url: `https://picksoffice.com/picks/${slug}`,
         },
       };
     }
   } catch (error) {
-    console.error('Error generating metadata for slug:', params.slug, error);
+    console.error('Error generating metadata for slug:', slug, error);
     return {
       title: 'Betting Pick',
       description: 'Expert betting analysis and predictions',
@@ -151,7 +152,8 @@ const getMockPickBySlug = (slug: string) => {
 };
 
 export default async function PickDetailPage({ params }: Props) {
-  const { slug } = params;
+  const resolvedParams = await params; // Await params
+  const slug = resolvedParams.slug;
 
   try {
     // Versuche zuerst, echte Daten zu holen

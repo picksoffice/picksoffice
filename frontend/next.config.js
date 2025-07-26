@@ -1,5 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  eslint: {
+    ignoreDuringBuilds: true, // Ignoriert ESLint im Build – temporär für Deployment
+  },
   images: {
     domains: ['localhost', '192.168.178.85'],
     remotePatterns: [

@@ -14,7 +14,7 @@ export default [
     plugins: {
       react,
       'react-hooks': reactHooks,
-      next: nextPlugin, // Define as 'next'
+      '@next/next': nextPlugin, // Scope '@next/next'
     },
     rules: {
       'react/jsx-uses-react': 'error',
