@@ -14,7 +14,6 @@ import {
 
 // …restlicher Code bleibt unverändert…
 
-
 interface Blog {
   id: number;
   documentId: string;
@@ -78,9 +77,10 @@ const createPaginationUrl = (page: number) => {
   return `/blog?page=${page}`;
 };
 
-export default async function BlogPage({ searchParams }: { searchParams: { page?: string } }) {
+export default async function BlogPage({ searchParams }: { searchParams: Promise<{ page?: string }> }) {
+  const params = await searchParams;
+  const currentPage = Number(params.page) || 1;
   let posts: Post[] = [];
-  const currentPage = Number(searchParams.page) || 1;
   const itemsPerPage = 9;
 
   try {
