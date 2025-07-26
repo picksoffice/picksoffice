@@ -1,10 +1,5 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // TS‑Fehler während des Build ignorieren (kann entfernt werden, wenn alle Typfehler behoben sind)
-  typescript: {
-    ignoreBuildErrors: true,
-  },
-  // Erlaubte Domains für das Next‑Image‑Optimierungsmodul
   images: {
     domains: ['localhost', '192.168.178.85'],
     remotePatterns: [
@@ -22,18 +17,12 @@ const nextConfig = {
       },
     ],
   },
-  // Kein React Strict Mode (verhindert doppelte API‑Aufrufe)
   reactStrictMode: false,
 
-  // Experimentelle Optionen; hier nur zulässige Optionen eintragen
   experimental: {
     esmExternals: true,
-    // isrMemoryCacheSize wurde entfernt, weil Next 15 ihn nicht mehr akzeptiert
   },
 
-  /**
-   * Definiert HTTP‑Header für alle Routen
-   */
   async headers() {
     const isDev = process.env.NODE_ENV === 'development';
     const allowedOrigins = isDev
